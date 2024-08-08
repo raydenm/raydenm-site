@@ -15,7 +15,7 @@ export function Message({ slug }: { slug: string }) {
 
       scriptElement.setAttribute('issue-term', slug)
       scriptElement.setAttribute('label', 'comment')
-      scriptElement.setAttribute('repo', 'raydenm/raydenm-website')
+      scriptElement.setAttribute('repo', 'raydenm/raydenm-site')
       scriptElement.setAttribute('theme', 'github-light')
 
       ref.current?.appendChild(scriptElement)

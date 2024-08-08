@@ -1,5 +1,6 @@
 // import dynamic from 'next/dynamic'
 import { Link2Icon } from 'lucide-react'
+import fallback from '@/assets/images/fallback.png'
 
 type BookmarkCardProps = {
   bookmark: {
@@ -26,7 +27,7 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
     >
       <span className="aspect-[1200/630] overflow-hidden rounded-lg">
         <img
-          src={bookmark.cover || '/assets/fallback.avif'}
+          src={bookmark.cover || fallback.src}
           alt={bookmark.title}
           width={1200}
           height={630}
@@ -36,7 +37,7 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
             // @ts-ignore
             e.target.onerror = null
             // @ts-ignore
-            e.target.src = '/assets/fallback.avif'
+            e.target.src = fallback.src
           }}
         />
       </span>
