@@ -20,6 +20,7 @@ export async function generateStaticParams() {
 
 async function fetchData(slug: string) {
   const { isEnabled } = draftMode()
+  sendAnalytics(slug)
   const data = await getPost(slug, isDevelopment ? true : isEnabled)
   if (!data) notFound()
 
@@ -31,7 +32,6 @@ async function fetchData(slug: string) {
 export default async function WritingSlug({ params }: { params: { slug: string } }) {
   const { slug } = params
   const { data } = await fetchData(slug)
-  sendAnalytics(slug)
 
   const {
     title,
