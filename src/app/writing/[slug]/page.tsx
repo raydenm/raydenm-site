@@ -19,6 +19,7 @@ export async function generateStaticParams() {
 async function fetchData(slug: string) {
   const { isEnabled } = draftMode()
   const data = await getPost(slug, isDevelopment ? true : isEnabled)
+  fetch(`/api/increment-views?slug=${slug}`)
   if (!data) notFound()
 
   return {
