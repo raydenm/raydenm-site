@@ -9,9 +9,9 @@ import {
   PencilLineIcon,
   NavigationIcon,
   Wand2Icon,
-  BookmarkIcon,
-  Boxes,
-  Images
+  BookmarkIcon
+  // Boxes,
+  // Images
 } from 'lucide-react'
 
 const PROFILES = {
