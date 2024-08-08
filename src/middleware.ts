@@ -12,9 +12,8 @@ export function middleware(
       process.env.NODE_ENV === 'production'
         ? process.env.WEBSITE_URL + '/api/increment-views'
         : 'http://localhost:3000/api/increment-views'
-    console.log('Sending analytics for', URL, writingSlug)
     try {
-      const res = await fetch(`${URL}?slug=${writingSlug}`, {
+      const res = await fetch(`${URL}?slug=${writingSlug}&timestamp=${Date.now()}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
