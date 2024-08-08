@@ -10,9 +10,7 @@ import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
-// import { sendAnalytics } from '@/lib/supabase'
 import { GetServerSideProps } from 'next'
-
 import 'highlight.js/styles/github-dark.css'
 export async function generateStaticParams() {
   const allPosts: { slug: string }[] = await getAllPostSlugs()
