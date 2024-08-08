@@ -10,6 +10,7 @@ import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
+import { sendAnalytics } from '@/lib/supabase'
 
 import 'highlight.js/styles/github-dark.css'
 export async function generateStaticParams() {
@@ -30,6 +31,7 @@ async function fetchData(slug: string) {
 export default async function WritingSlug({ params }: { params: { slug: string } }) {
   const { slug } = params
   const { data } = await fetchData(slug)
+  sendAnalytics(slug)
 
   const {
     title,
