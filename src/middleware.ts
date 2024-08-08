@@ -12,7 +12,7 @@ export function middleware(
       process.env.NODE_ENV === 'production'
         ? process.env.WEBSITE_URL + '/api/increment-views'
         : 'http://localhost:3000/api/increment-views'
-
+    console.log('Sending analytics for', URL, writingSlug)
     try {
       const res = await fetch(`${URL}?slug=${writingSlug}`, {
         method: 'GET',
@@ -21,7 +21,7 @@ export function middleware(
         },
         signal: AbortSignal.timeout(5000)
       })
-
+      console.log('Analytics sent', res)
       if (res.status !== 200) console.error('Failed to send analytics', res)
     } catch (error) {
       console.error('Error sending analytics', error)
