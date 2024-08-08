@@ -50,7 +50,7 @@ export const SideMenu = ({ children, title, bookmarks = [], isInner }: SideMenuP
   }
 
   const isBookmarksPath = pathname.startsWith('/bookmarks')
-  const currentBookmark = (bookmarks || []).find((bookmark) => `/bookmarks/${bookmark.slug}` === pathname)
+  const currentBookmark = bookmarks.find((bookmark) => `/bookmarks/${bookmark.slug}` === pathname)
 
   return (
     <ScrollArea
@@ -64,7 +64,9 @@ export const SideMenu = ({ children, title, bookmarks = [], isInner }: SideMenuP
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold tracking-tight">{title}</span>
             <div className="flex items-center gap-2">
-              {isBookmarksPath && <SubmitBookmarkDialog bookmarks={bookmarks} currentBookmark={currentBookmark} />}
+              {isBookmarksPath && currentBookmark && (
+                <SubmitBookmarkDialog bookmarks={bookmarks} currentBookmark={currentBookmark} />
+              )}
             </div>
           </div>
         </div>
