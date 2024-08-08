@@ -10,32 +10,10 @@ import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
-import { GetServerSideProps } from 'next'
 import 'highlight.js/styles/github-dark.css'
 export async function generateStaticParams() {
   const allPosts: { slug: string }[] = await getAllPostSlugs()
   return allPosts.map((post) => ({ slug: post.slug }))
-}
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { slug } = context.query
-
-  try {
-    const URL =
-      process.env.NODE_ENV === 'production'
-        ? process.env.WEBSITE_URL + '/api/increment-views'
-        : 'http://localhost:3000/api/increment-views'
-
-    const res = await fetch(`${URL}?slug=${slug}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
-    })
-    if (res.status !== 200) console.error('Failed to send analytics', res)
-  } catch (error) {
-    console.error('Error sending analytics', error)
-  }
-
-  return { props: {} } // Return props or empty object if no props needed
 }
 
 async function fetchData(slug: string) {
@@ -51,7 +29,6 @@ async function fetchData(slug: string) {
 export default async function WritingSlug({ params }: { params: { slug: string } }) {
   const { slug } = params
   const { data } = await fetchData(slug)
-  // sendAnalytics(slug)
 
   const {
     title,
