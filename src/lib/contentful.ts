@@ -2,7 +2,6 @@ import { cache } from 'react'
 import 'server-only'
 
 import { isDevelopment } from '@/lib/utils'
-import { sendAnalytics } from '@/lib/supabase'
 
 const fetchGraphQL = cache(async (query: string, preview = isDevelopment) => {
   try {
@@ -55,7 +54,6 @@ export const getAllPosts = cache(async (preview = isDevelopment) => {
 })
 
 export const getPost = cache(async (slug: string, preview = isDevelopment) => {
-  sendAnalytics(slug)
   try {
     const entry = await fetchGraphQL(
       `query {
