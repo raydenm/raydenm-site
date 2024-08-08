@@ -10,7 +10,6 @@ import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
-import { sendAnalytics } from '@/lib/supabase'
 
 import 'highlight.js/styles/github-dark.css'
 export async function generateStaticParams() {
@@ -20,7 +19,6 @@ export async function generateStaticParams() {
 
 async function fetchData(slug: string) {
   const { isEnabled } = draftMode()
-  sendAnalytics(slug)
   const data = await getPost(slug, isDevelopment ? true : isEnabled)
   if (!data) notFound()
 

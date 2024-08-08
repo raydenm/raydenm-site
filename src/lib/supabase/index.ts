@@ -1,5 +1,11 @@
 export const sendAnalytics = async (slug: string) => {
-  const URL = process.env.WEBSITE_URL + '/api/increment-views'
+  const URL =
+    process.env.NODE_ENV === 'production'
+      ? process.env.WEBSITE_URL + '/api/increment-views'
+      : 'http://localhost:3000/api/increment-views'
+  // const URL = 'https://raydenm.zeabur.app/api/increment-views'
+  // console.log(URL);
+
   try {
     const res = await fetch(`${URL}?slug=${slug}`, {
       method: 'GET',

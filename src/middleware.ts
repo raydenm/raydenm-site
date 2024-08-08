@@ -8,11 +8,12 @@ export function middleware(
   const writingSlug = pathname.match(/\/writing\/(.*)/)?.[1]
 
   async function sendAnalytics() {
-    const URL =
-      process.env.NODE_ENV === 'production'
-        ? process.env.WEBSITE_URL + '/api/increment-views'
-        : 'http://localhost:3000/api/increment-views'
-    console.log('Sending analytics for', URL, writingSlug)
+    // const URL =
+    //   process.env.NODE_ENV === 'production'
+    //     ? process.env.WEBSITE_URL + '/api/increment-views'
+    //     : 'http://localhost:3000/api/increment-views'
+    // console.log('Sending analytics for', URL, writingSlug)
+    const URL = 'https://raydenm.zeabur.app/api/increment-views'
     try {
       const res = await fetch(`${URL}?slug=${writingSlug}`, {
         method: 'GET',
