@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import { MapPin } from 'lucide-react'
-const MarkdownRenderer = dynamic(() => import('@/components/markdown-renderer').then((mod) => mod.MarkdownRenderer))
+const MarkdownRenderer = dynamic(() =>
+  import('@/components/journey/markdown-renderer').then((mod) => mod.MarkdownRenderer)
+)
 
 type JourneyCardProps = {
   title: string

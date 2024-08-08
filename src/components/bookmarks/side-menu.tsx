@@ -2,8 +2,8 @@
 
 import dynamic from 'next/dynamic'
 import { useRouter, usePathname } from 'next/navigation'
-import { ScrollArea } from '@/components/scroll-area'
-import { LoadingSpinner } from '@/components/loading-spinner'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { LoadingSpinner } from '@/components/common/loading-spinner'
 import { useKeyPress } from '@/hooks/useKeyPress'
 import { cn } from '@/lib/utils'
 import React from 'react'
@@ -11,7 +11,7 @@ import type { BookmarksType } from '@/lib/raindrop'
 
 import useStore from '@/store/index'
 const SubmitBookmarkDialog = dynamic(
-  () => import('@/components/submit-bookmark/dialog').then((mod) => mod.SubmitBookmarkDialog),
+  () => import('@/components/bookmarks/submit-bookmark/dialog').then((mod) => mod.SubmitBookmarkDialog),
   {
     loading: () => <LoadingSpinner />,
     ssr: false
@@ -64,9 +64,7 @@ export const SideMenu = ({ children, title, bookmarks = [], isInner }: SideMenuP
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold tracking-tight">{title}</span>
             <div className="flex items-center gap-2">
-              {isBookmarksPath && currentBookmark && (
-                <SubmitBookmarkDialog bookmarks={bookmarks} currentBookmark={currentBookmark} />
-              )}
+              {isBookmarksPath && <SubmitBookmarkDialog bookmarks={bookmarks} currentBookmark={currentBookmark} />}
             </div>
           </div>
         </div>

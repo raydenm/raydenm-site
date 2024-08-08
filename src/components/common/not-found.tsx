@@ -1,6 +1,6 @@
-import { ScrollArea } from '@/components/scroll-area'
-import { FloatingHeader } from '@/components/floating-header'
-import { PageTitle } from '@/components/page-title'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { FloatingHeader } from '@/components/common/floating-header'
+import { PageTitle } from '@/components/common/page-title'
 
 export function NotFound() {
   return (

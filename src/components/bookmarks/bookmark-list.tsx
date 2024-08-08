@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback, useMemo } from 'react'
 import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { BookmarkCard } from '@/components/bookmark-card'
+import { BookmarkCard } from '@/components/bookmarks/bookmark-card'
 import { getBookmarkItemsByPageIndex } from '@/app/actions'
 import { cn } from '@/lib/utils'
 

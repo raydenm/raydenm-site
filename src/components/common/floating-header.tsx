@@ -12,11 +12,11 @@ import {
 import type { BookmarksType, BookmarkType } from '@/lib/raindrop'
 
 import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/loading-spinner'
+import { LoadingSpinner } from '@/components/common/loading-spinner'
 import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from '@/lib/constants'
-const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then((mod) => mod.MobileDrawer))
+const MobileDrawer = dynamic(() => import('@/components/common/mobile-drawer').then((mod) => mod.MobileDrawer))
 const SubmitBookmarkDrawer = dynamic(
-  () => import('@/components/submit-bookmark/drawer').then((mod) => mod.SubmitBookmarkDrawer),
+  () => import('@/components/bookmarks/submit-bookmark/drawer').then((mod) => mod.SubmitBookmarkDrawer),
   {
     loading: () => <LoadingSpinner />,
     ssr: false
@@ -99,9 +99,7 @@ export const FloatingHeader = memo(
                   </Balancer>
                 )}
                 <div className="flex items-center gap-2">
-                  {isBookmarkPath && currentBookmark && (
-                    <SubmitBookmarkDrawer bookmarks={bookmarks} currentBookmark={currentBookmark} />
-                  )}
+                  {isBookmarkPath && <SubmitBookmarkDrawer bookmarks={bookmarks} currentBookmark={currentBookmark} />}
                 </div>
               </div>
             </div>

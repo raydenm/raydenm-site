@@ -5,9 +5,9 @@ import { GeistMono } from 'geist/font/mono'
 import { EyeIcon } from 'lucide-react'
 import { Toaster } from '@/components/ui/sonner'
 
-import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { SideMenu } from '@/components/side-menu'
-import { MenuContent } from '@/components/menu-content'
+import { TailwindIndicator } from '@/components/common/tailwind-indicator'
+import { SideMenu } from '@/components/bookmarks/side-menu'
+import { MenuContent } from '@/components/common/menu-content'
 import { preloadGetAllPosts } from '@/lib/contentful'
 import { sharedMetadata } from '@/app/shared-metadata'
 

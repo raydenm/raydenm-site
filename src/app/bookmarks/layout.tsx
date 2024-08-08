@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
-import { SideMenu } from '@/components/side-menu'
-import { ScreenLoadingSpinner } from '@/components/screen-loading-spinner'
-import { ListItem } from '@/components/list-item'
+import { SideMenu } from '@/components/bookmarks/side-menu'
+import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+import { ListItem } from '@/components/bookmarks/list-item'
 import { Toaster } from '@/components/ui/sonner'
 import { getBookmarks } from '@/lib/raindrop'
 
@@ -25,7 +25,7 @@ export default async function BookmarksLayout({ children }: { children: React.Re
                     key={bookmark._id}
                     path={`/bookmarks/${bookmark.slug}`}
                     title={bookmark.title}
-                    description={`${bookmark.count} bookmarks`}
+                    description={`${bookmark.count}个书签`}
                   />
                 )
               })}

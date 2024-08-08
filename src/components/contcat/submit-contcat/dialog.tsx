@@ -12,7 +12,7 @@ import {
   DialogTrigger
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { SubmitContcatForm } from '@/components/submit-contcat/form'
+import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
 import useStore from '@/store/index'
 import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/lib/constants'
 

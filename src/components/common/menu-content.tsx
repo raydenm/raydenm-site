@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
-import { NavigationLink } from '@/components/navigation-link'
+import { NavigationLink } from '@/components/common/navigation-link'
 
 import {
   GithubIcon,
@@ -14,8 +13,6 @@ import {
   Boxes,
   Images
 } from 'lucide-react'
-
-import RaydenmSmall from '@/assets/images/raydenm-small.png'
 
 const PROFILES = {
   github: {
@@ -113,8 +110,8 @@ export const MenuContent = () => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
-        <Image
-          src={RaydenmSmall}
+        <img
+          src="/assets/raydenm-small.png"
           alt="Raydenm"
           width={40}
           height={40}

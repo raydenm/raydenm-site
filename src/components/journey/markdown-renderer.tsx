@@ -1,6 +1,6 @@
 import Markdown from 'markdown-to-jsx'
 
-import { Link } from '@/components/link'
+import { Link } from '@/components/common/link'
 
 type MarkdownRendererProps = {
   options?: object

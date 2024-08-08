@@ -1,10 +1,10 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { LoadingSpinner } from '@/components/loading-spinner'
+import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 const SubmitContcatDialog = dynamic(
-  () => import('@/components/submit-contcat/dialog').then((mod) => mod.SubmitContcatDialog),
+  () => import('@/components/contcat/submit-contcat/dialog').then((mod) => mod.SubmitContcatDialog),
   {
     loading: () => <LoadingSpinner />,
     ssr: false
@@ -12,7 +12,7 @@ const SubmitContcatDialog = dynamic(
 )
 
 const SubmitContcatDrawer = dynamic(
-  () => import('@/components/submit-contcat/drawer').then((mod) => mod.SubmitContcatDrawer),
+  () => import('@/components/contcat/submit-contcat/drawer').then((mod) => mod.SubmitContcatDrawer),
   {
     loading: () => <LoadingSpinner />,
     ssr: false

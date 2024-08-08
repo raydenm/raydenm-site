@@ -15,7 +15,7 @@ export function middleware(
 
     try {
       const res = await fetch(`${URL}?slug=${writingSlug}`, {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         },

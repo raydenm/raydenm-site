@@ -12,13 +12,13 @@ import {
   DrawerTrigger
 } from '@/components/ui/drawer'
 import { Button } from '@/components/ui/button'
-import { SubmitBookmarkForm } from '@/components/submit-bookmark/form'
+import { SubmitBookmarkForm } from '@/components/bookmarks/submit-bookmark/form'
 import { SUBMIT_BOOKMARK_FORM_TITLE, SUBMIT_BOOKMARK_FORM_DESCRIPTION } from '@/lib/constants'
-import type { BookmarksType, BookmarkType } from '@/lib/raindrop'
+import type { BookmarksType } from '@/lib/raindrop'
 
 type SubmitBookmarkDrawerProps = {
   bookmarks: BookmarksType
-  currentBookmark: BookmarkType
+  currentBookmark: any
 }
 
 export const SubmitBookmarkDrawer = ({ bookmarks, currentBookmark }: SubmitBookmarkDrawerProps) => {
