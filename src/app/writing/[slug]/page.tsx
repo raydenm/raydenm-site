@@ -90,5 +90,3 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
   }
 }
-
-export const runtime = 'edge'

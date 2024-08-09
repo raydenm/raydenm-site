@@ -266,7 +266,7 @@ export const getPage = cache(async (slug: string, preview = isDevelopment) => {
   }
 })
 
-export const getAllLogbook = cache(async (preview = isDevelopment) => {
+export const getAllLogbook = async (preview = isDevelopment) => {
   try {
     const entries: {
       data: {
@@ -315,4 +315,4 @@ export const getAllLogbook = cache(async (preview = isDevelopment) => {
     console.info(error)
     return []
   }
-})
+}

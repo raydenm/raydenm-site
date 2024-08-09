@@ -17,7 +17,6 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
         },
         signal: AbortSignal.timeout(5000)
       })
-      console.log('Analytics sent', res)
       if (res.status !== 200) console.error('Failed to send analytics', res)
     } catch (error) {
       console.error('Error sending analytics', error)
