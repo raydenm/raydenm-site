@@ -8,6 +8,9 @@ export function Message({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (!scriptAdded.current) {
+      console.log(`https://raydenm.zeabur.app/api/increment-views?slug=${slug}`)
+
+      fetch(`https://raydenm.zeabur.app/api/increment-views?slug=${slug}`)
       const scriptElement = document.createElement('script')
       scriptElement.async = true
       scriptElement.crossOrigin = 'anonymous'
