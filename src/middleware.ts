@@ -45,6 +45,5 @@ export const config = {
         { type: 'header', key: 'purpose', value: 'prefetch' }
       ]
     }
-  ],
-  runtime: 'experimental-edge'
+  ]
 }
