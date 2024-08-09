@@ -3,9 +3,10 @@ import 'server-only'
 
 import { isDevelopment } from '@/lib/utils'
 
-const fetchGraphQL = cache(async (query: string, preview = isDevelopment) => {
+const fetchGraphQL = async (query: string, preview = isDevelopment) => {
   try {
     const res = await fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`, {
+      cache: 'no-store',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -21,7 +22,7 @@ const fetchGraphQL = cache(async (query: string, preview = isDevelopment) => {
     console.info(error)
     return null
   }
-})
+}
 
 // https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#preloading-data
 export const preloadGetAllPosts = (preview = isDevelopment) => {
