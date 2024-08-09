@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server'
-
-export function middleware(
-  request: { nextUrl: { pathname: any } },
-  event: { waitUntil: (arg0: Promise<void>) => void }
-) {
+import type { NextFetchEvent, NextRequest } from 'next/server'
+export function middleware(request: NextRequest, event: NextFetchEvent) {
   const { pathname } = request.nextUrl
   const writingSlug = pathname.match(/\/writing\/(.*)/)?.[1]
 
@@ -37,16 +34,17 @@ export function middleware(
 }
 
 export const config = {
-  matcher: '/writing/:path*'
+  // matcher: '/writing/:path*'
   // The below solution also filters out the user navigations which is not desired:
   // See: https://github.com/vercel/next.js/discussions/37736#discussioncomment-7886601
-  // matcher: [
-  //   {
-  //     source: '/writing/:path/',
-  //     missing: [
-  //       { type: 'header', key: 'next-router-prefetch' },
-  //       { type: 'header', key: 'purpose', value: 'prefetch' }
-  //     ]
-  //   }
-  // ]
+  matcher: [
+    {
+      source: '/writing/:path/',
+      missing: [
+        { type: 'header', key: 'next-router-prefetch' },
+        { type: 'header', key: 'purpose', value: 'prefetch' }
+      ]
+    }
+  ],
+  runtime: 'edge'
 }
