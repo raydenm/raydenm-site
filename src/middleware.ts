@@ -9,13 +9,14 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
     //   process.env.NODE_ENV === 'production'
     //     ? process.env.WEBSITE_URL + '/api/increment-views'
     //     : 'http://localhost:3000/api/increment-views'
-    const URL = '/api/increment-views'
+    const URL = 'https://raydenm.zeabur.app/api/increment-views'
     try {
       const res = await fetch(`${URL}?slug=${writingSlug}}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         },
+        cache: 'no-store',
         signal: AbortSignal.timeout(5000)
       })
       if (res.status !== 200) console.error('Failed to send analytics', res)
