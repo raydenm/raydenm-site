@@ -12,6 +12,8 @@ export function Message({ slug }: { slug: string }) {
         process.env.NODE_ENV === 'production'
           ? process.env.WEBSITE_URL + '/api/increment-views'
           : 'http://localhost:3000/api/increment-views'
+      console.log(`${URL}/api/increment-views?slug=${slug}`)
+
       fetch(`${URL}/api/increment-views?slug=${slug}`)
       const scriptElement = document.createElement('script')
       scriptElement.async = true

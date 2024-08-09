@@ -3,7 +3,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 import { ScrollArea } from '@/components/common/scroll-area'
-import { PageTitle } from '@/components/common/page-title'
+import { PageTitle } from '@/components/layout/page-title'
 import { FloatingHeader } from '@/components/common/floating-header'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { GradientBg } from '@/components/common/gradient-bg'
