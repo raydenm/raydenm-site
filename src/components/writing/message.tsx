@@ -8,10 +8,9 @@ export function Message({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (!scriptAdded.current) {
-      const URL = '/api/increment-views'
       console.log(`/api/increment-views?slug=${slug}`)
 
-      fetch(`${URL}/api/increment-views?slug=${slug}`)
+      fetch(`/api/increment-views?slug=${slug}`)
       const scriptElement = document.createElement('script')
       scriptElement.async = true
       scriptElement.crossOrigin = 'anonymous'

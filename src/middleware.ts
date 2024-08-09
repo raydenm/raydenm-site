@@ -5,12 +5,13 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
   const writingSlug = pathname.match(/\/writing\/(.*)/)?.[1]
 
   async function sendAnalytics() {
-    const URL =
-      process.env.NODE_ENV === 'production'
-        ? process.env.WEBSITE_URL + '/api/increment-views'
-        : 'http://localhost:3000/api/increment-views'
+    // const URL =
+    //   process.env.NODE_ENV === 'production'
+    //     ? process.env.WEBSITE_URL + '/api/increment-views'
+    //     : 'http://localhost:3000/api/increment-views'
+    const URL = '/api/increment-views'
     try {
-      const res = await fetch(`${URL}?slug=${writingSlug}&timestamp=${Date.now()}`, {
+      const res = await fetch(`${URL}?slug=${writingSlug}}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
