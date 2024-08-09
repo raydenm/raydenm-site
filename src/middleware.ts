@@ -5,18 +5,12 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
   const writingSlug = pathname.match(/\/writing\/(.*)/)?.[1]
 
   async function sendAnalytics() {
-    // const URL =
-    //   process.env.NODE_ENV === 'production'
-    //     ? process.env.WEBSITE_URL + '/api/increment-views'
-    //     : 'http://localhost:3000/api/increment-views'
-    const URL = 'https://raydenm.zeabur.app/api/increment-views'
     try {
-      const res = await fetch(`${URL}?slug=${writingSlug}}`, {
+      const res = await fetch(`https://raydenm.zeabur.app/api/increment-views?slug=${writingSlug}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
         },
-        cache: 'no-store',
         signal: AbortSignal.timeout(5000)
       })
       if (res.status !== 200) console.error('Failed to send analytics', res)
@@ -35,16 +29,16 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
 }
 
 export const config = {
-  // matcher: '/writing/:path*'
+  matcher: '/writing/:path*'
   // The below solution also filters out the user navigations which is not desired:
   // See: https://github.com/vercel/next.js/discussions/37736#discussioncomment-7886601
-  matcher: [
-    {
-      source: '/writing/:path/',
-      missing: [
-        { type: 'header', key: 'next-router-prefetch' },
-        { type: 'header', key: 'purpose', value: 'prefetch' }
-      ]
-    }
-  ]
+  // matcher: [
+  //   {
+  //     source: '/writing/:path/',
+  //     missing: [
+  //       { type: 'header', key: 'next-router-prefetch' },
+  //       { type: 'header', key: 'purpose', value: 'prefetch' }
+  //     ]
+  //   }
+  // ]
 }

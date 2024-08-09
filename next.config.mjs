@@ -18,7 +18,6 @@ const nextConfig = {
     formats: ['image/avif']
   },
   experimental: {
-    runtime: 'edge',
     optimizePackageImports: ['framer-motion', '@supabase/supabase-js', 'react-tweet'],
     webVitalsAttribution: ['FCP', 'LCP', 'CLS', 'FID', 'TTFB', 'INP']
   }
