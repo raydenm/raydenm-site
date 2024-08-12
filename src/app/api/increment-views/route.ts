@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server'
 import supabase from '@/lib/supabase/private'
 // import { isDevelopment } from '@/lib/utils'
 
+export const runtime = 'edge'
+
 export async function GET(request: Request) {
   // if (isDevelopment) return NextResponse.json({ error: 'Not available in development' }, { status: 400 })
 

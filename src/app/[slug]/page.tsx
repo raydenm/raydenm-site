@@ -49,3 +49,5 @@ export default async function PageSlug({ params }: { params: { slug: string } })
     </ScrollArea>
   )
 }
+
+export const runtime = 'edge'
