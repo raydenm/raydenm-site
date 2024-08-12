@@ -9,9 +9,9 @@ import {
   PencilLineIcon,
   NavigationIcon,
   Wand2Icon,
-  BookmarkIcon
-  // Boxes,
-  // Images
+  BookmarkIcon,
+  Boxes,
+  Images
 } from 'lucide-react'
 
 const PROFILES = {
@@ -89,21 +89,21 @@ const LINKS = [
     label: '技术找',
     icon: <Wand2Icon size={16} />
   },
-  // {
-  //   href: '/project',
-  //   label: '项目集',
-  //   icon: <Boxes size={16} />
-  // },
+  {
+    href: '/project',
+    label: '项目集',
+    icon: <Boxes size={16} />
+  },
   {
     href: '/bookmarks',
     label: '书签',
     icon: <BookmarkIcon size={16} />
+  },
+  {
+    href: '/photo',
+    label: '相册',
+    icon: <Images size={16} />
   }
-  // {
-  //   href: '/photo',
-  //   label: '相册',
-  //   icon: <Images size={16} />
-  // }
 ]
 
 export const MenuContent = () => (

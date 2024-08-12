@@ -6,7 +6,7 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
 
   async function sendAnalytics() {
     try {
-      const res = await fetch(`https://raydenm-site.vercel.app/api/increment-views?slug=${writingSlug}`, {
+      const res = await fetch(`/api/increment-views?slug=${writingSlug}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'

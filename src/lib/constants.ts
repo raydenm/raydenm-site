@@ -20,12 +20,8 @@ import PostgresqlIcon from '@/assets/stack/postgresql.svg'
 import ReactrouterIcon from '@/assets/stack/reactrouter.svg'
 import StorybookIcon from '@/assets/stack/storybook.svg'
 import TypescriptIcon from '@/assets/stack/typescript.svg'
-// import JavascriptIcon from '@/assets/stack/javascript.svg'
-// import Css3Icon from '@/assets/stack/css3.svg'
-// import Html5Icon from '@/assets/stack/html5.svg'
 import RadixuiIcon from '@/assets/stack/radixui.svg'
 import BashIcon from '@/assets/stack/bash.svg'
-// import ResendIcon from '@/assets/stack/resend.svg'
 import MarkdownIcon from '@/assets/stack/markdown.svg'
 import ChromeIcon from '@/assets/stack/chrome.svg'
 import ArcIcon from '@/assets/stack/arc.svg'
@@ -156,21 +152,6 @@ export const STACK_LIST = [
     url: 'https://www.typescriptlang.org/',
     icon: TypescriptIcon
   },
-  // {
-  //   title: 'Javascript',
-  //   url: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript',
-  //   icon: JavascriptIcon
-  // },
-  // {
-  //   title: 'CSS3',
-  //   url: 'https://developer.mozilla.org/zh-CN/docs/Web/CSS',
-  //   icon: Css3Icon
-  // },
-  // {
-  //   title: 'HTML5',
-  //   url: 'https://developer.mozilla.org/zh-CN/docs/Web/HTML',
-  //   icon: Html5Icon
-  // },
   {
     title: 'Radix UI',
     url: 'https://www.radix-ui.com/',
@@ -186,11 +167,6 @@ export const STACK_LIST = [
     url: 'https://ant.design/',
     icon: AntdesignIcon
   },
-  // {
-  //   title: 'Resend',
-  //   url: 'https://resend.com/',
-  //   icon: ResendIcon
-  // },
   {
     title: 'Markdown',
     url: 'https://www.markdownguide.org/',
