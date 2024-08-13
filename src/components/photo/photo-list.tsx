@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, use } from 'react'
 import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { PhotoCard } from '@/components/photo/photo-card'
 import { getPhotoList } from '@/lib/photo'
+import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 export type phoneItem = {
   url: string
@@ -20,6 +21,7 @@ export const PhotoList = () => {
   const [pageIndex, setPageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [count, setCount] = useState(0)
+  const [isload, setIsload] = useState(false)
 
   const loadMore = () => {
     if (!isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
@@ -34,6 +36,7 @@ export const PhotoList = () => {
     }
     if (count) setCount(count)
     setIsLoading(false)
+    setIsload(true)
   }, [pageIndex])
 
   useEffect(() => {
@@ -47,6 +50,7 @@ export const PhotoList = () => {
           return <PhotoCard key={index} photo={photo} />
         })}
       </div>
+
       {data.length > 0 ? (
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">
           {data.length < count ? (
@@ -77,7 +81,8 @@ export const PhotoList = () => {
         </div>
       ) : (
         <div className="mt-8 flex min-h-16 flex-col items-center justify-center lg:mt-12">
-          <span>暂无图片</span>
+          {isLoading && <LoadingSpinner />}
+          {isload && <span>暂无图片</span>}
         </div>
       )}
     </div>

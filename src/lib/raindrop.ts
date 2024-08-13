@@ -1,5 +1,4 @@
 import { cache } from 'react'
-import 'server-only'
 
 import { BOOKMARK_MAP } from './constants'
 
