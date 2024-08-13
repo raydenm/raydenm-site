@@ -9,7 +9,6 @@ export const getPhotoList = async ({ pageSize = 20, pageIndex = 0 }: { pageSize?
     process.env.NODE_ENV === 'production'
       ? `${process.env.WEBSITE_URL}/api/photo-list`
       : 'http://localhost:3000/api/photo-list'
-  console.log(URL)
 
   const response = await fetch(`${URL}?pageSize=${pageSize}&pageIndex=${pageIndex}`, {
     cache: 'no-store'

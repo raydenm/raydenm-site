@@ -34,3 +34,5 @@ export default async function Photo() {
     </ScrollArea>
   )
 }
+
+export const runtime = 'edge'
