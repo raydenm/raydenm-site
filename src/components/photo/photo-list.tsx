@@ -14,11 +14,12 @@ export type phoneItem = {
   description: string
 }
 
-export const PhotoList = ({ initData }: { initData: { photoList: phoneItem[]; count: number } }) => {
-  const [data, setData] = useState(initData.photoList)
+// { initData }: { initData: { photoList: phoneItem[]; count: number } }
+export const PhotoList = () => {
+  const [data, setData] = useState<phoneItem[]>([])
   const [pageIndex, setPageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
-  const [count, setCount] = useState(initData.count)
+  const [count, setCount] = useState(0)
 
   const loadMore = () => {
     if (!isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
@@ -28,13 +29,15 @@ export const PhotoList = ({ initData }: { initData: { photoList: phoneItem[]; co
     setIsLoading(true)
     const res = await getPhotoList({ pageIndex })
     const { data, count } = res || { data: [], count: 0 }
-    if (data) setData((prevData: phoneItem[]) => [...prevData, ...data])
+    if (data) {
+      pageIndex === 0 ? setData(data) : setData((prevData: phoneItem[]) => [...prevData, ...data])
+    }
     if (count) setCount(count)
     setIsLoading(false)
   }, [pageIndex])
 
   useEffect(() => {
-    if (pageIndex > 0) fetchData()
+    fetchData()
   }, [pageIndex, fetchData])
 
   return (
