@@ -5,10 +5,7 @@ type phoneItem = {
   description: string
 }
 export const getPhotoList = async ({ pageSize = 20, pageIndex = 0 }: { pageSize?: number; pageIndex?: number }) => {
-  const URL =
-    process.env.NODE_ENV === 'production'
-      ? `${process.env.WEBSITE_URL}/api/photo-list`
-      : 'http://localhost:3000/api/photo-list'
+  const URL = process.env.NODE_ENV === 'production' ? `/api/photo-list` : 'http://localhost:3000/api/photo-list'
 
   const response = await fetch(`${URL}?pageSize=${pageSize}&pageIndex=${pageIndex}`, {
     cache: 'no-store'

@@ -15,9 +15,6 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "prepare": "husky"
   },
-  "engines": {
-    "node": ">=18.15.0"
-  },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.18.0",
     "@contentful/rich-text-types": "^16.8.3",
