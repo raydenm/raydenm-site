@@ -30,7 +30,7 @@ export default async function Home() {
           <p>我是一名软件开发工程师，对设计和开发富有创造力和用户友好的应用充满热情。</p>
           <p>
             拥有7年的开发经验，精通JavaScript，并擅长使用现代框架如React、Vue.js等
-            <a className="text-[#3b82f6] hover:underline hover:decoration-1" href="/stack">
+            <a className="text-blue-600 hover:underline hover:decoration-1" href="/stack">
               技术栈
             </a>
             。

@@ -15,7 +15,6 @@ export async function GET(request: Request) {
 
   try {
     await supabase.rpc('increment_view_count', { page_slug: slug })
-    console.log('increment_view_count')
     return NextResponse.json({ messsage: `View count incremented successfully for slug: ${slug}` }, { status: 200 })
   } catch (error) {
     console.error('Error incrementing view count:', error)

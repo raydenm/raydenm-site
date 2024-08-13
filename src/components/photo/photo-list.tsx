@@ -4,9 +4,8 @@ import { useEffect, useState, useCallback } from 'react'
 import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-import supabase from '@/lib/supabase/public'
 import { PhotoCard } from '@/components/photo/photo-card'
+import { getPhotoList } from '@/lib/photo'
 
 export type phoneItem = {
   url: string
@@ -15,22 +14,20 @@ export type phoneItem = {
   description: string
 }
 
-export const PhotoList = ({ initData }: { initData: { data: phoneItem[]; count: number } }) => {
-  const [data, setData] = useState(initData.data)
+export const PhotoList = ({ initData }: { initData: { photoList: phoneItem[]; count: number } }) => {
+  const [data, setData] = useState(initData.photoList)
   const [pageIndex, setPageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [count, setCount] = useState(initData.count)
-  const pageSize = 30
 
   const loadMore = () => {
-    if (!isReachingEnd && !isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
+    if (!isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
   }
 
   const fetchData = useCallback(async () => {
     setIsLoading(true)
-    const start = pageIndex * pageSize
-    const end = start + pageSize - 1
-    const { data, count } = await supabase.from('image_list').select('*', { count: 'exact' }).range(start, end)
+    const res = await getPhotoList({ pageIndex })
+    const { data, count } = res || { data: [], count: 0 }
     if (data) setData((prevData: phoneItem[]) => [...prevData, ...data])
     if (count) setCount(count)
     setIsLoading(false)
@@ -40,21 +37,16 @@ export const PhotoList = ({ initData }: { initData: { data: phoneItem[]; count: 
     if (pageIndex > 0) fetchData()
   }, [pageIndex, fetchData])
 
-  const isReachingEnd = data.length >= initData?.count ?? 0
-
   return (
     <div>
-      {/* <div className="flex flex-col gap-4 @lg:hidden">
-
-      </div> */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {data.map((photo, index) => {
           return <PhotoCard key={index} photo={photo} />
         })}
       </div>
-      {/* {data.length > 0 ? (
+      {data.length > 0 ? (
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">
-          {!isReachingEnd ? (
+          {data.length < count ? (
             <>
               {isLoading ? (
                 <div
@@ -84,7 +76,7 @@ export const PhotoList = ({ initData }: { initData: { data: phoneItem[]; count: 
         <div className="mt-8 flex min-h-16 flex-col items-center justify-center lg:mt-12">
           <span>暂无图片</span>
         </div>
-      )} */}
+      )}
     </div>
   )
 }
