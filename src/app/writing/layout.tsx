@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 
-import { SideMenu } from '@/components/bookmarks/side-menu'
+import { SideMenu } from '@/components/layout/side-menu'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { WritingListLayout } from '@/components/writing/writing-list-layout'
 import { getAllPosts } from '@/lib/contentful'

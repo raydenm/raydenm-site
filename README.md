@@ -8,7 +8,6 @@ Raydenm-Blog
 - `/writing/[slug]` — Static pre-rendered writing pages using [Contentful](https://www.contentful.com).
 - `/stack` — Stack page.
 - `/workspace` — Workspace page.
-- `/project` - Project page.
 - `/bookmarks` — Bookmarks page.
 - `/bookmarks/[slug]` — Static pre-rendered bookmarks pages using [Raindrop](https://raindrop.io/).
 - `/api` — API routes.

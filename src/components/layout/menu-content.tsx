@@ -89,11 +89,6 @@ const LINKS = [
     label: '技术栈',
     icon: <Wand2Icon size={16} />
   },
-  // {
-  //   href: '/project',
-  //   label: '项目集',
-  //   icon: <Boxes size={16} />
-  // },
   {
     href: '/bookmarks',
     label: '书签',

@@ -6,7 +6,7 @@ import { EyeIcon } from 'lucide-react'
 import { Toaster } from '@/components/ui/sonner'
 
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator'
-import { SideMenu } from '@/components/bookmarks/side-menu'
+import { SideMenu } from '@/components/layout/side-menu'
 import { MenuContent } from '@/components/layout/menu-content'
 import { preloadGetAllPosts } from '@/lib/contentful'
 import { sharedMetadata } from '@/app/shared-metadata'
