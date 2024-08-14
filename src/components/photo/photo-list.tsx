@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback, use } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -14,8 +14,6 @@ export type phoneItem = {
   created_at: Date
   description: string
 }
-
-// { initData }: { initData: { photoList: phoneItem[]; count: number } }
 export const PhotoList = () => {
   const [data, setData] = useState<phoneItem[]>([])
   const [pageIndex, setPageIndex] = useState(0)
