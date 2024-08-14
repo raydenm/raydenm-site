@@ -1,256 +1,213 @@
-import ReactIcon from '@/assets/stack/reactjs.svg'
-import VueIcon from '@/assets/stack/vuejs.svg'
-import TauriIcon from '@/assets/stack/tauri.svg'
-import ExpoIcon from '@/assets/stack/expo.svg'
-import NextjsIcon from '@/assets/stack/nextjs.svg'
-import ReactnativeIcon from '@/assets/stack/reactnative.svg'
-import ElectronIcon from '@/assets/stack/electron.svg'
-import NuxtjsIcon from '@/assets/stack/nuxtjs.svg'
-import ShadcnuiIcon from '@/assets/stack/shadcnui.svg'
-import TailwindcssIcon from '@/assets/stack/tailwindcss.svg'
-import ReactqueryIcon from '@/assets/stack/react-query.svg'
-import PiniaIcon from '@/assets/stack/pinia.svg'
-import VitejsIcon from '@/assets/stack/vitejs.svg'
-import DockerIcon from '@/assets/stack/docker.svg'
-import ElementuiIcon from '@/assets/stack/elementui.svg'
-import LessIcon from '@/assets/stack/less.svg'
-import MantineIcon from '@/assets/stack/mantine.svg'
-import MysqlIcon from '@/assets/stack/mysql.svg'
-import PostgresqlIcon from '@/assets/stack/postgresql.svg'
-import ReactrouterIcon from '@/assets/stack/reactrouter.svg'
-import StorybookIcon from '@/assets/stack/storybook.svg'
-import TypescriptIcon from '@/assets/stack/typescript.svg'
-import RadixuiIcon from '@/assets/stack/radixui.svg'
-import BashIcon from '@/assets/stack/bash.svg'
-import MarkdownIcon from '@/assets/stack/markdown.svg'
-import ChromeIcon from '@/assets/stack/chrome.svg'
-import ArcIcon from '@/assets/stack/arc.svg'
-import GitIcon from '@/assets/stack/git.svg'
-import ZodIcon from '@/assets/stack/zod.svg'
-import WebpackIcon from '@/assets/stack/webpack.svg'
-import StylelintIcon from '@/assets/stack/stylelint.svg'
-import PrettierIcon from '@/assets/stack/prettier.svg'
-import NpmIcon from '@/assets/stack/npm.svg'
-import EsbuildIcon from '@/assets/stack/esbuild.svg'
-import EslintIcon from '@/assets/stack/eslint.svg'
-import ThreejsIcon from '@/assets/stack/threejs.svg'
-import SupabaseIcon from '@/assets/stack/supabase.svg'
-import NodejsIcon from '@/assets/stack/nodejs.svg'
-import PwaIcon from '@/assets/stack/pwa.svg'
-import SassIcon from '@/assets/stack/sass.svg'
-import ReduxIcon from '@/assets/stack/redux.svg'
-import AntdesignIcon from '@/assets/stack/antdesign.svg'
-
 export const STACK_LIST = [
   {
     title: 'React',
     url: 'https://react.dev',
-    icon: ReactIcon
+    icon: 'icon-reactjs'
   },
   {
     title: 'Vue',
     url: 'https://vuejs.org',
-    icon: VueIcon
+    icon: 'icon-vuejs'
   },
   {
     title: 'Tauri',
     url: 'https://tauri.app',
-    icon: TauriIcon
+    icon: 'icon-tauri'
   },
   {
     title: 'Expo',
     url: 'https://expo.dev',
-    icon: ExpoIcon
+    icon: 'icon-expo'
   },
   {
     title: 'Next.js',
     url: 'https://nextjs.org/',
-    icon: NextjsIcon
+    icon: 'icon-nextjs'
   },
   {
     title: 'React Native',
     url: 'https://reactnative.dev/',
-    icon: ReactnativeIcon
+    icon: 'icon-reactnative'
   },
   {
     title: 'Electron',
     url: 'https://www.electronjs.org/',
-    icon: ElectronIcon
+    icon: 'icon-electron'
   },
   {
     title: 'Nuxt.js',
     url: 'https://www.nuxtjs.cn/',
-    icon: NuxtjsIcon
+    icon: 'icon-nuxtjs'
   },
   {
     title: 'Shadcn UI',
     url: 'https://ui.shadcn.com/',
-    icon: ShadcnuiIcon
+    icon: 'icon-shadcnui'
   },
   {
     title: 'Tailwind CSS',
     url: 'https://tailwindcss.com/',
-    icon: TailwindcssIcon
+    icon: 'icon-tailwindcss'
   },
   {
     title: 'React Query',
     url: 'https://tanstack.com/query/latest/docs/framework/react/overview',
-    icon: ReactqueryIcon
+    icon: 'icon-react-query'
   },
   {
     title: 'Pinia',
     url: 'https://pinia.vuejs.org/',
-    icon: PiniaIcon
+    icon: 'icon-pinia'
   },
   {
     title: 'Vite.js',
     url: 'https://vitejs.dev/',
-    icon: VitejsIcon
+    icon: 'icon-vitejs'
   },
   {
     title: 'Docker',
     url: 'https://www.docker.com/',
-    icon: DockerIcon
+    icon: 'icon-docker'
   },
   {
     title: 'Element UI',
     url: 'https://element-plus.org/',
-    icon: ElementuiIcon
+    icon: 'icon-elementui'
   },
   {
     title: 'Less',
     url: 'https://lesscss.org/',
-    icon: LessIcon
+    icon: 'icon-less'
   },
   {
     title: 'Mantine',
     url: 'https://mantine.dev/',
-    icon: MantineIcon
+    icon: 'icon-mantine'
   },
   {
     title: 'MySQL',
     url: 'https://www.mysql.com/',
-    icon: MysqlIcon
+    icon: 'icon-mysql'
   },
   {
     title: 'PostgreSQL',
     url: 'https://www.postgresql.org/',
-    icon: PostgresqlIcon
+    icon: 'icon-postgresql'
   },
   {
     title: 'React Router',
     url: 'https://reactrouter.com/en/main',
-    icon: ReactrouterIcon
+    icon: 'icon-reactrouter'
   },
   {
     title: 'Storybook',
     url: 'https://storybook.js.org/',
-    icon: StorybookIcon
+    icon: 'icon-storybook'
   },
   {
     title: 'Typescript',
     url: 'https://www.typescriptlang.org/',
-    icon: TypescriptIcon
+    icon: 'icon-typescript'
   },
   {
     title: 'Radix UI',
     url: 'https://www.radix-ui.com/',
-    icon: RadixuiIcon
+    icon: 'icon-radixui'
   },
   {
     title: 'Bash',
     url: 'https://www.gnu.org/software/bash/',
-    icon: BashIcon
+    icon: 'icon-bash'
   },
   {
     title: 'Ant Design',
     url: 'https://ant.design/',
-    icon: AntdesignIcon
+    icon: 'icon-antdesign'
   },
   {
     title: 'Markdown',
     url: 'https://www.markdownguide.org/',
-    icon: MarkdownIcon
+    icon: 'icon-markdown'
   },
   {
     title: 'Chrome',
     url: 'https://www.google.com/chrome/',
-    icon: ChromeIcon
+    icon: 'icon-chrome'
   },
   {
     title: 'Arc',
     url: 'https://arc.net/',
-    icon: ArcIcon
+    icon: 'icon-arc'
   },
   {
     title: 'Git',
     url: 'https://git-scm.com/',
-    icon: GitIcon
+    icon: 'icon-git'
   },
   {
     title: 'Zod',
     url: 'https://zod.dev/',
-    icon: ZodIcon
+    icon: 'icon-zod'
   },
   {
     title: 'Webpack',
     url: 'https://webpack.js.org/',
-    icon: WebpackIcon
+    icon: 'icon-webpack'
   },
   {
     title: 'Stylelint',
     url: 'https://stylelint.io/',
-    icon: StylelintIcon
+    icon: 'icon-stylelint'
   },
   {
     title: 'Prettier',
     url: 'https://prettier.io/',
-    icon: PrettierIcon
+    icon: 'icon-prettier'
   },
   {
     title: 'Npm',
     url: 'https://www.npmjs.com/',
-    icon: NpmIcon
+    icon: 'icon-npm'
   },
   {
     title: 'Esbuild',
     url: 'https://esbuild.github.io/',
-    icon: EsbuildIcon
+    icon: 'icon-esbuild'
   },
   {
     title: 'Eslint',
     url: 'https://eslint.org/',
-    icon: EslintIcon
+    icon: 'icon-eslint'
   },
   {
     title: 'Threejs',
     url: 'https://threejs.org/',
-    icon: ThreejsIcon
+    icon: 'icon-threejs'
   },
   {
     title: 'Supabase',
     url: 'https://supabase.com/',
-    icon: SupabaseIcon
+    icon: 'icon-supabase'
   },
   {
     title: 'Nodejs',
     url: 'https://nodejs.org/en',
-    icon: NodejsIcon
+    icon: 'icon-nodejs'
   },
   {
     title: 'Pwa',
     url: 'https://web.dev/progressive-web-apps/',
-    icon: PwaIcon
+    icon: 'icon-pwa'
   },
   {
     title: 'Sass',
     url: 'https://sass-lang.com/',
-    icon: SassIcon
+    icon: 'icon-sass'
   },
   {
     title: 'Redux',
     url: 'https://redux.js.org/',
-    icon: ReduxIcon
+    icon: 'icon-redux'
   }
 ]
 

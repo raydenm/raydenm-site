@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import Giscus from '@giscus/react'
+// import Giscus from '@giscus/react'
 export function Message({ slug }: { slug: string }) {
   useEffect(() => {
     fetch(`/api/increment-views?slug=${slug}`)
@@ -9,7 +9,7 @@ export function Message({ slug }: { slug: string }) {
 
   return (
     <div className="mb-2 mt-16">
-      <Giscus
+      {/* <Giscus
         id="comments"
         repo="raydenm/raydenm-site"
         repoId="R_kgDOMguWIg"
@@ -21,7 +21,8 @@ export function Message({ slug }: { slug: string }) {
         inputPosition="top"
         theme="light"
         lang="zh-CN"
-      />
+        loading='lazy'
+      /> */}
     </div>
   )
 }

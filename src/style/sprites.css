@@ -1,0 +1,282 @@
+.icon-antdesign {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-arc {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-bash {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-chrome {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-css3 {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-docker {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-electron {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-elementui {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-esbuild {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-eslint {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-expo {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-git {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-github-copilot {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-html5 {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-javascript {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-less {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -300px;
+  width: 40px;
+  height: 39px;
+}
+.icon-mantine {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-markdown {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -300px;
+  width: 40px;
+  height: 38px;
+}
+.icon-mysql {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-nextjs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-nodejs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-npm {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-nuxtjs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-pinia {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-postgresql {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-prettier {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-pwa {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-radixui {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-react-query {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-reactjs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-reactnative {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-reactrouter {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-redux {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-resend {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-sass {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-shadcnui {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -150px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-storybook {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -200px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-stylelint {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -250px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-supabase {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-tailwindcss {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px -50px;
+  width: 40px;
+  height: 40px;
+}
+.icon-tauri {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px -100px;
+  width: 40px;
+  height: 40px;
+}
+.icon-threejs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px -150px;
+  width: 40px;
+  height: 40px;
+}
+.icon-typescript {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px -200px;
+  width: 40px;
+  height: 40px;
+}
+.icon-vitejs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -300px -250px;
+  width: 40px;
+  height: 40px;
+}
+.icon-vuejs {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: 0px -300px;
+  width: 40px;
+  height: 40px;
+}
+.icon-webpack {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -50px -300px;
+  width: 40px;
+  height: 40px;
+}
+.icon-zod {
+  background-image: url(../assets/sprite/sprite.png);
+  background-position: -100px -300px;
+  width: 40px;
+  height: 40px;
+}

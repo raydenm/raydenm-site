@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#000" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.385 0 50s22.386 50 50 50"/><path fill="url(#a)" d="M83.06 87.511 38.412 30H30v39.983h6.73V38.546L77.777 91.58a50 50 0 0 0 5.283-4.069"/><path fill="url(#b)" d="M70.556 30h-6.667v40h6.667z"/><defs><linearGradient id="a" x1="60.556" x2="80.278" y1="64.722" y2="89.166" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="b" x1="67.222" x2="67.111" y1="30" y2="59.375" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="px" viewBox="0 0 40 40" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="60.556" y1="64.722" x2="80.278" y2="89.166" gradientTransform="matrix(0.4,0,0,0.4,0,0)">
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,100%);stop-opacity:0;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="67.222" y1="30" x2="67.111" y2="59.375" gradientTransform="matrix(0.4,0,0,0.4,0,0)">
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,100%);stop-opacity:0;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 20 40 C 31.046875 40 40 31.046875 40 20 C 40 8.953125 31.046875 0 20 0 C 8.953125 0 0 8.953125 0 20 C 0 31.046875 8.953125 40 20 40 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 33.222656 35.003906 L 15.363281 12 L 12 12 L 12 27.992188 L 14.691406 27.992188 L 14.691406 15.417969 L 31.109375 36.632812 C 31.851562 36.136719 32.554688 35.59375 33.222656 35.003906 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 28.222656 12 L 25.554688 12 L 25.554688 28 L 28.222656 28 Z M 28.222656 12 "/>
+</g>
+</svg>

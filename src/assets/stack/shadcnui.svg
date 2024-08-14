@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25" clip-path="url(#a)"><path d="M81.25 50 50 81.25m25-65.625L15.625 75"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="px" viewBox="0 0 40 40" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:6.25;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 81.25 50 L 50 81.25 M 75 15.625 L 15.625 75 " transform="matrix(0.4,0,0,0.4,0,0)"/>
+</g>
+</svg>

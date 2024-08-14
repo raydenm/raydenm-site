@@ -1,3 +1,4 @@
+import '@/style/sprites.css'
 import { Suspense } from 'react'
 import { ScrollArea } from '@/components/common/scroll-area'
 import { GradientBg } from '@/components/common/gradient-bg'
