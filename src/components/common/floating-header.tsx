@@ -13,7 +13,7 @@ import type { BookmarksType, BookmarkType } from '@/lib/raindrop'
 
 import { Button } from '@/components/ui/button'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
-import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from '@/lib/constants'
+import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from '@/config'
 const MobileDrawer = dynamic(() => import('@/components/common/mobile-drawer').then((mod) => mod.MobileDrawer))
 const SubmitBookmarkDrawer = dynamic(
   () => import('@/components/bookmarks/submit-bookmark/drawer').then((mod) => mod.SubmitBookmarkDrawer),

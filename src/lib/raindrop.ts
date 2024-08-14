@@ -1,7 +1,7 @@
 import { cache } from 'react'
 import 'server-only'
 
-import { BOOKMARK_MAP } from './constants'
+import { BOOKMARK_MAP } from '@/config'
 
 const options = {
   method: 'GET',

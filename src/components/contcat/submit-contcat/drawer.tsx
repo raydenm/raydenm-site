@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/drawer'
 import { Button } from '@/components/ui/button'
 import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
-import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/lib/constants'
+import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/config'
 
 export const SubmitContcatDrawer = () => {
   const [open, setOpen] = useState(false)

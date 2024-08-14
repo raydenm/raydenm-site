@@ -1,4 +1,4 @@
-import { STACK_LIST } from '@/lib/constants'
+import { STACK_LIST } from '@/config'
 import { cn } from '@/lib/utils'
 
 export const StackList = () => {

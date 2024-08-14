@@ -10,7 +10,6 @@ import {
   NavigationIcon,
   Wand2Icon,
   BookmarkIcon,
-  Boxes,
   Images
 } from 'lucide-react'
 

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { SCROLL_AREA_ID } from '@/lib/constants'
+import { SCROLL_AREA_ID } from '@/config'
 import React from 'react'
 
 type ScrollAreaProps = {

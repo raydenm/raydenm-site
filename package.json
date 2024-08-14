@@ -16,6 +16,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.2",
     "@contentful/rich-text-react-renderer": "^15.18.0",
     "@contentful/rich-text-types": "^16.8.3",
     "@giscus/react": "^3.0.0",

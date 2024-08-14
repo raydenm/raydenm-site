@@ -1,23 +1,19 @@
 import '@/style/globals.css'
+
+import React from 'react'
+
 import { draftMode } from 'next/headers'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { EyeIcon } from 'lucide-react'
 import { Toaster } from '@/components/ui/sonner'
-
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator'
 import { SideMenu } from '@/components/layout/side-menu'
 import { MenuContent } from '@/components/layout/menu-content'
 import { preloadGetAllPosts } from '@/lib/contentful'
 import { sharedMetadata } from '@/app/shared-metadata'
 
-import React from 'react'
-
-type RootLayoutProps = {
-  children: React.ReactNode
-}
-
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = draftMode()
   preloadGetAllPosts(isEnabled)
 

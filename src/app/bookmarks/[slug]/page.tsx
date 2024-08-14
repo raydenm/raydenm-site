@@ -7,7 +7,6 @@ import { FloatingHeader } from '@/components/common/floating-header'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { BookmarkList } from '@/components/bookmarks/bookmark-list'
 import { getBookmarkItems, getBookmarks } from '@/lib/raindrop'
-import { sortByProperty } from '@/lib/utils'
 
 export async function generateStaticParams() {
   const bookmarks = await getBookmarks()
@@ -19,11 +18,10 @@ async function fetchData(slug: string) {
   const currentBookmark = (bookmarks || []).find((bookmark) => bookmark.slug === slug)
   if (!currentBookmark) notFound()
 
-  const sortedBookmarks = sortByProperty(bookmarks || [], 'title')
   const bookmarkItems = await getBookmarkItems(currentBookmark._id)
 
   return {
-    bookmarks: sortedBookmarks,
+    bookmarks,
     currentBookmark,
     bookmarkItems
   }
