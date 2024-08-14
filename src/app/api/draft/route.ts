@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server'
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { isDevelopment } from '@/lib/utils'
 
-export const runtime = !isDevelopment ? 'edge' : 'nodejs'
+export const runtime = 'edge'
 
 export async function GET(request: Request) {
   const parsedUrl = new URL(request.url)
