@@ -1,2 +1,2 @@
-/disable-draft
-/draft
+/src/app/api/disable-draft/
+/src/app/api/draft/
