@@ -44,7 +44,3 @@ export default async function BookmarksLayout({ children }: { children: React.Re
     </>
   )
 }
-
-export const viewport = {
-  maximumScale: 1
-}

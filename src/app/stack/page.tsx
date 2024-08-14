@@ -21,3 +21,22 @@ export default async function Stack() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  const title = '技术栈'
+  const description = '技术栈'
+  const siteUrl = '/stack'
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}

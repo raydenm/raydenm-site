@@ -106,7 +106,7 @@ export const MenuContent = () => (
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
         <img
-          src="/assets/raydenm-small.png"
+          src="/assets/raydenm-small.webp"
           alt="Raydenm"
           width={40}
           height={40}

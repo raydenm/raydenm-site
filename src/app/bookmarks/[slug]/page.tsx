@@ -52,3 +52,25 @@ export default async function CollectionPage({ params }: { params: { slug: strin
     </ScrollArea>
   )
 }
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params
+
+  const siteUrl = `/bookmarks/${slug}`
+  const title = '书签'
+  const description = '书签'
+
+  return {
+    title,
+    description,
+    keywords: [title, description],
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}

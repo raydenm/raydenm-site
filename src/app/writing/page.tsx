@@ -25,3 +25,22 @@ export default async function Writing() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  const title = '文章'
+  const description = '文章'
+  const siteUrl = '/writing'
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}

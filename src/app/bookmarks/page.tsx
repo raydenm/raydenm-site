@@ -34,3 +34,22 @@ export default async function Writing() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  const title = '书签'
+  const description = '书签'
+  const siteUrl = '/bookmarks'
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}

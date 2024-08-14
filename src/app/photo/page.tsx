@@ -22,3 +22,22 @@ export default async function Photo() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  const title = '相册'
+  const description = '相册'
+  const siteUrl = '/photo'
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}

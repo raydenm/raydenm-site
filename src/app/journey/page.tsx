@@ -67,3 +67,22 @@ export default async function Journey() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  const title = '时光记录'
+  const description = '时光记录'
+  const siteUrl = '/journey'
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: siteUrl
+    },
+    alternates: {
+      canonical: siteUrl
+    }
+  }
+}
