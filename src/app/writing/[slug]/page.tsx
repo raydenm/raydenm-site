@@ -1,4 +1,3 @@
-import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { Message } from '@/components/writing/message'
 import { ScrollArea } from '@/components/common/scroll-area'
@@ -6,7 +5,7 @@ import { PageTitle } from '@/components/layout/page-title'
 import { FloatingHeader } from '@/components/common/floating-header'
 import { WritingViews } from '@/components/writing/writing-views'
 import { getPost, getAllPostSlugs } from '@/lib/contentful'
-import { getDateTimeFormat, isDevelopment } from '@/lib/utils'
+import { getDateTimeFormat } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
@@ -17,8 +16,7 @@ export async function generateStaticParams() {
 }
 
 async function fetchData(slug: string) {
-  const { isEnabled } = draftMode()
-  const data = await getPost(slug, isDevelopment ? true : isEnabled)
+  const data = await getPost(slug)
   if (!data) notFound()
 
   return {

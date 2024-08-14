@@ -254,6 +254,51 @@ export const STACK_LIST = [
   }
 ]
 
+export const PROJECT_LIST = [
+  {
+    title: '客户关系saas平台',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: '官网',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: '平台',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: 'app',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: '小程序',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: 'webox',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  },
+  {
+    title: '官网',
+    url: 'https://nextjs.org/',
+    description: '',
+    image: ''
+  }
+]
+
 export const BOOKMARK_MAP: { [key: string]: string } = {
   design: '设计',
   tools: '工具',

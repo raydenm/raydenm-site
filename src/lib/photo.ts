@@ -4,7 +4,7 @@ type phoneItem = {
   created_at: Date
   description: string
 }
-export const getPhotoList = async ({ pageSize = 20, pageIndex = 0 }: { pageSize?: number; pageIndex?: number }) => {
+export const getPhotoList = async ({ pageSize = 24, pageIndex = 0 }: { pageSize?: number; pageIndex?: number }) => {
   const URL = process.env.NODE_ENV === 'production' ? `/api/photo-list` : 'http://localhost:3000/api/photo-list'
 
   const response = await fetch(`${URL}?pageSize=${pageSize}&pageIndex=${pageIndex}`, {

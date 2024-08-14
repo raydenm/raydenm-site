@@ -86,14 +86,14 @@ const LINKS = [
   },
   {
     href: '/stack',
-    label: '技术找',
+    label: '技术栈',
     icon: <Wand2Icon size={16} />
   },
-  {
-    href: '/project',
-    label: '项目集',
-    icon: <Boxes size={16} />
-  },
+  // {
+  //   href: '/project',
+  //   label: '项目集',
+  //   icon: <Boxes size={16} />
+  // },
   {
     href: '/bookmarks',
     label: '书签',
@@ -120,7 +120,7 @@ export const MenuContent = () => (
         />
         <div className="flex flex-col">
           <span className="font-semibold tracking-tight">Raydenm</span>
-          <span className="text-gray-600">软件开发工程师</span>
+          <span className="text-gray-600">前端开发工程师</span>
         </div>
       </Link>
       <div className="flex flex-col gap-1">

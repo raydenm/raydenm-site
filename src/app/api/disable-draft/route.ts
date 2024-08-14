@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server'
 import { draftMode } from 'next/headers'
 
-export const runtime = 'edge'
-
 export async function GET(request: Request) {
   const parsedUrl = new URL(request.url)
   const searchParams = parsedUrl.searchParams

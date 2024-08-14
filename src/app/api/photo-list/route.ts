@@ -5,8 +5,6 @@ import supabase from '@/lib/supabase/public'
 export const runtime = 'edge'
 
 export async function GET(request: Request) {
-  console.log('request.url', request.url)
-
   const parsedUrl = new URL(request.url)
   const searchParams = parsedUrl.searchParams
   const pageIndex = Number(searchParams.get('pageIndex'))
