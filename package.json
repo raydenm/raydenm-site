@@ -18,6 +18,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.18.0",
     "@contentful/rich-text-types": "^16.8.3",
+    "@giscus/react": "^3.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@hyvor/hyvor-talk-react": "0.0.3-patch.3",
     "@next/third-parties": "^14.1.4",

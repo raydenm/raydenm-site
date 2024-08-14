@@ -1,28 +1,27 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-
+import { useEffect } from 'react'
+import Giscus from '@giscus/react'
 export function Message({ slug }: { slug: string }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const scriptAdded = useRef(false)
-
   useEffect(() => {
-    if (!scriptAdded.current) {
-      fetch(`/api/increment-views?slug=${slug}`)
-      const scriptElement = document.createElement('script')
-      scriptElement.async = true
-      scriptElement.crossOrigin = 'anonymous'
-      scriptElement.src = 'https://utteranc.es/client.js'
-
-      scriptElement.setAttribute('issue-term', slug)
-      scriptElement.setAttribute('label', 'comment')
-      scriptElement.setAttribute('repo', 'raydenm/raydenm-site')
-      scriptElement.setAttribute('theme', 'github-light')
-
-      ref.current?.appendChild(scriptElement)
-      scriptAdded.current = true
-    }
+    fetch(`/api/increment-views?slug=${slug}`)
   }, [slug])
 
-  return <div className="mb-2 mt-10" ref={ref} />
+  return (
+    <div className="mb-2 mt-16">
+      <Giscus
+        id="comments"
+        repo="raydenm/raydenm-site"
+        repoId="R_kgDOMguWIg"
+        category="Announcements"
+        categoryId="DIC_kwDOMguWIs4ChnLC"
+        mapping="pathname"
+        reactionsEnabled="0"
+        emitMetadata="0"
+        inputPosition="top"
+        theme="light"
+        lang="zh-CN"
+      />
+    </div>
+  )
 }

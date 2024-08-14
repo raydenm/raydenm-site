@@ -65,8 +65,8 @@ export default async function WritingSlug({ params }: { params: { slug: string }
                 {markdown}
               </Markdown>
             )}
+            <Message slug={slug} />
           </article>
-          <Message slug={slug} />
         </div>
       </ScrollArea>
     </>
