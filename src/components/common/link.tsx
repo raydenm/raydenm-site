@@ -7,7 +7,7 @@ export const Link = ({ href = '#', ...rest }) => {
   if (isExternal) {
     return (
       <a
-        href={href + '?ref=' + process.env.WEBSITE_URL}
+        href={href + '?ref=' + process.env.NEXT_PUBLIC_WEBSITE_URL}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="访问外部资源↗"

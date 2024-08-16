@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/'
     },
-    host: process.env.WEBSITE_URL
+    host: process.env.NEXT_PUBLIC_WEBSITE_URL
   }
 }

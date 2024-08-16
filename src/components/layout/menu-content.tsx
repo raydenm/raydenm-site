@@ -65,13 +65,13 @@ export const MenuContent = () => (
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
         <img
           src="/assets/avatar.webp"
-          alt={process.env.WEBSITE_USERNAME}
+          alt={process.env.NEXT_PUBLIC_WEBSITE_USERNAME}
           width={40}
           height={40}
           className="rounded-full border shadow-sm"
         />
         <div className="flex flex-col">
-          <span className="font-semibold tracking-tight">{process.env.WEBSITE_USERNAME}</span>
+          <span className="font-semibold tracking-tight">{process.env.NEXT_PUBLIC_WEBSITE_USERNAME}</span>
           <span className="text-gray-600">软件开发工程师</span>
         </div>
       </Link>
