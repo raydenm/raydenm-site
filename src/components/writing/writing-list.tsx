@@ -54,23 +54,20 @@ export const WritingList = ({ items }: { items: [number, BlogPost[]][] }) => {
                   const formattedViewCount = view_count ? viewCountFormatter.format(view_count) : null
 
                   return (
-                    <li
-                      key={slug}
-                      className="group/list-item grid grid-cols-6 p-0 group-hover/list-wrapper:text-gray-300"
-                    >
+                    <li key={slug} className="group/list-item grid grid-cols-6 p-0 group-hover/list-wrapper:text-other">
                       <span
                         className={cn(
-                          'pointer-events-none col-span-1 hidden items-center tabular-nums transition-colors duration-300 group-hover/list:text-gray-900 md:grid',
-                          itemIndex === 0 && 'border-t border-gray-200'
+                          'pointer-events-none col-span-1 hidden items-center tabular-nums transition-colors duration-300 group-hover/list:text-primary md:grid',
+                          itemIndex === 0 && 'border-t border-muted'
                         )}
                       >
                         {itemIndex === 0 ? year : ''}
                       </span>
                       <Link
                         href={`/writing/${slug}`}
-                        className="col-span-6 group-hover/list-item:text-gray-900 md:col-span-5"
+                        className="col-span-6 group-hover/list-item:text-primary md:col-span-5"
                       >
-                        <span className="grid grid-cols-4 items-center gap-2 border-t border-gray-200 py-4 md:grid-cols-8">
+                        <span className="grid grid-cols-4 items-center gap-2 border-t border-muted py-4 md:grid-cols-8">
                           <span className="col-span-1 text-left tabular-nums">
                             <time dateTime={date} className="hidden md:block">
                               {dateWithDayAndMonth}

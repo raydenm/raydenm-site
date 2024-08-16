@@ -1,0 +1,72 @@
+pre {
+  @apply px-0 py-5 text-[13px];
+
+  code {
+    @apply grid whitespace-pre break-normal text-left font-mono text-[13px];
+    counter-reset: sh-line-number;
+
+    .sh__line {
+      @apply relative min-w-max px-4;
+
+      &:before {
+        @apply mr-6 inline-block w-5 text-right tabular-nums text-gray-400;
+        counter-increment: sh-line-number 1;
+        content: counter(sh-line-number);
+      }
+    }
+  }
+}
+
+pre code .sh__line {
+  @apply pl-1 pr-1;
+}
+
+pre code.hljs {
+  @apply bg-precode rounded-lg border-none;
+}
+
+pre {
+  @apply pt-0;
+}
+
+article li {
+  @apply mb-2 ml-0;
+}
+
+article ul {
+  list-style: outside;
+  @apply ml-7;
+}
+
+article ol li {
+  @apply mb-2;
+}
+
+article ol {
+  list-style: auto;
+  @apply mb-4 pl-6;
+}
+article p {
+  @apply mb-4 leading-slacker;
+}
+
+.timeline {
+  padding: 0px;
+}
+
+
+ol {
+  li::marker {
+    @apply font-semibold;
+  }
+}
+
+ul {
+  li {
+    @apply pl-2;
+
+    &::marker {
+      @apply text-gray-600;
+    }
+  }
+}

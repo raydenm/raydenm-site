@@ -46,7 +46,7 @@ const PROFILES = {
         height="44"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
-        stroke="#000000"
+        stroke="currentColor"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -68,11 +68,11 @@ export const MenuContent = () => (
           alt={process.env.NEXT_PUBLIC_WEBSITE_USERNAME}
           width={40}
           height={40}
-          className="rounded-full border shadow-sm"
+          className="rounded-full"
         />
         <div className="flex flex-col">
           <span className="font-semibold tracking-tight">{process.env.NEXT_PUBLIC_WEBSITE_USERNAME}</span>
-          <span className="text-gray-600">软件开发工程师</span>
+          <span className="text-muted-foreground">软件开发工程师</span>
         </div>
       </Link>
       <div className="flex flex-col gap-1">
@@ -87,7 +87,7 @@ export const MenuContent = () => (
         ))}
       </div>
     </div>
-    <hr />
+    <div className="my-6 h-px bg-border" />
     <div className="flex flex-col gap-2 text-sm">
       {/* <span className="px-2 text-xs font-medium leading-relaxed text-gray-600">Online</span> */}
       <div className="flex flex-col gap-1">

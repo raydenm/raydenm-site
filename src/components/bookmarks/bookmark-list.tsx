@@ -127,7 +127,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
             <>
               {isLoading ? (
                 <div
-                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black"
+                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
                   role="status"
                   aria-label="loading"
                 >
@@ -138,7 +138,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
                   variant="outline"
                   onClick={loadMore}
                   disabled={isLoading}
-                  className="w-full justify-center bg-white"
+                  className="w-full justify-center bg-primary-foreground"
                 >
                   加载更多
                   <ArrowDownIcon size={16} />

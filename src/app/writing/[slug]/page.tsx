@@ -10,6 +10,7 @@ import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import { Link } from '@/components/common/link'
 import 'highlight.js/styles/github-dark.css'
+import '@/style/article.css'
 export async function generateStaticParams() {
   const allPosts: { slug: string }[] = await getAllPostSlugs()
   return allPosts.map((post) => ({ slug: post.slug }))
@@ -40,7 +41,7 @@ export default async function WritingSlug({ params }: { params: { slug: string }
 
   return (
     <>
-      <ScrollArea className="bg-white" useScrollAreaId>
+      <ScrollArea useScrollAreaId>
         <FloatingHeader scrollTitle={title} goBackLink="/writing">
           <WritingViews slug={slug} />
         </FloatingHeader>

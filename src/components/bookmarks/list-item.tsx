@@ -20,12 +20,12 @@ export const ListItem = ({ title, description, path }: ListItemProps) => {
       key={path}
       href={path}
       className={cn(
-        'flex flex-col gap-1 rounded-lg p-2 transition-colors duration-300 [&>*]:transition-colors [&>*]:duration-300',
-        isActive ? 'bg-black' : 'hover:bg-gray-200'
+        'flex flex-col gap-1 rounded-lg p-2',
+        isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'
       )}
     >
-      <span className={cn('font-medium', isActive && 'text-white')}>{title}</span>
-      {description && <span className={cn(isActive ? 'text-slate-300' : 'text-slate-500')}>{description}</span>}
+      <span className="font-medium">{title}</span>
+      {description && <span className="text-muted-foreground">{description}</span>}
     </Link>
   )
 }

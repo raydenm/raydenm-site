@@ -14,6 +14,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        other: 'hsl(var(--other))',
+        precode: 'hsl(var(--precode))',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -33,7 +35,7 @@ module.exports = {
           950: '#050914'
         },
         primary: {
-          DEFAULT: '#3276FF',
+          DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {

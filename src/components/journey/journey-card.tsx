@@ -39,8 +39,8 @@ export const JourneyCard = ({ title, description, image, index, location }: Jour
       </div>
     )}
     {location && (
-      <div className="mt-2 flex items-center gap-1 text-xs text-zinc-600">
-        <MapPin className="size-4 text-zinc-400" />
+      <div className="mt-2 flex items-center gap-1 text-xs text-muted-foreground">
+        <MapPin className="size-3" />
         <span>{location}</span>
       </div>
     )}

@@ -18,7 +18,7 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
   return (
     <a
       key={bookmark._id}
-      className="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100"
+      className="flex aspect-auto cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-muted p-4 transition-all"
       href={`${bookmark.link}?ref=${process.env.NEXT_PUBLIC_WEBSITE_URL}`}
       target="_blank"
       rel="noopener noreferrer"

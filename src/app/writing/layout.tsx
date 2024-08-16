@@ -22,7 +22,8 @@ export default async function WritingLayout({ children }: { children: React.Reac
           <WritingListLayout list={sortedPosts} />
         </Suspense>
       </SideMenu>
-      <div className="lg:bg-dots flex-1">{children}</div>
+      {/* lg:bg-dots  */}
+      <div className="flex-1">{children}</div>
     </>
   )
 }

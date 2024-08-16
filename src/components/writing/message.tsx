@@ -1,5 +1,6 @@
 'use client'
 
+import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 import Giscus from '@giscus/react'
 export function Message({ slug }: { slug: string }) {
@@ -7,6 +8,7 @@ export function Message({ slug }: { slug: string }) {
   const repoId = process.env.NEXT_PUBLIC_REPO_ID || ''
   const category = process.env.NEXT_PUBLIC_CATEGORY || ''
   const categoryId = process.env.NEXT_PUBLIC_CATEGORY_ID || ''
+  const { theme } = useTheme()
 
   // 记录访问量
   useEffect(() => {
@@ -26,7 +28,7 @@ export function Message({ slug }: { slug: string }) {
         reactionsEnabled="0"
         emitMetadata="0"
         inputPosition="top"
-        theme="light"
+        theme={theme}
         lang="zh-CN"
       />
     </div>
