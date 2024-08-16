@@ -8,6 +8,7 @@ import { useKeyPress } from '@/hooks/useKeyPress'
 import { cn } from '@/lib/utils'
 import React from 'react'
 import type { BookmarksType } from '@/lib/raindrop'
+import { keyCodePathnameMapping } from '@/config/path'
 
 import useStore from '@/store/index'
 const SubmitBookmarkDialog = dynamic(
@@ -17,15 +18,6 @@ const SubmitBookmarkDialog = dynamic(
     ssr: false
   }
 )
-
-const keyCodePathnameMapping: { [key: string]: string } = {
-  Digit1: '/',
-  Digit2: '/writing',
-  Digit3: '/journey',
-  Digit4: '/stack',
-  Digit5: '/bookmarks',
-  Digit6: '/photo'
-}
 
 type SideMenuProps = {
   children: React.ReactNode

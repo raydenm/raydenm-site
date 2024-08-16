@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
+const resendEmail = process.env.RESEND_EMAIL || ''
 
 export const runtime = 'edge'
 
@@ -12,8 +13,8 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'zhuguanghao0928@gmail.com',
-      subject: `raydenm-website-submit-contact`,
+      to: resendEmail,
+      subject: `website-submit-contact`,
       html: `<div>
         <p>姓名: ${name}</p>
         <p>联系方式: ${contact}</p>

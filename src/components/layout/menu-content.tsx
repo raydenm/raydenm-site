@@ -1,17 +1,9 @@
 import Link from 'next/link'
 
 import { NavigationLink } from '@/components/common/navigation-link'
+import { LINKS } from '@/config/path'
 
-import {
-  GithubIcon,
-  MessageCircleMore,
-  SparklesIcon,
-  PencilLineIcon,
-  NavigationIcon,
-  Wand2Icon,
-  BookmarkIcon,
-  Images
-} from 'lucide-react'
+import { GithubIcon, MessageCircleMore } from 'lucide-react'
 
 const PROFILES = {
   github: {
@@ -67,54 +59,20 @@ const PROFILES = {
   }
 }
 
-const LINKS = [
-  {
-    href: '/',
-    label: '主页',
-    icon: <SparklesIcon size={16} />
-  },
-  {
-    href: '/writing',
-    label: '文章',
-    icon: <PencilLineIcon size={16} />
-  },
-  {
-    href: '/journey',
-    label: '时光记录',
-    icon: <NavigationIcon size={16} />
-  },
-  {
-    href: '/stack',
-    label: '技术栈',
-    icon: <Wand2Icon size={16} />
-  },
-  {
-    href: '/bookmarks',
-    label: '书签',
-    icon: <BookmarkIcon size={16} />
-  },
-  {
-    href: '/photo',
-    label: '相册',
-    icon: <Images size={16} />
-  }
-]
-
 export const MenuContent = () => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
         <img
-          src="/assets/raydenm-small.webp"
-          alt="Raydenm"
+          src="/assets/avatar.webp"
+          alt={process.env.WEBSITE_USERNAME}
           width={40}
           height={40}
-          loading="lazy"
           className="rounded-full border shadow-sm"
         />
         <div className="flex flex-col">
-          <span className="font-semibold tracking-tight">Raydenm</span>
-          <span className="text-gray-600">前端开发工程师</span>
+          <span className="font-semibold tracking-tight">{process.env.WEBSITE_USERNAME}</span>
+          <span className="text-gray-600">软件开发工程师</span>
         </div>
       </Link>
       <div className="flex flex-col gap-1">

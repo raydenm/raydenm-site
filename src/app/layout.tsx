@@ -59,7 +59,7 @@ export const metadata = {
     default: sharedMetadata.title
   },
   description: sharedMetadata.description,
-  keywords: ['raydenm'],
+  keywords: sharedMetadata.keywords,
   alternates: {
     canonical: '/'
   },
