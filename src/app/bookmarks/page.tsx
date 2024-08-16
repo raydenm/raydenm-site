@@ -36,7 +36,7 @@ export default async function Writing() {
 }
 
 export async function generateMetadata() {
-  const title = '书签'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-书签`
   const description = '书签'
   const siteUrl = '/bookmarks'
 

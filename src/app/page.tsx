@@ -55,3 +55,9 @@ export default async function Home() {
     </ScrollArea>
   )
 }
+
+export async function generateMetadata() {
+  return {
+    title: `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-主页`
+  }
+}

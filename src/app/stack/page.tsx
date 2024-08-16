@@ -24,7 +24,7 @@ export default async function Stack() {
 }
 
 export async function generateMetadata() {
-  const title = '技术栈'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-技术栈`
   const description = '技术栈'
   const siteUrl = '/stack'
 

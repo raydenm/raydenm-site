@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -25,16 +24,6 @@
     --input: 220 13% 91%;
     --ring: 262.1 83.3% 57.8%;
     --radius: 1rem;
-
-
-    --sh-identifier: #171717;
-    --sh-sign: #8996a3;
-    --sh-property: hsl(278.93deg 100% 36.12%);
-    --sh-entity: hsl(210.8deg 100% 38.9%);
-    --sh-jsxliterals: #6266d1;
-    --sh-string: hsl(138.58deg 77.94% 27.65%);
-    --sh-keyword: rgb(215, 58, 73);
-    --sh-comment: #a19595;
   }
 
   ::selection {

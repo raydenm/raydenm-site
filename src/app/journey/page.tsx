@@ -69,7 +69,7 @@ export default async function Journey() {
 }
 
 export async function generateMetadata() {
-  const title = '时光记录'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-时光记录`
   const description = '时光记录'
   const siteUrl = '/journey'
 

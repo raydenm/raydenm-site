@@ -24,7 +24,7 @@ export default async function Photo() {
 }
 
 export async function generateMetadata() {
-  const title = '相册'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-相册`
   const description = '相册'
   const siteUrl = '/photo'
 

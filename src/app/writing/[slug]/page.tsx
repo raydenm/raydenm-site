@@ -77,8 +77,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { slug } = params
 
   const siteUrl = `/writing/${slug}`
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-文章`
 
   return {
+    title,
     openGraph: {
       type: 'article',
       url: siteUrl

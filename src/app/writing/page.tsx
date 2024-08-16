@@ -27,7 +27,7 @@ export default async function Writing() {
 }
 
 export async function generateMetadata() {
-  const title = '文章'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-文章`
   const description = '文章'
   const siteUrl = '/writing'
 

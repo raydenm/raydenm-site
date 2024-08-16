@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { slug } = params
 
   const siteUrl = `/bookmarks/${slug}`
-  const title = '书签'
+  const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-书签`
   const description = '书签'
 
   return {
