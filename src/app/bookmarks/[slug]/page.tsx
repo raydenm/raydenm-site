@@ -6,7 +6,7 @@ import { PageTitle } from '@/components/layout/page-title'
 import { FloatingHeader } from '@/components/common/floating-header'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { BookmarkList } from '@/components/bookmarks/bookmark-list'
-import { getBookmarkItems, getBookmarks } from '@/lib/raindrop'
+import { getBookmarkItems, getBookmarks } from '@/services/raindrop'
 
 export async function generateStaticParams() {
   const bookmarks = await getBookmarks()

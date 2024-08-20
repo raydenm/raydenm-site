@@ -5,7 +5,7 @@ import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { PhotoCard } from '@/components/photo/photo-card'
-import { getPhotoList } from '@/lib/supabase/photo'
+import { getPhotoList } from '@/services/supabase/photo'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 export type phoneItem = {

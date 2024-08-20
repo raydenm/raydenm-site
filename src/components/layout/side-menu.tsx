@@ -7,7 +7,7 @@ import { LoadingSpinner } from '@/components/common/loading-spinner'
 import { useKeyPress } from '@/hooks/useKeyPress'
 import { cn } from '@/lib/utils'
 import React from 'react'
-import type { BookmarksType } from '@/lib/raindrop'
+import type { BookmarksType } from '@/services/raindrop'
 import { keyCodePathnameMapping } from '@/config/path'
 
 import useStore from '@/store/index'

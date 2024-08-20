@@ -9,7 +9,7 @@ import {
   ArrowLeftIcon
   // RadioIcon
 } from 'lucide-react'
-import type { BookmarksType, BookmarkType } from '@/lib/raindrop'
+import type { BookmarksType, BookmarkType } from '@/services/raindrop'
 
 import { Button } from '@/components/ui/button'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
@@ -68,7 +68,7 @@ export const FloatingHeader = memo(
     }, [scrollTitle])
 
     return (
-      <header className="sticky inset-x-0 top-0 z-10 mx-auto flex h-12 w-full shrink-0 items-center overflow-hidden border-b text-sm font-medium lg:hidden">
+      <header className="sticky inset-x-0 top-0 z-10 mx-auto flex h-12 w-full shrink-0 items-center overflow-hidden border-b border-muted bg-primary-foreground text-sm font-medium lg:hidden">
         <div className="flex size-full items-center px-3">
           <div className="flex w-full items-center justify-between gap-2">
             <div className="flex flex-1 items-center gap-1">

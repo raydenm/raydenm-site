@@ -54,6 +54,7 @@
     --chart-5: 27 87% 67%;
     --precode: 240 10% 3.9%;
     --other: 217.9 10.6% 64.9%;
+    --cardactive: 220 14.3% 95.9%;
   }
 
   .dark {
@@ -83,6 +84,7 @@
     --chart-5: 340 75% 55%;
     --precode: 217.2 32.6% 17.5%;
     --other: 220 8.9% 46.1%;
+    --cardactive: 216.9 19.1% 26.7%;
   }
 
   html {
@@ -114,7 +116,7 @@
   }
 
   h3 {
-    @apply mb-2  mt-2 md:text-xl;
+    @apply mb-2  mt-4 md:text-xl;
   }
 
   h4 {

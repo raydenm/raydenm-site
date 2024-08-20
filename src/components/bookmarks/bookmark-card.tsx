@@ -18,20 +18,18 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
   return (
     <a
       key={bookmark._id}
-      className="flex aspect-auto cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-muted p-4 transition-all"
+      className="flex cursor-pointer flex-row gap-3 overflow-hidden rounded-xl bg-muted p-3 transition-all hover:bg-cardactive"
       href={`${bookmark.link}?ref=${process.env.NEXT_PUBLIC_WEBSITE_URL}`}
       target="_blank"
       rel="noopener noreferrer"
       data-bookmark-order={order}
     >
-      <span className="aspect-[1200/630] overflow-hidden rounded-lg">
+      <div className="w-[30%]">
         <img
           src={bookmark.cover || '/assets/fallback.avif'}
           alt={bookmark.title}
-          width={1200}
-          height={630}
           loading={order < 2 ? 'eager' : 'lazy'}
-          className="aspect-[1200/630] animate-reveal rounded-lg border bg-cover bg-center bg-no-repeat object-cover"
+          className="aspect-square animate-reveal rounded-lg bg-cover bg-center bg-no-repeat object-cover"
           onError={(e) => {
             // @ts-ignore
             e.target.onerror = null
@@ -39,10 +37,11 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
             e.target.src = '/assets/fallback.avif'
           }}
         />
-      </span>
-      <div className="flex flex-col gap-1">
-        <h2 className="line-clamp-4 text-lg leading-snug">{bookmark.title}</h2>
-        <span className="line-clamp-4 inline-flex items-center gap-1 text-sm text-gray-500">
+      </div>
+
+      <div className="flex w-full flex-col gap-1">
+        <div className="line-clamp-4 text-lg leading-snug">{bookmark.title}</div>
+        <span className="line-clamp-4 inline-flex items-center gap-1 text-sm text-muted-foreground">
           <Link2Icon size={16} />
           {bookmark.domain}
         </span>

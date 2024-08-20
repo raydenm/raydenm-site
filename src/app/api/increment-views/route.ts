@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import supabase from '@/lib/supabase/private'
+import supabase from '@/services/supabase/private'
 
 export const runtime = 'edge'
 

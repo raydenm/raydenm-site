@@ -7,8 +7,9 @@ export const LINKS = [
     icon: <SparklesIcon size={16} />
   },
   {
-    href: '/writing/atomic-design',
+    href: '/writing',
     label: '文章',
+    defaultHref: '/atomic-design',
     icon: <PencilLineIcon size={16} />
   },
   {
@@ -22,8 +23,9 @@ export const LINKS = [
     icon: <Wand2Icon size={16} />
   },
   {
-    href: '/bookmarks/markbooks',
+    href: '/bookmarks',
     label: '书签',
+    defaultHref: '/markbooks',
     icon: <BookmarkIcon size={16} />
   },
   {
@@ -35,9 +37,9 @@ export const LINKS = [
 
 export const keyCodePathnameMapping: { [key: string]: string } = {
   Digit1: '/',
-  Digit2: '/writing/atomic-design',
+  Digit2: '/writing',
   Digit3: '/journey',
   Digit4: '/stack',
-  Digit5: '/bookmarks/markbooks',
+  Digit5: '/bookmarks',
   Digit6: '/photo'
 }

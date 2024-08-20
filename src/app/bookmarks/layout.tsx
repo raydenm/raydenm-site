@@ -3,7 +3,7 @@ import { SideMenu } from '@/components/layout/side-menu'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { ListItem } from '@/components/bookmarks/list-item'
 import { Toaster } from '@/components/ui/sonner'
-import { getBookmarks } from '@/lib/raindrop'
+import { getBookmarks } from '@/services/raindrop'
 
 async function fetchData() {
   const bookmarks = await getBookmarks()

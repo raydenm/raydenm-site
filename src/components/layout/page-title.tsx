@@ -14,7 +14,7 @@ type PageTitleProps = {
 export const PageTitle = ({ title, subtitle, className, ...rest }: PageTitleProps) => {
   return (
     <div className={cn('mb-6', className)}>
-      <Balancer as="h1" {...rest}>
+      <Balancer className="!text-pretty text-3xl font-semibold" as="div" {...rest}>
         {title}
       </Balancer>
       {subtitle}

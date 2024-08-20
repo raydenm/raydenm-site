@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import supabase from '@/lib/supabase/public'
+import supabase from '@/services/supabase/public'
 import { SUPABASE_TABLE_NAME } from '@/config'
 
 export const useViewData = (slug?: string) => {

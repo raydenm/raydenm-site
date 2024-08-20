@@ -7,7 +7,7 @@ import { FloatingHeader } from '@/components/common/floating-header'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { PageTitle } from '@/components/layout/page-title'
 import { GradientBg3 } from '@/components/common/gradient-bg'
-import { getAllLogbook } from '@/lib/contentful'
+import { getAllLogbook } from '@/services/contentful'
 
 async function fetchData() {
   const allLogbook = await getAllLogbook()

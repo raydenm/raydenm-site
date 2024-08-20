@@ -59,7 +59,7 @@ const PROFILES = {
   }
 }
 
-export const MenuContent = () => (
+export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
@@ -79,7 +79,7 @@ export const MenuContent = () => (
         {LINKS.map((link, linkIndex) => (
           <NavigationLink
             key={link.href}
-            href={link.href}
+            href={isMobile ? link.href : link.href + (link.defaultHref || '')}
             label={link.label}
             icon={link.icon}
             shortcutNumber={linkIndex + 1}

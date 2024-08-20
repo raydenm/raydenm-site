@@ -29,7 +29,7 @@ export const WritingLink = ({ post, viewCount, isMobile, isActive }: WritingLink
         className={cn(
           'flex flex-col gap-1',
           !isMobile && isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted',
-          isMobile ? 'border-b px-4 py-3 text-sm hover:bg-gray-100' : 'rounded-lg p-2'
+          isMobile ? 'border-b border-muted px-4 py-3 text-sm' : 'rounded-lg p-2'
         )}
       >
         <span className="font-medium">{post.title}</span>

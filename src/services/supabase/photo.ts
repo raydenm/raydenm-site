@@ -1,4 +1,4 @@
-import supabase from '@/lib/supabase/public'
+import supabase from '@/services/supabase/public'
 import { cache } from 'react'
 
 export const getPhotoList = cache(

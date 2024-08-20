@@ -14,6 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        cardactive: 'hsl(var(--cardactive))',
         other: 'hsl(var(--other))',
         precode: 'hsl(var(--precode))',
         border: 'hsl(var(--border))',

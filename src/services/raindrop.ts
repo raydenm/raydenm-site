@@ -51,6 +51,8 @@ export const getBookmarkItems = cache(async (id: number, pageIndex = 0) => {
       options
     )
     const data: BookmarkItemsType = await response.json()
+    console.log(data)
+
     return data
   } catch (error) {
     console.info(error)
@@ -66,6 +68,7 @@ export const getBookmarks = cache(async () => {
       ...bookmark,
       title: BOOKMARK_MAP[bookmark.title] || bookmark.title
     }))
+
     return bookmarkList
   } catch (error) {
     console.info(error)
