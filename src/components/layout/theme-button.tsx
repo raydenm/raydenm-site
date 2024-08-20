@@ -8,13 +8,6 @@ import { flushSync } from 'react-dom'
 
 export const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
-
-  const themeMap = [
-    { icon: <Sun size={16} />, theme: 'light' },
-    { icon: <Monitor size={16} />, theme: 'system' },
-    { icon: <Moon size={16} />, theme: 'dark' }
-  ]
-
   const transitionViewIfSupported = (updateCb: () => any) => {
     if (window.matchMedia(`(prefers-reduced-motion: reduce)`).matches) {
       updateCb()
@@ -38,17 +31,6 @@ export const ThemeButton = () => {
   return (
     <div className="hidden md:block">
       <div className="fixed bottom-2 left-2 z-50 flex cursor-pointer gap-3 rounded-full border border-muted px-3 py-2 text-primary">
-        {/* {themeMap.map((item, index) =>
-        (<div
-          key={index}
-          onClick={() => {
-            buildThemeTransition(item.theme)
-          }}
-          className={cn('border-b-2 py-0.5 border-primary-foreground', theme === item.theme && 'border-muted-foreground')}
-        >
-          {item.icon}
-        </div>)
-        )} */}
         <div
           onClick={() => {
             buildThemeTransition('light')
