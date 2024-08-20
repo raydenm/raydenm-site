@@ -63,6 +63,7 @@ export const metadata = {
   title: {
     default: sharedMetadata.title
   },
+  manifest: '/manifest.json',
   description: sharedMetadata.description,
   keywords: sharedMetadata.keywords,
   alternates: {

@@ -14,8 +14,8 @@
 
 # production
 /build
-sw.js
-workbox-*.js
+# sw.js
+# workbox-*.js
 
 # misc
 .DS_Store
