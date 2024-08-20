@@ -27,13 +27,13 @@ export const JourneyCard = ({ title, description, image, index, location }: Jour
       </div>
     )}
     {image?.url && (
-      <div className="mt-2.5 overflow-hidden rounded-xl bg-white">
+      <div className="mt-2.5 overflow-hidden rounded-xl bg-primary-foreground">
         <img
           src={image.url}
           alt={image.title || image.description}
           width={image.width}
           height={image.height}
-          loading={index < 1 ? 'eager' : 'lazy'}
+          // loading={index < 1 ? 'eager' : 'lazy'}
           className="animate-reveal"
         />
       </div>

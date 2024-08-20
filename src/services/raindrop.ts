@@ -51,8 +51,6 @@ export const getBookmarkItems = cache(async (id: number, pageIndex = 0) => {
       options
     )
     const data: BookmarkItemsType = await response.json()
-    console.log(data)
-
     return data
   } catch (error) {
     console.info(error)
@@ -64,11 +62,12 @@ export const getBookmarks = cache(async () => {
   try {
     const response = await fetch(`${RAINDROP_API_URL}/collections?time=${Date.now()}`, options)
     const bookmarks: { items: BookmarksType } = await response.json()
-    const bookmarkList = (bookmarks?.items || []).map((bookmark) => ({
-      ...bookmark,
-      title: BOOKMARK_MAP[bookmark.title] || bookmark.title
-    }))
-
+    const bookmarkList = (bookmarks?.items || [])
+      .filter((bookmark) => BOOKMARK_MAP[bookmark.title])
+      .map((bookmark) => ({
+        ...bookmark,
+        title: BOOKMARK_MAP[bookmark.title] || bookmark.title
+      }))
     return bookmarkList
   } catch (error) {
     console.info(error)
