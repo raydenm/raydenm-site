@@ -42,7 +42,6 @@ export function SubmitContcatForm({ className, setFormOpen }: SubmitContcatFormP
   const { reset } = form
 
   function onSubmit(values: any) {
-    console.log(values)
     setIsSubmitting(true)
     fetch('/api/submit-contact', {
       method: 'POST',

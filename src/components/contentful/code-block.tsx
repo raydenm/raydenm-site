@@ -12,8 +12,6 @@ type CodeBlockProps = {
 }
 
 export function CodeBlock({ title, code }: CodeBlockProps) {
-  console.log(code)
-
   const [copied, setCopied] = useState(false)
   const codeHTML = highlight(code)
 

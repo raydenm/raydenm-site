@@ -1,35 +1,17 @@
 'use client'
 
-import dynamic from 'next/dynamic'
-import { LoadingSpinner } from '@/components/common/loading-spinner'
-
-const SubmitContcatDialog = dynamic(
-  () => import('@/components/contcat/submit-contcat/dialog').then((mod) => mod.SubmitContcatDialog),
-  {
-    loading: () => <LoadingSpinner />,
-    ssr: false
-  }
-)
-
-const SubmitContcatDrawer = dynamic(
-  () => import('@/components/contcat/submit-contcat/drawer').then((mod) => mod.SubmitContcatDrawer),
-  {
-    loading: () => <LoadingSpinner />,
-    ssr: false
-  }
-)
+import { SubmitContcatDialog } from '@/components/contcat/submit-contcat/dialog'
+import { SubmitContcatDrawer } from '@/components/contcat/submit-contcat/drawer'
 
 export const ContcatContent = () => {
   return (
-    <div className="mt-4">
-      {/* <h2 className="mb-4 mt-8">联系我</h2>
-      <div className="mb-4">如果您有任何问题、建议或合作意向，欢迎随时与我联系。</div> */}
-      <div className="hidden lg:block">
+    <>
+      <span className="hidden lg:inline-block">
         <SubmitContcatDialog />
-      </div>
-      <div className="lg:hidden">
+      </span>
+      <span className="lg:hidden">
         <SubmitContcatDrawer />
-      </div>
-    </div>
+      </span>
+    </>
   )
 }

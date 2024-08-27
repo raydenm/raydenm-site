@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { SendIcon } from 'lucide-react'
 
 import {
   Drawer,
@@ -11,7 +10,6 @@ import {
   DrawerTitle,
   DrawerTrigger
 } from '@/components/ui/drawer'
-import { Button } from '@/components/ui/button'
 import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
 import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/config'
 
@@ -21,10 +19,7 @@ export const SubmitContcatDrawer = () => {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button size="xs" className="relative">
-          <SendIcon size={16} className="mr-2" />
-          联系我
-        </Button>
+        <span className="mx-1 text-blue-600 hover:underline hover:decoration-1">与我联系</span>
       </DrawerTrigger>
       <DrawerContent className="px-6">
         <DrawerHeader className="sm:text-center">

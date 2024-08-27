@@ -9,6 +9,7 @@ import { PageTitle } from '@/components/layout/page-title'
 import { Button } from '@/components/ui/button'
 import { getAllPosts } from '@/services/contentful'
 import { getSortedPosts, getItemsByYear } from '@/lib/utils'
+import { ContcatContent } from '@/components/contcat/contcat-content'
 
 async function fetchData() {
   const allPosts = await getAllPosts()
@@ -30,10 +31,11 @@ export default async function Home() {
             <div className="mb-4 leading-slacker">这是一个记录成长及归纳总结的地方。</div>
             <div className="mb-4 leading-slacker">
               喜欢研究新的技术和工具，关注前沿技术和设计趋势，这是我的
-              <a className="text-blue-600 hover:underline hover:decoration-1" href="/stack">
+              <a className="mx-1 text-blue-600 hover:underline hover:decoration-1" href="/stack">
                 技术栈
               </a>
-              。如果你有任何问题或者想要交流，请随时与我联系！
+              。如果你有任何问题或者想要交流，请随时
+              <ContcatContent />！
             </div>
             <div className="mb-4 leading-slacker"></div>
           </div>

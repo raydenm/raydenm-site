@@ -45,7 +45,6 @@ export function SubmitBookmarkForm({ className, setFormOpen, bookmarks, currentB
   const { reset } = form
 
   async function onSubmit(values: any) {
-    console.log(values)
     setIsSubmitting(true)
     fetch('/api/submit-bookmark', {
       method: 'POST',

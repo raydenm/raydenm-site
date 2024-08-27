@@ -6,7 +6,7 @@ import { ArrowDownIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BookmarkCard } from '@/components/bookmarks/bookmark-card'
 import { cn } from '@/lib/utils'
-import { getBookmarkItemsByPageIndex } from '@/app/actions'
+import { getBookmarkItemsAction } from '@/app/actions'
 
 export type BookmarkItemType = {
   _id: number
@@ -39,7 +39,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
 
   const fetchInfiniteData = useCallback(async () => {
     setIsLoading(true)
-    const newData = await getBookmarkItemsByPageIndex(id, pageIndex)
+    const newData = await getBookmarkItemsAction(id, pageIndex)
     if (newData?.result) setData((prevData: any) => [...prevData, ...newData.items])
     setIsLoading(false)
   }, [id, pageIndex])

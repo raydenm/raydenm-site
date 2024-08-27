@@ -5,7 +5,7 @@ import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { PhotoCard } from '@/components/photo/photo-card'
-import { getPhotoListByPageIndex } from '@/app/actions'
+import { getPhotoListAction } from '@/app/actions'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 export type phoneItem = {
@@ -25,7 +25,7 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
 
   const fetchData = useCallback(async () => {
     setIsLoading(true)
-    const res = await getPhotoListByPageIndex({ pageIndex })
+    const res = await getPhotoListAction({ pageIndex })
     const { data } = res
     if (data) {
       pageIndex === 0 ? setData(data) : setData((prevData: phoneItem[]) => [...prevData, ...data])
@@ -60,12 +60,7 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
                   <span className="sr-only">加载中...</span>
                 </div>
               ) : (
-                <Button
-                  variant="outline"
-                  onClick={loadMore}
-                  disabled={isLoading}
-                  className="w-full justify-center bg-white"
-                >
+                <Button variant="link" onClick={loadMore} disabled={isLoading} className="hover:no-underline">
                   加载更多
                   <ArrowDownIcon size={16} />
                 </Button>

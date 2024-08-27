@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { User } from 'lucide-react'
 
 import {
   Dialog,
@@ -11,7 +10,6 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
 import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
 import useStore from '@/store/index'
 import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/config'
@@ -27,10 +25,7 @@ export const SubmitContcatDialog = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" className="relative">
-          <User size={16} className="mr-2" />
-          联系我
-        </Button>
+        <span className="mx-1 text-blue-600 hover:underline hover:decoration-1">与我联系</span>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

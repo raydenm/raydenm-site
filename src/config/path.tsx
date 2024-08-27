@@ -1,39 +1,45 @@
 import { SparklesIcon, PencilLineIcon, NavigationIcon, Wand2Icon, BookmarkIcon, Images } from 'lucide-react'
+import { getBookmarksAction, getAllPostSlugsAction } from '@/app/actions'
 
-export const LINKS = [
-  {
-    href: '/',
-    label: '主页',
-    icon: <SparklesIcon size={16} />
-  },
-  {
-    href: '/writing',
-    label: '文章',
-    defaultHref: '/atomic-design',
-    icon: <PencilLineIcon size={16} />
-  },
-  {
-    href: '/journey',
-    label: '时光记录',
-    icon: <NavigationIcon size={16} />
-  },
-  {
-    href: '/stack',
-    label: '技术栈',
-    icon: <Wand2Icon size={16} />
-  },
-  {
-    href: '/bookmarks',
-    label: '书签',
-    defaultHref: '/markbooks',
-    icon: <BookmarkIcon size={16} />
-  },
-  {
-    href: '/photo',
-    label: '相册',
-    icon: <Images size={16} />
-  }
-]
+export const LINKS = async () => {
+  const allPosts = await getAllPostSlugsAction()
+  const bookmarks = await getBookmarksAction()
+
+  return [
+    {
+      href: '/',
+      label: '主页',
+      icon: <SparklesIcon size={16} />
+    },
+    {
+      href: '/writing',
+      label: '文章',
+      defaultHref: `/${allPosts[0]?.slug}`,
+      icon: <PencilLineIcon size={16} />
+    },
+    {
+      href: '/journey',
+      label: '时光记录',
+      icon: <NavigationIcon size={16} />
+    },
+    {
+      href: '/stack',
+      label: '技术栈',
+      icon: <Wand2Icon size={16} />
+    },
+    {
+      href: '/bookmarks',
+      label: '书签',
+      defaultHref: `/${bookmarks[0]?.slug}`,
+      icon: <BookmarkIcon size={16} />
+    },
+    {
+      href: '/photo',
+      label: '相册',
+      icon: <Images size={16} />
+    }
+  ]
+}
 
 export const keyCodePathnameMapping: { [key: string]: string } = {
   Digit1: '/',

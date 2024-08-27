@@ -5,18 +5,18 @@ import { LINKS } from '@/config/path'
 
 import { GithubIcon, MessageCircleMore } from 'lucide-react'
 
-const PROFILES = {
-  github: {
+const PROFILES = [
+  {
     title: 'GitHub',
     url: 'https://github.com/raydenm',
     icon: <GithubIcon size={16} />
   },
-  WeChat: {
+  {
     title: '微信',
     url: 'https://isharrlrlvkdieveofmw.supabase.co/storage/v1/object/public/images/raydenm-wechat.jpg',
     icon: <MessageCircleMore size={16} />
   },
-  juejin: {
+  {
     title: '稀土掘金',
     url: 'https://juejin.cn/collection/6845242851597484040',
     icon: (
@@ -35,7 +35,7 @@ const PROFILES = {
       </svg>
     )
   },
-  twitter: {
+  {
     title: '推特',
     url: 'https://x.com/Raydenm928',
     icon: (
@@ -57,9 +57,9 @@ const PROFILES = {
       </svg>
     )
   }
-}
+]
 
-export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
+export const MenuContent = async ({ isMobile = false }: { isMobile?: boolean }) => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
@@ -76,7 +76,7 @@ export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
         </div>
       </Link>
       <div className="flex flex-col gap-1">
-        {LINKS.map((link, linkIndex) => (
+        {(await LINKS()).map((link, linkIndex) => (
           <NavigationLink
             key={link.href}
             href={isMobile ? link.href : link.href + (link.defaultHref || '')}
@@ -89,10 +89,9 @@ export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
     </div>
     <div className="my-6 h-px bg-border" />
     <div className="flex flex-col gap-2 text-sm">
-      {/* <span className="px-2 text-xs font-medium leading-relaxed text-gray-600">Online</span> */}
       <div className="flex flex-col gap-1">
-        {Object.values(PROFILES).map((profile) => (
-          <NavigationLink key={profile.url} href={profile.url} label={profile.title} icon={profile.icon} />
+        {PROFILES.map(({ url, title, icon }) => (
+          <NavigationLink key={title} href={url} label={title} icon={icon} />
         ))}
       </div>
     </div>
