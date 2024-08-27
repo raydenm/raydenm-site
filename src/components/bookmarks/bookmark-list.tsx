@@ -6,6 +6,7 @@ import { ArrowDownIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BookmarkCard } from '@/components/bookmarks/bookmark-card'
 import { cn } from '@/lib/utils'
+import { getBookmarkItemsByPageIndex } from '@/app/actions'
 
 export type BookmarkItemType = {
   _id: number
@@ -36,35 +37,9 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
     if (!isReachingEnd && !isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
   }
 
-  const getBookmarkItems = async (id: number, pageIndex = 0) => {
-    try {
-      const response = await fetch(
-        `https://api.raindrop.io/rest/v1/raindrops/${id}?` +
-          new URLSearchParams({
-            page: String(pageIndex),
-            perpage: '30',
-            time: String(Date.now()),
-            sort: 'created'
-          }),
-        {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_RAINDROP_ACCESS_TOKEN}`
-          }
-        }
-      )
-      const data: BookmarkItemsType = await response.json()
-      return data
-    } catch (error) {
-      console.info(error)
-      return null
-    }
-  }
-
   const fetchInfiniteData = useCallback(async () => {
     setIsLoading(true)
-    const newData = await getBookmarkItems(id, pageIndex)
+    const newData = await getBookmarkItemsByPageIndex(id, pageIndex)
     if (newData?.result) setData((prevData: any) => [...prevData, ...newData.items])
     setIsLoading(false)
   }, [id, pageIndex])

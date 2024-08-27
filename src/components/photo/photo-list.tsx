@@ -5,7 +5,7 @@ import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { PhotoCard } from '@/components/photo/photo-card'
-import { getPhotoList } from '@/services/supabase/photo'
+import { getPhotoListByPageIndex } from '@/app/actions'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 export type phoneItem = {
@@ -14,32 +14,30 @@ export type phoneItem = {
   created_at: Date
   description: string
 }
-export const PhotoList = () => {
-  const [data, setData] = useState<phoneItem[]>([])
+export const PhotoList = ({ initialData }: { initialData: any }) => {
+  const [data, setData] = useState<phoneItem[]>(initialData?.data || [])
   const [pageIndex, setPageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
-  const [count, setCount] = useState(0)
-  const [isload, setIsload] = useState(false)
 
   const loadMore = () => {
-    if (!isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
+    if (!isReachingEnd && !isLoading) setPageIndex((prevPageIndex) => prevPageIndex + 1)
   }
 
   const fetchData = useCallback(async () => {
     setIsLoading(true)
-    const res = await getPhotoList({ pageIndex })
-    const { data, count } = res || { data: [], count: 0 }
+    const res = await getPhotoListByPageIndex({ pageIndex })
+    const { data } = res
     if (data) {
       pageIndex === 0 ? setData(data) : setData((prevData: phoneItem[]) => [...prevData, ...data])
     }
-    if (count) setCount(count)
     setIsLoading(false)
-    setIsload(true)
   }, [pageIndex])
 
   useEffect(() => {
-    fetchData()
+    if (pageIndex > 0) fetchData()
   }, [pageIndex, fetchData])
+
+  const isReachingEnd = data.length >= initialData?.count ?? 0
 
   return (
     <div>
@@ -51,7 +49,7 @@ export const PhotoList = () => {
 
       {data.length > 0 ? (
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">
-          {data.length < count ? (
+          {!isReachingEnd ? (
             <>
               {isLoading ? (
                 <div
@@ -80,7 +78,6 @@ export const PhotoList = () => {
       ) : (
         <div className="mt-8 flex min-h-16 flex-col items-center justify-center lg:mt-12">
           {isLoading && <LoadingSpinner />}
-          {isload && <span>暂无图片</span>}
         </div>
       )}
     </div>

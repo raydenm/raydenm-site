@@ -5,11 +5,11 @@ import { PageTitle } from '@/components/layout/page-title'
 export function NotFound() {
   return (
     <ScrollArea useScrollAreaId>
-      <FloatingHeader scrollTitle="Not found" />
+      <FloatingHeader scrollTitle="未找到" />
       <div className="content-wrapper">
         <div className="content">
-          <PageTitle title="Not found" />
-          <p>This link might be broken, deleted, or moved. Nevertheless, there’s nothing to see here...</p>
+          <PageTitle title="未找到" />
+          <p>此链接可能已损坏、删除或移动。不过，这里没什么可看的...</p>
         </div>
       </div>
     </ScrollArea>

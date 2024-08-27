@@ -5,8 +5,16 @@ import { FloatingHeader } from '@/components/common/floating-header'
 import { PageTitle } from '@/components/layout/page-title'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { PhotoList } from '@/components/photo/photo-list'
+import { getPhotoList } from '@/services/supabase/photo'
+
+async function fetchData() {
+  const photoData = await getPhotoList({})
+  return photoData
+}
 
 export default async function Photo() {
+  const photoData = await fetchData()
+
   return (
     <ScrollArea useScrollAreaId>
       <GradientBg />
@@ -15,7 +23,7 @@ export default async function Photo() {
         <div className="content">
           <PageTitle title="相册" />
           <Suspense fallback={<ScreenLoadingSpinner />}>
-            <PhotoList />
+            <PhotoList initialData={photoData} />
           </Suspense>
         </div>
       </div>

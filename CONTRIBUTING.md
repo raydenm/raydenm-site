@@ -7,6 +7,8 @@
 - `ci`: all changes regarding the configuration of continuous integration (i.e. github actions, ci system)
 - `chore`: all changes to the repository that do not fit into any of the above categories
 
+## 中文翻译
+
 - `feat / feature`：引入全新代码或新功能的所有更改
 - `fix`：修复错误的更改（理想情况下，如果存在问题，您还将引用问题）
 - `refactor`：任何与代码相关的更改，既不是修复也不是功能

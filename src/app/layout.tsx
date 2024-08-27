@@ -22,6 +22,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="3cf694bd-ddd7-4b7b-b96d-3227c54e985d"
+        ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="min-h-screen">
             {isEnabled && (
