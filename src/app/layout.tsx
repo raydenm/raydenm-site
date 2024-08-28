@@ -6,7 +6,6 @@ import React from 'react'
 import { draftMode } from 'next/headers'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { EyeIcon } from 'lucide-react'
 import { Toaster } from '@/components/ui/sonner'
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator'
 import { SideMenu } from '@/components/layout/side-menu'
@@ -15,6 +14,7 @@ import { preloadGetAllPosts } from '@/services/contentful'
 import { sharedMetadata } from '@/app/shared-metadata'
 import { ThemeProvider } from '@/app/theme-provider'
 import { ThemeButton } from '@/components/layout/theme-button'
+import { DraftMode } from '@/components/layout/draft-mode'
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = draftMode()
   preloadGetAllPosts(isEnabled)
@@ -29,14 +29,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="min-h-screen">
-            {isEnabled && (
-              <div className="absolute inset-x-0 bottom-0 z-50 flex h-12 w-full items-center justify-center bg-green-500 text-center text-sm font-medium text-white">
-                <div className="flex items-center gap-2">
-                  <EyeIcon size={16} />
-                  <span>已启用草稿模式</span>
-                </div>
-              </div>
-            )}
             <div className="lg:flex">
               <SideMenu>
                 <MenuContent />
@@ -46,6 +38,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </main>
           <TailwindIndicator />
           <ThemeButton />
+          <DraftMode isEnabled={isEnabled} />
           <Toaster
             closeButton
             richColors
