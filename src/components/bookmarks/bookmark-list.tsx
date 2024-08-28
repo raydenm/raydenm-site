@@ -6,7 +6,8 @@ import { ArrowDownIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BookmarkCard } from '@/components/bookmarks/bookmark-card'
 import { cn } from '@/lib/utils'
-import { getBookmarkItemsAction } from '@/app/actions'
+// import { getBookmarkItemsAction } from '@/app/actions'
+import { getBookmarkItems } from '@/services/raindrop'
 
 export type BookmarkItemType = {
   _id: number
@@ -39,7 +40,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
 
   const fetchInfiniteData = useCallback(async () => {
     setIsLoading(true)
-    const newData = await getBookmarkItemsAction(id, pageIndex)
+    const newData = await getBookmarkItems(id, pageIndex)
     if (newData?.result) setData((prevData: any) => [...prevData, ...newData.items])
     setIsLoading(false)
   }, [id, pageIndex])
@@ -109,12 +110,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
                   <span className="sr-only">加载中...</span>
                 </div>
               ) : (
-                <Button
-                  variant="outline"
-                  onClick={loadMore}
-                  disabled={isLoading}
-                  className="w-full justify-center bg-primary-foreground"
-                >
+                <Button variant="link" onClick={loadMore} disabled={isLoading} className="hover:no-underline">
                   加载更多
                   <ArrowDownIcon size={16} />
                 </Button>

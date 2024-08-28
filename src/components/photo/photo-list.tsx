@@ -5,7 +5,7 @@ import { ArrowDownIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { PhotoCard } from '@/components/photo/photo-card'
-import { getPhotoListAction } from '@/app/actions'
+import { getPhotoList } from '@/services/supabase/photo'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
 
 export type phoneItem = {
@@ -25,7 +25,7 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
 
   const fetchData = useCallback(async () => {
     setIsLoading(true)
-    const res = await getPhotoListAction({ pageIndex })
+    const res = await getPhotoList({ pageIndex })
     const { data } = res
     if (data) {
       pageIndex === 0 ? setData(data) : setData((prevData: phoneItem[]) => [...prevData, ...data])
@@ -53,7 +53,7 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
             <>
               {isLoading ? (
                 <div
-                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black"
+                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent"
                   role="status"
                   aria-label="loading"
                 >

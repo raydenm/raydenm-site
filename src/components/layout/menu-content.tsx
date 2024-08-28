@@ -59,7 +59,7 @@ const PROFILES = [
   }
 ]
 
-export const MenuContent = async ({ isMobile = false }: { isMobile?: boolean }) => (
+export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
   <div className="flex w-full flex-col text-sm">
     <div className="flex flex-col gap-4">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
@@ -76,7 +76,7 @@ export const MenuContent = async ({ isMobile = false }: { isMobile?: boolean }) 
         </div>
       </Link>
       <div className="flex flex-col gap-1">
-        {(await LINKS()).map((link, linkIndex) => (
+        {LINKS.map((link, linkIndex) => (
           <NavigationLink
             key={link.href}
             href={isMobile ? link.href : link.href + (link.defaultHref || '')}
