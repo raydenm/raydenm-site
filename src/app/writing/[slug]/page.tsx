@@ -77,6 +77,8 @@ export default async function WritingSlug({ params }: { params: { slug: string }
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = params
 
+  const { data } = await fetchData(slug)
+
   const siteUrl = `/writing/${slug}`
   const title = `${process.env.NEXT_PUBLIC_WEBSITE_USERNAME}-文章`
 
@@ -86,6 +88,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       type: 'article',
       url: siteUrl
     },
+    description: data.title,
     alternates: {
       canonical: siteUrl
     }
