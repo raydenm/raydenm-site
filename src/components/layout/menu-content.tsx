@@ -11,11 +11,11 @@ const PROFILES = [
     url: 'https://github.com/raydenm',
     icon: <GithubIcon size={16} />
   },
-  {
-    title: '微信',
-    url: 'https://isharrlrlvkdieveofmw.supabase.co/storage/v1/object/public/images/raydenm-wechat.jpg',
-    icon: <MessageCircleMore size={16} />
-  },
+  // {
+  //   title: '微信',
+  //   url: 'https://img-storage.pages.dev/v2/81534fe720493172277f8.jpg',
+  //   icon: <MessageCircleMore size={16} />
+  // },
   {
     title: '稀土掘金',
     url: 'https://juejin.cn/collection/6845242851597484040',
@@ -72,7 +72,7 @@ export const MenuContent = ({ isMobile = false }: { isMobile?: boolean }) => (
         />
         <div className="flex flex-col">
           <span className="font-semibold tracking-tight">{process.env.NEXT_PUBLIC_WEBSITE_USERNAME}</span>
-          <span className="text-muted-foreground">软件开发工程师</span>
+          <span className="text-muted-foreground">前端工程师</span>
         </div>
       </Link>
       <div className="flex flex-col gap-1">

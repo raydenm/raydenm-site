@@ -23,10 +23,10 @@ export default async function Home() {
 
   return (
     <ScrollArea useScrollAreaId>
-      <FloatingHeader scrollTitle="Raydenm" />
+      <FloatingHeader scrollTitle={process.env.NEXT_PUBLIC_WEBSITE_USERNAME} />
       <div className="content-wrapper">
         <div className="content">
-          <PageTitle title="Raydenm" />
+          <PageTitle title={process.env.NEXT_PUBLIC_WEBSITE_USERNAME as string} />
           <div>
             <div className="mb-4 leading-slacker">这是一个记录成长及归纳总结的地方。</div>
             <div className="mb-4 leading-slacker">

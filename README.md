@@ -1,4 +1,4 @@
-# Raydenm personal website.
+# Personal website.
 
 ## Overview
 
