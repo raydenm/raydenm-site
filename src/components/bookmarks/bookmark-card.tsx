@@ -40,7 +40,7 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
       </div>
 
       <div className="flex w-full flex-col gap-1">
-        <div className="line-clamp-4 text-lg leading-snug">{bookmark.title}</div>
+        <div className="line-clamp-4 break-all text-lg leading-snug">{bookmark.title}</div>
         <span className="line-clamp-4 inline-flex items-center gap-1 text-sm text-muted-foreground">
           <Link2Icon size={16} />
           {bookmark.domain}

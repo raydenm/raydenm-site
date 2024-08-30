@@ -15,7 +15,7 @@ const ImageDialog = ({ url, open, setOpen }: { url: string; open: boolean; setOp
       <DialogContent
         isPreview
         closeClassName={`bottom-[-70px] top-[none] right-[50%] translate-x-[50%] ${loading && 'hidden'}`}
-        className="top-[48%] max-h-[80vh] max-w-[80vw] border-none bg-transparent p-0 shadow-none focus:outline-0"
+        className="top-[48%] max-h-[80vh] border-none bg-transparent p-0 shadow-none focus:outline-0 md:max-w-[80vw]"
         overlayClassName="bg-black/80"
       >
         <div className="flex items-start justify-center">
@@ -27,7 +27,7 @@ const ImageDialog = ({ url, open, setOpen }: { url: string; open: boolean; setOp
           <img
             src={url}
             alt=""
-            className="block max-h-[80vh] max-w-[80vw] rounded-md border-none"
+            className="block max-h-[80vh] rounded-md border-none md:max-w-[80vw]"
             onLoad={(e) => {
               setLoading(false)
             }}

@@ -257,12 +257,13 @@ export const PROJECT_LIST = [
 ]
 
 export const BOOKMARK_MAP: { [key: string]: string } = {
-  // design: '设计',
+  design: '设计',
   tools: '工具',
   frontend: '前端',
   // 'VS Code': 'VS Code 插件',
+  library: '库',
   AI: '人工智能',
-  markbooks: '收藏'
+  extranet: '外网'
 }
 
 export const SCROLL_AREA_ID = 'scroll-area'

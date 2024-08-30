@@ -18,8 +18,7 @@ Create a `.env` file similar to [`.env.example`].
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org) 用于构建快速、支持服务端渲染和静态网站的 React 框架，提供强大的功能如 API 路由和自动代码
-  分割。
+- [Next.js](https://nextjs.org) 用于构建快速、支持服务端渲染和静态网站的 React 框架，提供强大的功能如 API 路由和自动代码分割。
 - [Tailwind CSS](https://tailwindcss.com) 实用性优先的 CSS 框架，提供低级样式工具，帮助快速创建完全响应式的现代设计。
 - [Shadcn UI](https://ui.shadcn.com) 基于 Tailwind 和 Radix 构建的可自定义 UI 组件库，提供预设计的组件，加快开发速度。
 - [Contentful](https://www.contentful.com) 无头 CMS，允许你通过灵活的 API 管理和交付跨数字渠道的内容。

@@ -6,6 +6,7 @@ import { PageTitle } from '@/components/layout/page-title'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { PhotoList } from '@/components/photo/photo-list'
 import { getPhotoList } from '@/services/supabase/photo'
+import { Link } from '@/components/common/link'
 
 async function fetchData() {
   const photoData = await getPhotoList({})
@@ -21,7 +22,11 @@ export default async function Photo() {
       <FloatingHeader scrollTitle="相册" />
       <div className="content-wrapper">
         <div className="content">
-          <PageTitle title="相册" />
+          <div className="flex items-center justify-between">
+            <PageTitle title="相册" />
+            <Link href="https://img-storage.pages.dev">图床</Link>
+          </div>
+
           <Suspense fallback={<ScreenLoadingSpinner />}>
             <PhotoList initialData={photoData} />
           </Suspense>

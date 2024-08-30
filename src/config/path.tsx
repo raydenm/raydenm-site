@@ -25,7 +25,7 @@ export const LINKS = [
   {
     href: '/bookmarks',
     label: '书签',
-    defaultHref: '/markbooks',
+    defaultHref: '/library',
     icon: <BookmarkIcon size={16} />
   },
   {
