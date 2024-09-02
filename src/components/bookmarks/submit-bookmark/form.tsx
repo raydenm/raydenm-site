@@ -66,7 +66,7 @@ export function SubmitBookmarkForm({ className, setFormOpen, bookmarks, currentB
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className={cn('space-y-2', className)}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className={cn(className)}>
         <FormField
           control={form.control}
           name="url"

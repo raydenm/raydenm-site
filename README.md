@@ -18,13 +18,13 @@ Create a `.env` file similar to [`.env.example`].
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org) 用于构建快速、支持服务端渲染和静态网站的 React 框架，提供强大的功能如 API 路由和自动代码分割。
-- [Tailwind CSS](https://tailwindcss.com) 实用性优先的 CSS 框架，提供低级样式工具，帮助快速创建完全响应式的现代设计。
-- [Shadcn UI](https://ui.shadcn.com) 基于 Tailwind 和 Radix 构建的可自定义 UI 组件库，提供预设计的组件，加快开发速度。
-- [Contentful](https://www.contentful.com) 无头 CMS，允许你通过灵活的 API 管理和交付跨数字渠道的内容。
-- [Raindrop](https://raindrop.io) 智能书签工具，帮助你高效地组织、保存和分享网页内容。
-- [Supabase](https://supabase.com) 一个开源的后端即服务平台，提供实时数据库、认证和 API 端点。
-- [Resend](https://resend.com) 开发者友好的电子邮件服务，通过 API 简化邮件发送，并支持现代邮件模板。
-- [Giscus](https://giscus.app) 开源、集成 GitHub 的评论系统，使用 GitHub Discussions 管理你网站上的评论。
-- [Umami](https://umami.is) 轻量级的开源网站分析工具，提供隐私友好的数据洞察，无需依赖 cookies 或跟踪脚本。
-- [Cloudflare](https://cloudflare.com) 全球领先的内容分发网络（CDN）和安全服务提供商，全球部署的 CDN，提供边缘函数。
+- [Next.js](https://nextjs.org): A React framework for building fast websites with support for server-side rendering and static site generation. It offers powerful features like API routes and automatic code splitting.
+- [Tailwind CSS](https://tailwindcss.com): A utility-first CSS framework that provides low-level styling tools to help you quickly create fully responsive modern designs.
+- [Shadcn UI](https://ui.shadcn.com): A customizable UI component library built on Tailwind and Radix, offering pre-designed components to speed up development.
+- [Contentful](https://www.contentful.com): A headless CMS that allows you to manage and deliver content across digital channels through flexible APIs.
+- [Raindrop](https://raindrop.io): A smart bookmarking tool that helps you efficiently organize, save, and share web content.
+- [Supabase](https://supabase.com): An open-source backend-as-a-service platform that provides a real-time database, authentication, and API endpoints.
+- [Resend](https://resend.com): A developer-friendly email service that simplifies email sending via APIs and supports modern email templates.
+- [Giscus](https://giscus.app): An open-source comment system integrated with GitHub that uses GitHub Discussions to manage comments on your website.
+- [Umami](https://umami.is): A lightweight open-source web analytics tool that provides privacy-friendly data insights without relying on cookies or tracking scripts.
+- [Cloudflare](https://cloudflare.com): A leading global content delivery network (CDN) and security services provider, offering a globally distributed CDN with edge functions.

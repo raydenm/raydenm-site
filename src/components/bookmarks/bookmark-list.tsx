@@ -73,10 +73,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
           // @ts-ignore
           data.map((bookmark, bookmarkIndex) => {
             return (
-              <div
-                key={`bookmark_${bookmarkIndex}`}
-                className={cn('grid gap-4', isTweetCollection ? 'h-fit' : 'place-content-start')}
-              >
+              <div key={`bookmark_${bookmarkIndex}`}>
                 <BookmarkCard key={bookmark._id} bookmark={bookmark} order={bookmarkIndex} />
               </div>
             )

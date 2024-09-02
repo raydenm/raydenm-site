@@ -63,7 +63,7 @@ export function SubmitContcatForm({ className, setFormOpen }: SubmitContcatFormP
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className={cn('space-y-6', className)}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className={cn(className)}>
         <FormField
           control={form.control}
           name="name"
