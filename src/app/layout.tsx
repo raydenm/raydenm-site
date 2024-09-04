@@ -15,6 +15,8 @@ import { sharedMetadata } from '@/app/shared-metadata'
 import { ThemeProvider } from '@/app/theme-provider'
 import { ThemeButton } from '@/components/layout/theme-button'
 import { DraftMode } from '@/components/layout/draft-mode'
+import { WebVitals } from './web-vitals'
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = draftMode()
   preloadGetAllPosts(isEnabled)
@@ -38,6 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </main>
           <TailwindIndicator />
           <ThemeButton />
+          <WebVitals />
           <DraftMode isEnabled={isEnabled} />
           <Toaster
             closeButton
