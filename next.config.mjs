@@ -19,11 +19,11 @@ const nextConfig = {
       fullUrl: process.env.NODE_ENV === 'development'
     }
   },
-  compiler: {
-    removeConsole: {
-      exclude: ['error', 'info']
-    }
-  },
+  // compiler: {
+  //   removeConsole: {
+  //     exclude: ['error', 'info']
+  //   }
+  // },
   trailingSlash: false,
   images: {
     deviceSizes: [390, 435, 768, 1024, 1280],

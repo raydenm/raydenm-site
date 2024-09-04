@@ -26,7 +26,7 @@ export const WritingList = ({ items }: { items: [number, BlogPost[]][] }) => {
           <span className="col-span-1 hidden text-left md:grid">年</span>
           <span className="col-span-6 md:col-span-5">
             <span className="grid grid-cols-4 items-center md:grid-cols-8">
-              <span className="col-span-1 text-left">月/日</span>
+              <span className="col-span-1 text-left">日期</span>
               <span className="col-span-2 md:col-span-6">标题</span>
               <span className="col-span-1 text-right">阅读量</span>
             </span>

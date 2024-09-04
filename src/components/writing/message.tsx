@@ -11,6 +11,8 @@ export function Message({ slug }: { slug: string }) {
   const categoryId = process.env.NEXT_PUBLIC_CATEGORY_ID || ''
   const { theme } = useTheme()
   const [giscusTheme, setGiscusTheme] = useState('light')
+  // 修复跟随系统主题初始化错误
+  const [giscuskey, setGiscusKey] = useState(Math.random().toString(36))
 
   // 记录访问量
   useEffect(() => {
@@ -22,8 +24,10 @@ export function Message({ slug }: { slug: string }) {
   useEffect(() => {
     if (theme === 'system') {
       setGiscusTheme(systemTheme)
+      setGiscusKey(Math.random().toString(36))
     } else {
       theme && setGiscusTheme(theme)
+      setGiscusKey(Math.random().toString(36))
     }
   }, [systemTheme, theme])
 
@@ -31,6 +35,7 @@ export function Message({ slug }: { slug: string }) {
     <div className="mb-2 mt-16">
       <Giscus
         id="comments"
+        key={giscuskey}
         // @ts-ignore
         repo={repo}
         repoId={repoId}
