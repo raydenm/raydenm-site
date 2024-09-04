@@ -9,7 +9,7 @@ export const LINKS = [
   {
     href: '/writing',
     label: '文章',
-    defaultHref: `/typescript-doc`,
+    defaultHref: `/react-hocs`,
     icon: <PencilLineIcon size={16} />
   },
   {
