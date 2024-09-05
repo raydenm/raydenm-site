@@ -51,7 +51,7 @@ export const SideMenu = ({ children, title, bookmarks = [], isInner }: SideMenuP
       )}
     >
       {title && (
-        <div className="sticky top-0 z-10 border-b border-muted px-5 py-3">
+        <div className="sticky top-0 z-10 border-b border-muted bg-background px-5 py-3">
           <div className="flex min-h-7 items-center justify-between">
             <span className="text-sm font-semibold tracking-tight">{title}</span>
             <div className="flex items-center gap-2">

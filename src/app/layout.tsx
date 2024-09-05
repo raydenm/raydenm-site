@@ -16,6 +16,7 @@ import { ThemeProvider } from '@/app/theme-provider'
 import { ThemeButton } from '@/components/layout/theme-button'
 import { DraftMode } from '@/components/layout/draft-mode'
 import { WebVitals } from './web-vitals'
+import { env } from '@/config/env'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = draftMode()
@@ -56,7 +57,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL as string),
+  metadataBase: new URL(env.NEXT_PUBLIC_WEBSITE_URL as string),
   robots: {
     index: true,
     follow: true
