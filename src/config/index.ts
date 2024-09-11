@@ -257,6 +257,9 @@ export const PROJECT_LIST = [
 ]
 
 export const BOOKMARK_MAP: { [key: string]: string } = {
+  vscode: 'VS Code 插件',
+  npm: 'npm',
+  server: '云服务',
   design: '设计',
   tools: '工具',
   frontend: '前端',

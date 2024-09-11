@@ -18,8 +18,8 @@ type JourneyCardProps = {
   location?: string
 }
 
-export const JourneyCard = ({ title, description, image, index, location }: JourneyCardProps) => (
-  <div className="word-break-word flex flex-col">
+export const JourneyCard = ({ title, description, image, location }: JourneyCardProps) => (
+  <div className="flex flex-col break-words">
     <span className="font-semibold tracking-tight">{title}</span>
     {description && (
       <div className="mt-1 text-sm">
@@ -33,7 +33,6 @@ export const JourneyCard = ({ title, description, image, index, location }: Jour
           alt={image.title || image.description}
           width={image.width}
           height={image.height}
-          // loading={index < 1 ? 'eager' : 'lazy'}
           className="animate-reveal"
         />
       </div>

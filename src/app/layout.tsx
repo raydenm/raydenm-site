@@ -31,7 +31,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           data-website-id="3cf694bd-ddd7-4b7b-b96d-3227c54e985d"
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="min-h-screen">
+          <main className="min-h-screen bg-background">
             <div className="lg:flex">
               <SideMenu>
                 <MenuContent />
