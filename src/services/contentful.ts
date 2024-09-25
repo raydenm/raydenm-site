@@ -63,43 +63,6 @@ export const getPost = cache(async (slug: string, preview = isDevelopment) => {
             slug
             date
             markdown
-            seo {
-              title
-              description
-            }
-            content {
-              json
-              links {
-                assets {
-                  block {
-                    sys {
-                      id
-                    }
-                    url(transform: {
-                      format: AVIF,
-                      quality: 50
-                    })
-                    title
-                    width
-                    height
-                    description
-                    contentfulMetadata {
-                      tags {
-                        name
-                      }
-                    }
-                  }
-                }
-                entries {
-                  inline {
-                    sys {
-                      id
-                    }
-                    __typename
-                  }
-                }
-              }
-            }
             sys {
               firstPublishedAt
               publishedAt
@@ -114,89 +77,6 @@ export const getPost = cache(async (slug: string, preview = isDevelopment) => {
   } catch (error) {
     console.info(error)
     return null
-  }
-})
-
-export const getWritingSeo = cache(async (slug: string, preview = isDevelopment) => {
-  try {
-    const entry = await fetchGraphQL(
-      `query {
-        postCollection(where: { slug: "${slug}" }, preview: ${preview}, limit: 1) {
-          items {
-            date
-            seo {
-              title
-              description
-              ogImageTitle
-              ogImageSubtitle
-              keywords
-            }
-            sys {
-              firstPublishedAt
-              publishedAt
-            }
-          }
-        }
-      }`,
-      preview
-    )
-
-    return entry?.data?.postCollection?.items?.[0] ?? null
-  } catch (error) {
-    console.info(error)
-    return null
-  }
-})
-
-export const getPageSeo = cache(async (slug: string, preview = isDevelopment) => {
-  try {
-    const entry = await fetchGraphQL(
-      `query {
-        pageCollection(where: { slug: "${slug}" }, preview: ${preview}, limit: 1) {
-          items {
-            seo {
-              title
-              description
-              ogImageTitle
-              ogImageSubtitle
-              keywords
-            }
-          }
-        }
-      }`,
-      preview
-    )
-
-    return entry?.data?.pageCollection?.items?.[0] ?? null
-  } catch (error) {
-    console.info(error)
-    return null
-  }
-})
-
-export const getAllPageSlugs = cache(async (preview = isDevelopment) => {
-  try {
-    const entries = await fetchGraphQL(
-      `query {
-        pageCollection(preview: ${preview}) {
-          items {
-            slug
-            hasCustomPage
-            sys {
-              id
-              firstPublishedAt
-              publishedAt
-            }
-          }
-        }
-      }`,
-      preview
-    )
-
-    return entries?.data?.pageCollection?.items ?? []
-  } catch (error) {
-    console.info(error)
-    return []
   }
 })
 
@@ -217,52 +97,6 @@ export const getAllPostSlugs = cache(async (preview = isDevelopment) => {
   } catch (error) {
     console.info(error)
     return []
-  }
-})
-
-export const getPage = cache(async (slug: string, preview = isDevelopment) => {
-  try {
-    const entry = await fetchGraphQL(
-      `query {
-        pageCollection(where: { slug: "${slug}" }, preview: ${preview}, limit: 1) {
-          items {
-            title
-            slug
-            content {
-              json
-              links {
-                assets {
-                  block {
-                    sys {
-                      id
-                    }
-                    url(transform: {
-                      format: AVIF,
-                      quality: 50
-                    })
-                    title
-                    width
-                    height
-                    description
-                  }
-                }
-              }
-            }
-            sys {
-              id
-              firstPublishedAt
-              publishedAt
-            }
-          }
-        }
-      }`,
-      preview
-    )
-
-    return entry?.data?.pageCollection?.items?.[0] ?? null
-  } catch (error) {
-    console.info(error)
-    return null
   }
 })
 

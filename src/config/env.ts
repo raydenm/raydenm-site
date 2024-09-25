@@ -2,8 +2,6 @@ import 'server-only'
 import { z } from 'zod'
 
 const isString = z.string().min(1)
-// const isBoolean = isString.transform((value) => value === 'true');
-// const isNumber = isString.transform(Number);
 
 const envSchema = z.object({
   // Contentful
@@ -33,7 +31,10 @@ const envSchema = z.object({
   NEXT_PUBLIC_REPO: isString,
   NEXT_PUBLIC_REPO_ID: isString,
   NEXT_PUBLIC_CATEGORY: isString,
-  NEXT_PUBLIC_CATEGORY_ID: isString
+  NEXT_PUBLIC_CATEGORY_ID: isString,
+
+  // umami
+  NEXT_PUBLIC_UMAMI_WEBSITE_ID: isString
 })
 
 /**

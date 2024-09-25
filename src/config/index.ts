@@ -211,51 +211,6 @@ export const STACK_LIST = [
   }
 ]
 
-export const PROJECT_LIST = [
-  {
-    title: '客户关系saas平台',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: '官网',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: '平台',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: 'app',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: '小程序',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: 'webox',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  },
-  {
-    title: '官网',
-    url: 'https://nextjs.org/',
-    description: '',
-    image: ''
-  }
-]
-
 export const BOOKMARK_MAP: { [key: string]: string } = {
   vscode: 'VS Code 插件',
   npm: 'npm',
@@ -263,7 +218,6 @@ export const BOOKMARK_MAP: { [key: string]: string } = {
   design: '设计',
   tools: '工具',
   frontend: '前端',
-  // 'VS Code': 'VS Code 插件',
   library: '库',
   AI: '人工智能',
   extranet: '外网'
@@ -271,12 +225,9 @@ export const BOOKMARK_MAP: { [key: string]: string } = {
 
 export const SCROLL_AREA_ID = 'scroll-area'
 export const MOBILE_SCROLL_THRESHOLD = 20
-export const SUPABASE_TABLE_NAME = 'view_data'
 
 export const SUBMIT_BOOKMARK_FORM_TITLE = '提交网站'
 export const SUBMIT_BOOKMARK_FORM_DESCRIPTION = '提交一个网站, 如果是一个非常棒的网站, 我会加入到我的书签, 分享给大家。'
-export const MAX_BOOKMARK_SUBMISSIONS_PER_DAY = 10
-export const BOOKMARK_SUBMISSION_COUNT_COOKIE_NAME = 'formSubmissionCount'
 
 export const SUBMIT_CONTCAT_FORM_TITLE = '联系我'
 export const SUBMIT_CONTCAT_FORM_DESCRIPTION =

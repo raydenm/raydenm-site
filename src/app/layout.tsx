@@ -28,7 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script
           defer
           src="https://cloud.umami.is/script.js"
-          data-website-id="3cf694bd-ddd7-4b7b-b96d-3227c54e985d"
+          data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="min-h-screen bg-background">

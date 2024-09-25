@@ -14,7 +14,9 @@
 
 ## Running Locally
 
-Create a `.env` file similar to [`.env.example`].
+Create a `.env` file similar to [`.env.example`] and get env data from Contentful/Raindrop/Resend/Umami/Giscus/Memfiredb or Supabase. Set website url and username.
+
+Change config in `src/config`.
 
 ## Tech Stack
 
@@ -24,6 +26,7 @@ Create a `.env` file similar to [`.env.example`].
 - [Contentful](https://www.contentful.com): A headless CMS that allows you to manage and deliver content across digital channels through flexible APIs.
 - [Raindrop](https://raindrop.io): A smart bookmarking tool that helps you efficiently organize, save, and share web content.
 - [Supabase](https://supabase.com): An open-source backend-as-a-service platform that provides a real-time database, authentication, and API endpoints.
+- [Memfiredb](https://memfiredb.com): Adopts open source Supabase, compatible with domestic development ecosystem.
 - [Resend](https://resend.com): A developer-friendly email service that simplifies email sending via APIs and supports modern email templates.
 - [Giscus](https://giscus.app): An open-source comment system integrated with GitHub that uses GitHub Discussions to manage comments on your website.
 - [Umami](https://umami.is): A lightweight open-source web analytics tool that provides privacy-friendly data insights without relying on cookies or tracking scripts.

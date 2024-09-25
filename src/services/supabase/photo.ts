@@ -1,5 +1,4 @@
 import { cache } from 'react'
-// import 'server-only'
 
 import supabase from '@/services/supabase/public'
 
