@@ -8,6 +8,7 @@ import { getPost, getAllPostSlugs } from '@/services/contentful'
 import { getDateTimeFormat } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
+import remarkGfm from 'remark-gfm'
 import { Link } from '@/components/common/link'
 import 'highlight.js/styles/github-dark.css'
 import '@/style/article.css'
@@ -61,7 +62,7 @@ export default async function WritingSlug({ params }: { params: { slug: string }
                 components={{
                   a: ({ className, ...rest }) => <Link {...rest} />
                 }}
-                rehypePlugins={[rehypeHighlight]}
+                rehypePlugins={[rehypeHighlight, remarkGfm]}
               >
                 {markdown}
               </Markdown>

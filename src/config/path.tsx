@@ -1,4 +1,13 @@
-import { SparklesIcon, PencilLineIcon, NavigationIcon, Wand2Icon, BookmarkIcon, Images, GithubIcon } from 'lucide-react'
+import {
+  SparklesIcon,
+  PencilLineIcon,
+  NavigationIcon,
+  Wand2Icon,
+  BookmarkIcon,
+  Images,
+  GithubIcon,
+  ChartNoAxesCombined
+} from 'lucide-react'
 
 export const LINKS = [
   {
@@ -81,6 +90,11 @@ export const PROFILES = [
         <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
       </svg>
     )
+  },
+  {
+    url: 'https://us.umami.is/share/v7iBK1HqRbbkQ2y2',
+    title: '网站统计',
+    icon: <ChartNoAxesCombined size={16} />
   }
 ]
 
