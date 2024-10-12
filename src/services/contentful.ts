@@ -37,6 +37,7 @@ export const getAllPosts = cache(async (preview = isDevelopment) => {
             title
             slug
             date
+            tag
             sys {
               firstPublishedAt
               publishedAt
@@ -62,6 +63,7 @@ export const getPost = cache(async (slug: string, preview = isDevelopment) => {
             title
             slug
             date
+            tag
             markdown
             sys {
               firstPublishedAt
