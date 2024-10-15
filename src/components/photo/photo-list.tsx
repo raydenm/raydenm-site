@@ -8,14 +8,18 @@ import { PhotoCard } from '@/components/photo/photo-card'
 import { getPhotoList } from '@/services/supabase/photo'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
 
-export type phoneItem = {
+import 'react-photo-view/dist/react-photo-view.css'
+
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+
+export type photoItem = {
   url: string
   id: string
   created_at: Date
   description: string
 }
 export const PhotoList = ({ initialData }: { initialData: any }) => {
-  const [data, setData] = useState<phoneItem[]>(initialData?.data || [])
+  const [data, setData] = useState<photoItem[]>(initialData?.data || [])
   const [pageIndex, setPageIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -28,7 +32,7 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
     const res = await getPhotoList({ pageIndex })
     const { data } = res
     if (data) {
-      pageIndex === 0 ? setData(data) : setData((prevData: phoneItem[]) => [...prevData, ...data])
+      pageIndex === 0 ? setData(data) : setData((prevData: photoItem[]) => [...prevData, ...data])
     }
     setIsLoading(false)
   }, [pageIndex])
@@ -37,16 +41,19 @@ export const PhotoList = ({ initialData }: { initialData: any }) => {
     if (pageIndex > 0) fetchData()
   }, [pageIndex, fetchData])
 
-  const isReachingEnd = data.length >= initialData?.count ?? 0
+  const isReachingEnd = data.length >= initialData?.count
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {data.map((photo, index) => {
-          return <PhotoCard key={index} photo={photo} />
-        })}
-      </div>
-
+      <PhotoProvider>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+          {data.map((photo, index) => (
+            <PhotoView key={index} src={photo.url}>
+              <PhotoCard key={index} photo={photo} />
+            </PhotoView>
+          ))}
+        </div>
+      </PhotoProvider>
       {data.length > 0 ? (
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">
           {!isReachingEnd ? (

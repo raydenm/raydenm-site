@@ -27,12 +27,13 @@ const ImageDialog = ({ url, open, setOpen }: { url: string; open: boolean; setOp
           <img
             src={url}
             alt=""
-            className="block max-h-[80vh] max-w-[95vw] rounded-md border-none md:max-w-[80vw]"
+            className={`block max-h-[80vh] max-w-[95vw] rounded-md bg-white ${!loading && 'p-3'}  md:max-w-[80vw]`}
             onLoad={(e) => {
               setLoading(false)
             }}
           />
         </div>
+        <div>123</div>
       </DialogContent>
     </Dialog>
   )

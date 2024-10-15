@@ -27,13 +27,13 @@ export const JourneyCard = ({ title, description, image, location }: JourneyCard
       </div>
     )}
     {image?.url && (
-      <div className="mt-2.5 overflow-hidden rounded-xl bg-primary-foreground">
+      <div className="mt-2.5 ">
         <img
           src={image.url}
           alt={image.title || image.description}
           width={image.width}
           height={image.height}
-          className="animate-reveal"
+          className="animate-reveal rounded-xl"
         />
       </div>
     )}

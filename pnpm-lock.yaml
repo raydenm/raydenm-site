@@ -125,6 +125,9 @@ dependencies:
   react-markdown:
     specifier: ^9.0.1
     version: 9.0.1(@types/react@18.3.3)(react@18.3.1)
+  react-photo-view:
+    specifier: ^1.2.6
+    version: 1.2.6(react-dom@18.3.1)(react@18.3.1)
   react-tweet:
     specifier: ^3.2.0
     version: 3.2.1(react-dom@18.3.1)(react@18.3.1)
@@ -10544,6 +10547,16 @@ packages:
       vfile: 6.0.2
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /react-photo-view@1.2.6(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-Fq17yxkMIv0oFp7HOJr39HgCZRP6A9K5T5rixJ4flSUYT2OO3V8vNxEExjhIKgIrfmTu+mDnHYEsI9RRWi1JHw==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /react-promise-suspense@0.3.4:

@@ -52,7 +52,7 @@ const DialogContent = React.forwardRef<
         className={cn(
           `absolute ${
             isPreview ? 'right-[-5px] top-[-5px]' : 'right-7 top-7'
-          }  rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground`,
+          }  rounded-sm ring-offset-background transition-opacity focus:outline-none  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground`,
           closeClassName
         )}
       >
