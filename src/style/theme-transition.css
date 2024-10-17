@@ -1,28 +1,57 @@
+::view-transition-new(root),::view-transition-old(root) {
+    animation: none;
+    mix-blend-mode: normal
+}
+
+::view-transition-old(root) {
+    z-index: 1
+}
+
 ::view-transition-new(root) {
-  animation: turnOff 800ms ease-in-out;
+    z-index: 9999
 }
 
-@keyframes turnOn {
-  0% {
-    clip-path: polygon(0% 0%, 100% 0, 100% 0, 0 0);
-  }
-  100% {
-    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 100%);
-  }
+.dark::view-transition-old(root) {
+    z-index: 9999
 }
 
-html.dark::view-transition-new(root) {
-  animation: turnOn 800ms ease-in-out;
+.dark::view-transition-new(root) {
+    z-index: 1
 }
+
+
+::view-transition-new(root) {
+  animation: turnOff 600ms ease-in-out;
+}
+
 ::view-transition-old(root) {
   animation: none;
 }
 
-@keyframes turnOff {
-  0% {
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+.dark::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal
+}
+
+.dark::view-transition-old(root) {
+  animation: turnOn 600ms ease-in-out;
+}
+
+/* @keyframes turnOn {
+   0% {
+    clip-path: circle(150% at 20px 95%);
   }
   100% {
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    clip-path: circle(0px at 20px 95%);
   }
 }
+
+@keyframes turnOff {
+  0% {
+    clip-path: circle(0px at 20px 95%);
+  }
+  100% {
+    clip-path: circle(150% at 20px 95%);
+  }
+} */
+

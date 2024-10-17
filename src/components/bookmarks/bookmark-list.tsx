@@ -6,7 +6,6 @@ import { ArrowDownIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BookmarkCard } from '@/components/bookmarks/bookmark-card'
 import { cn } from '@/lib/utils'
-// import { getBookmarkItemsAction } from '@/app/actions'
 import { getBookmarkItems } from '@/services/raindrop'
 
 export type BookmarkItemType = {
@@ -63,7 +62,7 @@ export const BookmarkList = ({ initialData, id }: BookmarkListProps) => {
   }, [data])
 
   const chunks = useMemo(() => getChunks(), [getChunks])
-  const isReachingEnd = data.length >= initialData?.count ?? 0
+  const isReachingEnd = data.length >= initialData?.count
   const isTweetCollection = false
 
   return (
