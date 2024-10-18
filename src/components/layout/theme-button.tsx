@@ -44,8 +44,10 @@ export const ThemeButton = () => {
       updateCb()
       return
     }
-    if (document.startViewTransition) {
-      document.startViewTransition(updateCb)
+    // @ts-ignore
+    if (document?.startViewTransition) {
+      // @ts-ignore
+      document?.startViewTransition(updateCb)
     } else {
       updateCb()
     }
