@@ -19,7 +19,6 @@
     z-index: 1
 }
 
-
 ::view-transition-new(root) {
   animation: turnOff 600ms ease-in-out;
 }
@@ -37,21 +36,21 @@
   animation: turnOn 600ms ease-in-out;
 }
 
-/* @keyframes turnOn {
+@keyframes turnOn {
    0% {
-    clip-path: circle(150% at 20px 95%);
+    clip-path: circle(150% at var(--themeswitch-x) var(--themeswitch-y));
   }
   100% {
-    clip-path: circle(0px at 20px 95%);
+    clip-path: circle(18px at var(--themeswitch-x) var(--themeswitch-y));
   }
 }
 
 @keyframes turnOff {
   0% {
-    clip-path: circle(0px at 20px 95%);
+    clip-path: circle(18px at var(--themeswitch-x) var(--themeswitch-y));
   }
   100% {
-    clip-path: circle(150% at 20px 95%);
+    clip-path: circle(150% at var(--themeswitch-x) var(--themeswitch-y));
   }
-} */
+}
 

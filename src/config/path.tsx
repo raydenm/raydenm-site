@@ -6,7 +6,8 @@ import {
   BookmarkIcon,
   Images,
   GithubIcon,
-  ChartNoAxesCombined
+  ChartNoAxesCombined,
+  ImagePlus
 } from 'lucide-react'
 
 export const LINKS = [
@@ -95,6 +96,11 @@ export const PROFILES = [
     url: 'https://us.umami.is/share/v7iBK1HqRbbkQ2y2',
     title: '网站统计',
     icon: <ChartNoAxesCombined size={16} />
+  },
+  {
+    url: 'https://img-storage.pages.dev',
+    title: '图床',
+    icon: <ImagePlus size={16} />
   }
 ]
 

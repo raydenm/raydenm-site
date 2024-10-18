@@ -5,6 +5,7 @@ import { Sun, Moon } from 'lucide-react'
 import { flushSync } from 'react-dom'
 import { useEffect, useRef, useState } from 'react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { cn } from '@/lib/utils'
 
 const SystemThemeIcon = ({ className }: { className: string }) => (
   <svg className={className} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -15,56 +16,47 @@ const SystemThemeIcon = ({ className }: { className: string }) => (
   </svg>
 )
 
-const setDynamicKeyframes = (x: number, y: number) => {
-  const keyframesTurnOn = `
-    @keyframes turnOn {
-      0% {
-        clip-path: circle(150% at ${x}px ${y}px);
-      }
-      100% {
-        clip-path: circle(18px at ${x}px ${y}px);
-      }
-    }
-  `
-
-  const keyframesTurnOff = `
-    @keyframes turnOff {
-      0% {
-        clip-path: circle(18px at ${x}px ${y}px);
-      }
-      100% {
-        clip-path: circle(150% at ${x}px ${y}px);
-      }
-    }
-  `
-
-  const styleSheet = document.styleSheets[0]
-  styleSheet?.insertRule(keyframesTurnOn, styleSheet.cssRules.length)
-  styleSheet?.insertRule(keyframesTurnOff, styleSheet.cssRules.length)
-}
-
 export const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
   const themeRef = useRef<HTMLDivElement>(null)
   const [isClient, setIsClient] = useState(false)
+
+  const themeMap = [
+    {
+      value: 'light',
+      lable: '亮色主题',
+      icon: <Sun size={16} className="mr-2" />
+    },
+    {
+      value: 'dark',
+      lable: '暗黑主题',
+      icon: <Moon size={16} className="mr-2" />
+    },
+    {
+      value: 'system',
+      lable: '跟随系统',
+      icon: <SystemThemeIcon className="mr-2 size-4" />
+    }
+  ]
 
   const transitionViewIfSupported = (updateCb: () => any) => {
     if (window.matchMedia(`(prefers-reduced-motion: reduce)`).matches) {
       updateCb()
       return
     }
-    // @ts-ignore
     if (document.startViewTransition) {
-      // @ts-ignore
       document.startViewTransition(updateCb)
     } else {
       updateCb()
     }
   }
 
-  const buildThemeTransition = (theme: string) => {
+  const buildThemeTransition = (value: string) => {
+    if (theme === value) {
+      return
+    }
     transitionViewIfSupported(() => {
-      flushSync(() => setTheme(theme))
+      flushSync(() => setTheme(value))
     })
   }
 
@@ -72,43 +64,35 @@ export const ThemeButton = () => {
     if (themeRef.current) {
       const rect = themeRef.current.getBoundingClientRect()
       const { top, left } = rect
-      setDynamicKeyframes(left + 18, top)
+      document.documentElement.style.setProperty('--themeswitch-x', `${left + 18}px`)
+      document.documentElement.style.setProperty('--themeswitch-y', `${top}px`)
     }
     setIsClient(true)
-  }, [])
+  }, [isClient])
 
   return (
-    <div className="hidden md:block">
-      <div
-        ref={themeRef}
-        className="fixed bottom-3 left-3 z-50 flex cursor-pointer rounded-full p-2 text-[#6B7785] hover:bg-muted"
-      >
-        <DropdownMenu>
-          <DropdownMenuTrigger className="focus-visible:outline-none">
-            {isClient && (
-              <div>
-                {theme === 'system' && <SystemThemeIcon className="size-5" />}
-                {theme === 'light' && <Sun size={20} />}
-                {theme === 'dark' && <Moon size={20} />}
-              </div>
-            )}
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="mb-2 ml-3">
-            <DropdownMenuItem className="px-3" onClick={() => buildThemeTransition('light')}>
-              <Sun size={16} className="mr-2" />
-              亮色主题
-            </DropdownMenuItem>
-            <DropdownMenuItem className="px-3" onClick={() => buildThemeTransition('dark')}>
-              <Moon size={16} className="mr-2" />
-              暗黑主题
-            </DropdownMenuItem>
-            <DropdownMenuItem className="px-3" onClick={() => buildThemeTransition('system')}>
-              <SystemThemeIcon className="mr-2 size-4" />
-              跟随系统
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger className="focus-visible:outline-none">
+        {isClient && (
+          <div ref={themeRef} className="flex cursor-pointer rounded-full p-2 text-[#6B7785] hover:bg-muted">
+            {theme === 'system' && <SystemThemeIcon className="size-5" />}
+            {theme === 'light' && <Sun size={20} />}
+            {theme === 'dark' && <Moon size={20} />}
+          </div>
+        )}
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="mb-1 ml-2 flex flex-col gap-1">
+        {themeMap.map(({ value, icon, lable }) => (
+          <DropdownMenuItem
+            key={value}
+            className={cn('rounded-md px-3', theme === value && '!bg-primary !text-primary-foreground')}
+            onClick={() => buildThemeTransition(value)}
+          >
+            {icon}
+            {lable}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

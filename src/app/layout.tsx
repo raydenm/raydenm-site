@@ -3,25 +3,19 @@ import '@/style/theme-transition.css'
 
 import React from 'react'
 
-import { draftMode } from 'next/headers'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Toaster } from '@/components/ui/sonner'
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator'
 import { SideMenu } from '@/components/layout/side-menu'
 import { MenuContent } from '@/components/layout/menu-content'
-import { preloadGetAllPosts } from '@/services/contentful'
 import { sharedMetadata } from '@/app/shared-metadata'
 import { ThemeProvider } from '@/app/theme-provider'
-import { ThemeButton } from '@/components/layout/theme-button'
-import { DraftMode } from '@/components/layout/draft-mode'
 import { WebVitals } from './web-vitals'
 import { env } from '@/config/env'
+import { Tools } from '@/components/layout/tools'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const { isEnabled } = draftMode()
-  preloadGetAllPosts(isEnabled)
-
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
@@ -40,9 +34,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </main>
           <TailwindIndicator />
-          <ThemeButton />
+          <Tools />
           <WebVitals />
-          <DraftMode isEnabled={isEnabled} />
           <Toaster
             closeButton
             richColors
