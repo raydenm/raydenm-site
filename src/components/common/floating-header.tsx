@@ -5,10 +5,7 @@ import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Balancer from 'react-wrap-balancer'
-import {
-  ArrowLeftIcon
-  // RadioIcon
-} from 'lucide-react'
+import { ArrowLeftIcon } from 'lucide-react'
 import type { BookmarksType, BookmarkType } from '@/services/raindrop'
 
 import { Button } from '@/components/ui/button'
@@ -36,9 +33,7 @@ export const FloatingHeader = memo(
   ({ scrollTitle, title, goBackLink, bookmarks = [], currentBookmark, children }: FloatingHeaderProps) => {
     const [transformValues, setTransformValues] = useState({ translateY: 0, opacity: scrollTitle ? 0 : 1 })
     const pathname = usePathname()
-    // const isWritingIndexPage = pathname === '/writing'
     const isWritingPath = pathname.startsWith('/writing')
-    // const isBookmarksIndexPage = pathname === '/bookmarks'
     const isBookmarkPath = pathname.startsWith('/bookmarks')
 
     useEffect(() => {

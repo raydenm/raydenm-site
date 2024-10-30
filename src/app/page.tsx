@@ -39,6 +39,16 @@ export default async function Home() {
             </div>
             <div className="mb-4 leading-slacker"></div>
           </div>
+          {/* <Button asChild variant="link" className="inline px-0">
+            <Link href="/writing">
+              <h2 className="mb-4 mt-8">技术栈</h2>
+            </Link>
+          </Button>
+          <Button asChild variant="link" className="inline px-0">
+            <Link href="/writing">
+              <h2 className="mb-4 mt-8">项目</h2>
+            </Link>
+          </Button> */}
           <Button asChild variant="link" className="inline px-0">
             <Link href="/writing">
               <h2 className="mb-4 mt-8">文章</h2>

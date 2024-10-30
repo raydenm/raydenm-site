@@ -33,7 +33,6 @@ const ImageDialog = ({ url, open, setOpen }: { url: string; open: boolean; setOp
             }}
           />
         </div>
-        <div>123</div>
       </DialogContent>
     </Dialog>
   )

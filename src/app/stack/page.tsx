@@ -1,4 +1,3 @@
-import '@/style/sprites.css'
 import { Suspense } from 'react'
 import { ScrollArea } from '@/components/common/scroll-area'
 import { GradientBg } from '@/components/common/gradient-bg'
@@ -6,6 +5,7 @@ import { FloatingHeader } from '@/components/common/floating-header'
 import { PageTitle } from '@/components/layout/page-title'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { StackList } from '@/components/stack/stack-list'
+import { STACK_LIST } from '@/config'
 export default async function Stack() {
   return (
     <ScrollArea useScrollAreaId>
@@ -15,7 +15,7 @@ export default async function Stack() {
         <div className="content">
           <PageTitle title="技术栈" />
           <Suspense fallback={<ScreenLoadingSpinner />}>
-            <StackList />
+            <StackList list={STACK_LIST} />
           </Suspense>
         </div>
       </div>

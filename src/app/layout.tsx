@@ -1,5 +1,6 @@
 import '@/style/globals.css'
 import '@/style/theme-transition.css'
+import '@/style/sprites.css'
 
 import React from 'react'
 

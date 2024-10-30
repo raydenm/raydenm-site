@@ -1,10 +1,17 @@
-import { STACK_LIST } from '@/config'
 import { cn } from '@/lib/utils'
 
-export const StackList = () => {
+export const StackList = ({
+  list
+}: {
+  list: {
+    title: string
+    icon: string
+    url: string
+  }[]
+}) => {
   return (
     <div className="grid grid-cols-3 gap-4 sm:flex sm:flex-wrap">
-      {STACK_LIST.map(({ title, icon, url }, key) => (
+      {list.map(({ title, icon, url }, key) => (
         <a
           key={key}
           href={`${url}?ref=${process.env.NEXT_PUBLIC_WEBSITE_URL}`}

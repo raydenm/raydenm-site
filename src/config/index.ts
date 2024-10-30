@@ -10,16 +10,6 @@ export const STACK_LIST = [
     icon: 'icon-vuejs'
   },
   {
-    title: 'Tauri',
-    url: 'https://tauri.app',
-    icon: 'icon-tauri'
-  },
-  {
-    title: 'Expo',
-    url: 'https://expo.dev',
-    icon: 'icon-expo'
-  },
-  {
     title: 'Next.js',
     url: 'https://nextjs.org/',
     icon: 'icon-nextjs'
@@ -28,11 +18,6 @@ export const STACK_LIST = [
     title: 'React Native',
     url: 'https://reactnative.dev/',
     icon: 'icon-reactnative'
-  },
-  {
-    title: 'Electron',
-    url: 'https://www.electronjs.org/',
-    icon: 'icon-electron'
   },
   {
     title: 'Nuxt.js',
@@ -49,6 +34,23 @@ export const STACK_LIST = [
     url: 'https://tailwindcss.com/',
     icon: 'icon-tailwindcss'
   },
+  {
+    title: 'Tauri',
+    url: 'https://tauri.app',
+    icon: 'icon-tauri'
+  },
+  {
+    title: 'Expo',
+    url: 'https://expo.dev',
+    icon: 'icon-expo'
+  },
+
+  {
+    title: 'Electron',
+    url: 'https://www.electronjs.org/',
+    icon: 'icon-electron'
+  },
+
   {
     title: 'React Query',
     url: 'https://tanstack.com/query/latest/docs/framework/react/overview',
