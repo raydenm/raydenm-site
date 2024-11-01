@@ -68,7 +68,10 @@ export const ThemeButton = () => {
     <DropdownMenu>
       <DropdownMenuTrigger className="focus-visible:outline-none">
         {isClient && (
-          <div ref={themeRef} className="flex cursor-pointer rounded-full p-2 text-[#6B7785] hover:bg-muted">
+          <div
+            ref={themeRef}
+            className="flex cursor-pointer rounded-full p-2 text-[#6B7785] transition-all hover:bg-muted/50"
+          >
             {theme === 'system' && <SystemThemeIcon className="size-5" />}
             {theme === 'light' && <Sun size={20} />}
             {theme === 'dark' && <Moon size={20} />}

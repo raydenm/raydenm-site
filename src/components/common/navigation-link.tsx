@@ -26,7 +26,7 @@ export const NavigationLink = memo(({ href, label, icon, shortcutNumber }: Navig
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-between gap-2 rounded-lg p-2 hover:bg-muted"
+        className="flex items-center justify-between gap-2 rounded-lg p-2 transition-all hover:bg-muted/50"
       >
         <span className="inline-flex items-center gap-2 font-medium">
           {iconCmp} {label}
@@ -48,8 +48,8 @@ export const NavigationLink = memo(({ href, label, icon, shortcutNumber }: Navig
       key={href}
       href={href}
       className={cn(
-        'group flex items-center justify-between rounded-lg p-2',
-        isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'
+        'group flex items-center justify-between rounded-lg p-2 transition-all',
+        isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted/50'
       )}
     >
       <span className="flex items-center gap-2">

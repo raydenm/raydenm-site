@@ -38,7 +38,10 @@ export const PwaDownload = () => {
 
   return (
     isInstallable && (
-      <div className="flex cursor-pointer rounded-full p-2 text-[#6B7785] hover:bg-muted" onClick={handleInstallClick}>
+      <div
+        className="flex cursor-pointer rounded-full p-2 text-[#6B7785] transition-all hover:bg-muted/50"
+        onClick={handleInstallClick}
+      >
         <MonitorDown size={20} />
       </div>
     )

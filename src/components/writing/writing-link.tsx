@@ -28,7 +28,7 @@ export const WritingLink = ({ post, viewCount, isMobile, isActive }: WritingLink
         href={`/writing/${post.slug}`}
         className={cn(
           'flex flex-col gap-1',
-          !isMobile && isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted',
+          !isMobile && isActive ? 'bg-primary text-primary-foreground' : 'hover:bg-muted/50',
           isMobile ? 'border-b border-muted px-4 py-3 text-sm' : 'rounded-lg p-2'
         )}
       >

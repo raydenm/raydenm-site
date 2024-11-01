@@ -18,7 +18,7 @@ export const BookmarkCard = ({ bookmark, order }: BookmarkCardProps) => {
   return (
     <a
       key={bookmark._id}
-      className="flex min-h-[105px] cursor-pointer flex-row gap-3 overflow-hidden rounded-xl bg-muted p-3 transition-all hover:bg-cardactive xl:min-h-[118px]"
+      className="flex min-h-[105px] cursor-pointer flex-row gap-3 overflow-hidden rounded-xl bg-muted/70 p-3 transition-all hover:bg-cardactive/70 xl:min-h-[118px]"
       href={`${bookmark.link}?ref=${process.env.NEXT_PUBLIC_WEBSITE_URL}`}
       target="_blank"
       rel="noopener noreferrer"

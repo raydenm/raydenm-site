@@ -7,14 +7,14 @@ import React from 'react'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Toaster } from '@/components/ui/sonner'
-import { TailwindIndicator } from '@/components/layout/tailwind-indicator'
+import { TailwindIndicator } from '@/components/tools/tailwind-indicator'
 import { SideMenu } from '@/components/layout/side-menu'
 import { MenuContent } from '@/components/layout/menu-content'
 import { sharedMetadata } from '@/app/shared-metadata'
 import { ThemeProvider } from '@/app/theme-provider'
 import { WebVitals } from './web-vitals'
 import { env } from '@/config/env'
-import { Tools } from '@/components/layout/tools'
+import { Tools } from '@/components/tools/tools'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,7 +26,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="min-h-screen bg-background">
+          {/* bg-background */}
+          <main className="min-h-screen">
             <div className="lg:flex">
               <SideMenu>
                 <MenuContent />

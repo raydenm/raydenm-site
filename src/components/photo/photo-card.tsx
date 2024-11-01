@@ -15,7 +15,7 @@ export const PhotoCard = forwardRef<HTMLDivElement, PhotoCardProps>(({ onClick, 
     <img
       src={`${photo.url}?w=220`}
       alt="/assets/fallback.avif"
-      className="size-full animate-reveal cursor-pointer rounded-md border-0 object-cover transition-all duration-500 hover:scale-105"
+      className="size-full animate-reveal cursor-pointer rounded-md border-0 object-cover transition-all duration-300 hover:scale-105"
     />
   </div>
 ))
