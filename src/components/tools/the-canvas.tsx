@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-semi */
 /* eslint-disable no-sequences */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable eqeqeq */
