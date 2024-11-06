@@ -1,18 +1,14 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Giscus from '@giscus/react'
 import useSystemTheme from '@/hooks/useSystemTheme'
+import useRealTheme from '@/hooks/useRealTheme'
 export function Message({ slug }: { slug: string }) {
   const repo = process.env.NEXT_PUBLIC_REPO || ''
   const repoId = process.env.NEXT_PUBLIC_REPO_ID || ''
   const category = process.env.NEXT_PUBLIC_CATEGORY || ''
   const categoryId = process.env.NEXT_PUBLIC_CATEGORY_ID || ''
-  const { theme } = useTheme()
-  const [giscusTheme, setGiscusTheme] = useState('light')
-  // 修复跟随系统主题初始化错误
-  const [giscuskey, setGiscusKey] = useState(Math.random().toString(36))
 
   // 记录访问量
   useEffect(() => {
@@ -20,22 +16,14 @@ export function Message({ slug }: { slug: string }) {
   }, [slug])
 
   const systemTheme = useSystemTheme()
-
-  useEffect(() => {
-    if (theme === 'system') {
-      setGiscusTheme(systemTheme)
-      setGiscusKey(Math.random().toString(36))
-    } else {
-      theme && setGiscusTheme(theme)
-      setGiscusKey(Math.random().toString(36))
-    }
-  }, [systemTheme, theme])
+  const realTheme = useRealTheme()
 
   return (
     <div className="mb-2 mt-16">
+      {systemTheme}
       <Giscus
         id="comments"
-        key={giscuskey}
+        key={realTheme}
         // @ts-ignore
         repo={repo}
         repoId={repoId}
@@ -45,7 +33,7 @@ export function Message({ slug }: { slug: string }) {
         reactionsEnabled="0"
         emitMetadata="0"
         inputPosition="top"
-        theme={giscusTheme}
+        theme={realTheme}
         lang="zh-CN"
       />
     </div>

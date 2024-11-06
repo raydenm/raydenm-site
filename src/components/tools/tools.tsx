@@ -6,7 +6,7 @@ import { preloadGetAllPosts } from '@/services/contentful'
 // import { SettingButton } from './setting-button'
 import { ColorCanvas } from './color-canvas'
 // import { FondoAnimado } from './fondo-animado'
-import { TheCanvas } from './the-canvas'
+import { LineCanvas } from './line-canvas'
 
 export const Tools = () => {
   const { isEnabled } = draftMode()
@@ -22,7 +22,7 @@ export const Tools = () => {
       </div>
       <ColorCanvas />
       {/* <FondoAnimado /> */}
-      <TheCanvas />
+      <LineCanvas />
     </div>
   )
 }

@@ -142,7 +142,7 @@ function Node() {
   this.vx = 0
 }
 
-export const renderCanvas = function () {
+const renderCanvas = function () {
   ctx = document.getElementById('canvas').getContext('2d')
   ctx.running = true
   ctx.frame = 1
@@ -167,3 +167,5 @@ export const renderCanvas = function () {
   })
   resizeCanvas()
 }
+
+export default renderCanvas
