@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react'
 import Giscus from '@giscus/react'
-import useSystemTheme from '@/hooks/useSystemTheme'
 import useRealTheme from '@/hooks/useRealTheme'
 export function Message({ slug }: { slug: string }) {
   const repo = process.env.NEXT_PUBLIC_REPO || ''
@@ -15,12 +14,10 @@ export function Message({ slug }: { slug: string }) {
     fetch(`/api/increment-views?slug=${slug}`)
   }, [slug])
 
-  const systemTheme = useSystemTheme()
   const realTheme = useRealTheme()
 
   return (
     <div className="mb-2 mt-16">
-      {systemTheme}
       <Giscus
         id="comments"
         key={realTheme}
