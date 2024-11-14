@@ -1,13 +1,13 @@
 import {
-  SparklesIcon,
-  PencilLineIcon,
-  NavigationIcon,
-  Wand2Icon,
   BookmarkIcon,
-  Images,
-  GithubIcon,
   ChartNoAxesCombined,
-  ImagePlus
+  GithubIcon,
+  ImagePlus,
+  Images,
+  NavigationIcon,
+  PencilLineIcon,
+  SparklesIcon,
+  Wand2Icon
 } from 'lucide-react'
 
 import { JunJingIcon, TwitterIcon } from '@/assets/svg'
@@ -21,7 +21,7 @@ export const LINKS = [
   {
     href: '/writing',
     label: '文章',
-    defaultHref: `/javascript-garbage-collection`,
+    defaultHref: `/javascript-es7-to-es15-evolution`,
     icon: <PencilLineIcon size={16} />
   },
   {

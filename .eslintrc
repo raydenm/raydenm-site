@@ -2,14 +2,12 @@
   "extends": [
     "next",
     "prettier",
-    "react-app",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    // "plugin:@typescript-eslint/recommended",
-    // "plugin:import/recommended",
     "plugin:tailwindcss/recommended"
   ],
+  "plugins": ["simple-import-sort"],
   "env": {
     "node": true,
     "browser": true,
@@ -24,7 +22,9 @@
     "@next/next/no-img-element": 0,
     "no-unused-vars": "warn",
     "import/no-unresolved": [2, { "caseSensitive": false }],
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   },
   "settings": {
     "import/resolver": {

@@ -1,19 +1,19 @@
 'use client'
 
-import { useState } from 'react'
 import { SendIcon } from 'lucide-react'
+import { useState } from 'react'
 
+import { SubmitBookmarkForm } from '@/components/bookmarks/submit-bookmark/form'
+import { Button } from '@/components/ui/button'
 import {
   Drawer,
   DrawerContent,
-  DrawerHeader,
   DrawerDescription,
+  DrawerHeader,
   DrawerTitle,
   DrawerTrigger
 } from '@/components/ui/drawer'
-import { Button } from '@/components/ui/button'
-import { SubmitBookmarkForm } from '@/components/bookmarks/submit-bookmark/form'
-import { SUBMIT_BOOKMARK_FORM_TITLE, SUBMIT_BOOKMARK_FORM_DESCRIPTION } from '@/config'
+import { SUBMIT_BOOKMARK_FORM_DESCRIPTION, SUBMIT_BOOKMARK_FORM_TITLE } from '@/config'
 import type { BookmarksType } from '@/services/raindrop'
 
 type SubmitBookmarkDrawerProps = {

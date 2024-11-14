@@ -25,6 +25,10 @@ pre code.hljs {
   @apply bg-precode rounded-lg border-none;
 }
 
+.dark pre code.hljs {
+  @apply bg-precode/70;
+}
+
 pre {
   @apply pt-0;
 }

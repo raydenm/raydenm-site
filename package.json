@@ -83,6 +83,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-tailwindcss": "^3.15.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
@@ -104,8 +105,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "pnpm lint",
-      "pnpm prettier"
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }

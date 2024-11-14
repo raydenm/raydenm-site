@@ -2,19 +2,20 @@ import '@/style/globals.css'
 import '@/style/theme-transition.css'
 import '@/style/sprites.css'
 
+import { GeistMono } from 'geist/font/mono'
+import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Toaster } from '@/components/ui/sonner'
-import { TailwindIndicator } from '@/components/tools/tailwind-indicator'
-import { SideMenu } from '@/components/layout/side-menu'
-import { MenuContent } from '@/components/layout/menu-content'
 import { sharedMetadata } from '@/app/shared-metadata'
 import { ThemeProvider } from '@/app/theme-provider'
-import { WebVitals } from './web-vitals'
-import { env } from '@/config/env'
+import { MenuContent } from '@/components/layout/menu-content'
+import { SideMenu } from '@/components/layout/side-menu'
+import { TailwindIndicator } from '@/components/tools/tailwind-indicator'
 import { Tools } from '@/components/tools/tools'
+import { Toaster } from '@/components/ui/sonner'
+import { env } from '@/config/env'
+
+import { WebVitals } from './web-vitals'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,7 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           src="https://cloud.umami.is/script.js"
           data-website-id={env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         ></script>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {/* bg-background */}
           <main className="min-h-screen">
             <div className="lg:flex">

@@ -80,7 +80,7 @@ Line.prototype = {
 function onMousemove(e) {
   function o() {
     lines = []
-    for (var e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.45 + (e / E.trails) * 0.025 }))
+    for (var e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.35 + (e / E.trails) * 0.025 }))
   }
   function c(e) {
     e.touches
