@@ -8,7 +8,7 @@
     "prettier": "prettier --write \"**/*.{html,ts,tsx,js,jsx,json,mjs}\"",
     "clear-cache": "rm -rf .next",
     "unused": "next-unused",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "prepare": "husky"
   },
   "dependencies": {

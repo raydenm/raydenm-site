@@ -1,12 +1,12 @@
-import { Suspense } from 'react'
 import { PlusIcon } from 'lucide-react'
+import { Suspense } from 'react'
 
+import { FloatingHeader } from '@/components/common/floating-header'
+import { GradientBg3 } from '@/components/common/gradient-bg'
+import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { ScrollArea } from '@/components/common/scroll-area'
 import { JourneyCard } from '@/components/journey/journey-card'
-import { FloatingHeader } from '@/components/common/floating-header'
-import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
 import { PageTitle } from '@/components/layout/page-title'
-import { GradientBg3 } from '@/components/common/gradient-bg'
 import { getAllLogbook } from '@/services/contentful'
 
 async function fetchData() {

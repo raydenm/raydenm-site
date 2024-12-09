@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react'
-import { SideMenu } from '@/components/layout/side-menu'
-import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+
 import { ListItem } from '@/components/bookmarks/list-item'
+import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+import { SideMenu } from '@/components/layout/side-menu'
 import { Toaster } from '@/components/ui/sonner'
 import { getBookmarks } from '@/services/raindrop'
 

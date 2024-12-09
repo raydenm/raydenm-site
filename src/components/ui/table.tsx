@@ -8,19 +8,17 @@ interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
   contentClassName?: string
 }
 
-const Table = React.forwardRef<HTMLTableElement, TableProps>(
-  ({ className, contentClassName, isEmpty, ...props }, ref) => (
-    <div className={cn('relative w-full', contentClassName)}>
-      <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
-      {/* {isEmpty && (
+const Table = React.forwardRef<HTMLTableElement, TableProps>(({ className, contentClassName, ...props }, ref) => (
+  <div className={cn('relative w-full', contentClassName)}>
+    <table ref={ref} className={cn('w-full caption-bottom text-sm', className)} {...props} />
+    {/* {isEmpty && (
         <div className="my-20 flex w-full flex-col items-center text-light-500">
           <img src={Empty} alt="" />
           暂无内容
         </div>
       )} */}
-    </div>
-  )
-)
+  </div>
+))
 Table.displayName = 'Table'
 
 const TableHeader = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
@@ -91,4 +89,4 @@ const TableCaption = React.forwardRef<HTMLTableCaptionElement, React.HTMLAttribu
 )
 TableCaption.displayName = 'TableCaption'
 
-export { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption }
+export { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow }

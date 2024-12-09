@@ -1,15 +1,15 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useRouter, usePathname } from 'next/navigation'
-import { ScrollArea } from '@/components/common/scroll-area'
+import { usePathname, useRouter } from 'next/navigation'
+import React from 'react'
+
 import { LoadingSpinner } from '@/components/common/loading-spinner'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { keyCodePathnameMapping } from '@/config/path'
 import { useKeyPress } from '@/hooks/useKeyPress'
 import { cn } from '@/lib/utils'
-import React from 'react'
 import type { BookmarksType } from '@/services/raindrop'
-import { keyCodePathnameMapping } from '@/config/path'
-
 import useStore from '@/store/index'
 const SubmitBookmarkDialog = dynamic(
   () => import('@/components/bookmarks/submit-bookmark/dialog').then((mod) => mod.SubmitBookmarkDialog),

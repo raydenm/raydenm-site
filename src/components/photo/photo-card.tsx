@@ -1,5 +1,6 @@
-import type { photoItem } from '@/components/photo/photo-list'
 import { forwardRef } from 'react'
+
+import type { photoItem } from '@/components/photo/photo-list'
 
 interface PhotoCardProps {
   onClick?: () => void

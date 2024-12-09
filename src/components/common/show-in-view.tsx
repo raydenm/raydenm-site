@@ -1,7 +1,7 @@
 'use client'
 
-import { useInView } from 'react-intersection-observer'
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
 type ShowInViewProps = {
   children: React.ReactNode
   rootMargin?: string

@@ -1,11 +1,11 @@
-import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
+import { Suspense } from 'react'
 
-import { ScrollArea } from '@/components/common/scroll-area'
-import { PageTitle } from '@/components/layout/page-title'
+import { BookmarkList } from '@/components/bookmarks/bookmark-list'
 import { FloatingHeader } from '@/components/common/floating-header'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
-import { BookmarkList } from '@/components/bookmarks/bookmark-list'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { PageTitle } from '@/components/layout/page-title'
 import { getBookmarkItems, getBookmarks } from '@/services/raindrop'
 
 export async function generateStaticParams() {

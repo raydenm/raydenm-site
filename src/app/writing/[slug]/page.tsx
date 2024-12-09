@@ -1,17 +1,19 @@
+import 'highlight.js/styles/github-dark.css'
+import '@/style/article.css'
+
 import { notFound } from 'next/navigation'
-import { Message } from '@/components/writing/message'
-import { ScrollArea } from '@/components/common/scroll-area'
-import { PageTitle } from '@/components/layout/page-title'
-import { FloatingHeader } from '@/components/common/floating-header'
-import { WritingViews } from '@/components/writing/writing-views'
-import { getPost, getAllPostSlugs } from '@/services/contentful'
-import { getDateTimeFormat } from '@/lib/utils'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import remarkGfm from 'remark-gfm'
+
+import { FloatingHeader } from '@/components/common/floating-header'
 import { Link } from '@/components/common/link'
-import 'highlight.js/styles/github-dark.css'
-import '@/style/article.css'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { PageTitle } from '@/components/layout/page-title'
+import { Message } from '@/components/writing/message'
+import { WritingViews } from '@/components/writing/writing-views'
+import { getDateTimeFormat } from '@/lib/utils'
+import { getAllPostSlugs, getPost } from '@/services/contentful'
 export async function generateStaticParams() {
   const allPosts: { slug: string }[] = await getAllPostSlugs()
   return allPosts.map((post) => ({ slug: post.slug }))
@@ -60,6 +62,7 @@ export default async function WritingSlug({ params }: { params: { slug: string }
             {markdown && (
               <Markdown
                 components={{
+                  // eslint-disable-next-line no-unused-vars
                   a: ({ className, ...rest }) => <Link {...rest} />
                 }}
                 rehypePlugins={[rehypeHighlight, remarkGfm]}

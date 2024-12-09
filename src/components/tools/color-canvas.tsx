@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+
 import useRealTheme from '@/hooks/useRealTheme'
 import renderCanvas from '@/lib/colorRenderCanvas'
 

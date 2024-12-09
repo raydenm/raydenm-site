@@ -1,5 +1,6 @@
 'use client'
 
+import { Settings } from 'lucide-react'
 import { useState } from 'react'
 
 import {
@@ -10,8 +11,6 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
-
-import { Settings } from 'lucide-react'
 
 export const SettingButton = () => {
   const [open, setOpen] = useState(false)

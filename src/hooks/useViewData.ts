@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
 import supabase from '@/services/supabase/public'
 
 export const useViewData = (slug?: string) => {

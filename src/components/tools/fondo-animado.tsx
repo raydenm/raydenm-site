@@ -1,15 +1,13 @@
 /* eslint-disable no-extra-semi */
 /* eslint-disable no-sequences */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable eqeqeq */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // @ts-nocheck
 
 'use client'
 
-import { useEffect, useRef, Component } from 'react'
+import { Component, useEffect, useRef } from 'react'
 
 export const FondoAnimado = () => {
   // const canvas = useRef(null)
@@ -186,25 +184,25 @@ export const FondoAnimado = () => {
         gui.add(config, 'SHADING').name('shading').onFinishChange(updateKeywords);
         gui.add(config, 'COLORFUL').name('colorful');
         gui.add(config, 'PAUSED').name('paused').listen();
-    
+
         gui.add({ fun: () => {
             splatStack.push(parseInt(Math.random() * 20) + 5);
         } }, 'fun').name('Random splats');
-    
+
         let bloomFolder = gui.addFolder('Bloom');
         bloomFolder.add(config, 'BLOOM').name('enabled').onFinishChange(updateKeywords);
         bloomFolder.add(config, 'BLOOM_INTENSITY', 0.1, 2.0).name('intensity');
         bloomFolder.add(config, 'BLOOM_THRESHOLD', 0.0, 1.0).name('threshold');
-    
+
         let sunraysFolder = gui.addFolder('Sunrays');
         sunraysFolder.add(config, 'SUNRAYS').name('enabled').onFinishChange(updateKeywords);
         sunraysFolder.add(config, 'SUNRAYS_WEIGHT', 0.3, 1.0).name('weight');
-    
+
         let captureFolder = gui.addFolder('Capture');
         captureFolder.addColor(config, 'BACK_COLOR').name('background color');
         captureFolder.add(config, 'TRANSPARENT').name('transparent');
         captureFolder.add({ fun: captureScreenshot }, 'fun').name('take screenshot');
-    
+
         let github = gui.add({ fun : () => {
             window.open('https://github.com/PavelDoGreat/WebGL-Fluid-Simulation');
             ga('send', 'event', 'link button', 'github');
@@ -214,7 +212,7 @@ export const FondoAnimado = () => {
         let githubIcon = document.createElement('span');
         github.domElement.parentElement.appendChild(githubIcon);
         githubIcon.className = 'icon github';
-    
+
         let twitter = gui.add({ fun : () => {
             ga('send', 'event', 'link button', 'twitter');
             window.open('https://twitter.com/PavelDoGreat');
@@ -224,7 +222,7 @@ export const FondoAnimado = () => {
         let twitterIcon = document.createElement('span');
         twitter.domElement.parentElement.appendChild(twitterIcon);
         twitterIcon.className = 'icon twitter';
-    
+
         let discord = gui.add({ fun : () => {
             ga('send', 'event', 'link button', 'discord');
             window.open('https://discordapp.com/invite/CeqZDDE');
@@ -234,7 +232,7 @@ export const FondoAnimado = () => {
         let discordIcon = document.createElement('span');
         discord.domElement.parentElement.appendChild(discordIcon);
         discordIcon.className = 'icon discord';
-    
+
         let app = gui.add({ fun : () => {
             ga('send', 'event', 'link button', 'app');
             window.open('http://onelink.to/5b58bn');
@@ -1324,7 +1322,7 @@ export const FondoAnimado = () => {
         blur(sunrays, sunraysTemp, 1)
       }
       /*
-    
+
         if (target == null || !config.TRANSPARENT) {
             gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
             gl.enable(gl.BLEND);

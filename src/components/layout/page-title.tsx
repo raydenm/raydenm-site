@@ -1,8 +1,7 @@
+import React from 'react'
 import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
-
-import React from 'react'
 
 type PageTitleProps = {
   title: string

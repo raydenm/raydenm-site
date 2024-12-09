@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react'
 
-import { SideMenu } from '@/components/layout/side-menu'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+import { SideMenu } from '@/components/layout/side-menu'
 import { WritingListLayout } from '@/components/writing/writing-list-layout'
-import { getAllPosts } from '@/services/contentful'
 import { getSortedPosts } from '@/lib/utils'
+import { getAllPosts } from '@/services/contentful'
 
 async function fetchData() {
   const allPosts = await getAllPosts()

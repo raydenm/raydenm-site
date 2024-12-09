@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic'
 import { MapPin } from 'lucide-react'
+import dynamic from 'next/dynamic'
 const MarkdownRenderer = dynamic(() =>
   import('@/components/journey/markdown-renderer').then((mod) => mod.MarkdownRenderer)
 )

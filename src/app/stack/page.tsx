@@ -1,9 +1,10 @@
 import { Suspense } from 'react'
-import { ScrollArea } from '@/components/common/scroll-area'
-import { GradientBg } from '@/components/common/gradient-bg'
+
 import { FloatingHeader } from '@/components/common/floating-header'
-import { PageTitle } from '@/components/layout/page-title'
+import { GradientBg } from '@/components/common/gradient-bg'
 import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { PageTitle } from '@/components/layout/page-title'
 import { StackList } from '@/components/stack/stack-list'
 import { STACK_LIST } from '@/config'
 export default async function Stack() {

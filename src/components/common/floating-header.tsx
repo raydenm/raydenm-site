@@ -1,16 +1,16 @@
 'use client'
 
-import React, { memo, useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import Balancer from 'react-wrap-balancer'
 import { ArrowLeftIcon } from 'lucide-react'
-import type { BookmarksType, BookmarkType } from '@/services/raindrop'
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React, { memo, useEffect, useState } from 'react'
+import Balancer from 'react-wrap-balancer'
 
-import { Button } from '@/components/ui/button'
 import { LoadingSpinner } from '@/components/common/loading-spinner'
-import { SCROLL_AREA_ID, MOBILE_SCROLL_THRESHOLD } from '@/config'
+import { Button } from '@/components/ui/button'
+import { MOBILE_SCROLL_THRESHOLD, SCROLL_AREA_ID } from '@/config'
+import type { BookmarksType, BookmarkType } from '@/services/raindrop'
 const MobileDrawer = dynamic(() => import('@/components/common/mobile-drawer').then((mod) => mod.MobileDrawer))
 const SubmitBookmarkDrawer = dynamic(
   () => import('@/components/bookmarks/submit-bookmark/drawer').then((mod) => mod.SubmitBookmarkDrawer),

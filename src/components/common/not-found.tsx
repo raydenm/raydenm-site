@@ -1,5 +1,5 @@
-import { ScrollArea } from '@/components/common/scroll-area'
 import { FloatingHeader } from '@/components/common/floating-header'
+import { ScrollArea } from '@/components/common/scroll-area'
 import { PageTitle } from '@/components/layout/page-title'
 
 export function NotFound() {

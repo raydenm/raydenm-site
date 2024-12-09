@@ -1,5 +1,5 @@
 import { JunJingIcon } from './junjing-icon'
-import { TwitterIcon } from './twitter-icon'
 import { SystemThemeIcon } from './system-theme-icon'
+import { TwitterIcon } from './twitter-icon'
 
-export { JunJingIcon, TwitterIcon, SystemThemeIcon }
+export { JunJingIcon, SystemThemeIcon, TwitterIcon }

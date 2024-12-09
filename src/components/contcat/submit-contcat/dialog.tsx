@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
+import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
 import {
   Dialog,
   DialogContent,
@@ -10,10 +11,8 @@ import {
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
-
-import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
+import { SUBMIT_CONTCAT_FORM_DESCRIPTION, SUBMIT_CONTCAT_FORM_TITLE } from '@/config'
 import useStore from '@/store/index'
-import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/config'
 
 export const SubmitContcatDialog = () => {
   const [open, setOpen] = useState(false)

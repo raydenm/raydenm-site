@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils'
-import { SCROLL_AREA_ID } from '@/config'
 import React from 'react'
+
+import { SCROLL_AREA_ID } from '@/config'
+import { cn } from '@/lib/utils'
 
 type ScrollAreaProps = {
   useScrollAreaId?: boolean

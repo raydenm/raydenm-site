@@ -2,17 +2,16 @@
 
 import { useState } from 'react'
 
+import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
 import {
   Drawer,
   DrawerContent,
-  DrawerHeader,
   DrawerDescription,
+  DrawerHeader,
   DrawerTitle,
   DrawerTrigger
 } from '@/components/ui/drawer'
-
-import { SubmitContcatForm } from '@/components/contcat/submit-contcat/form'
-import { SUBMIT_CONTCAT_FORM_TITLE, SUBMIT_CONTCAT_FORM_DESCRIPTION } from '@/config'
+import { SUBMIT_CONTCAT_FORM_DESCRIPTION, SUBMIT_CONTCAT_FORM_TITLE } from '@/config'
 
 export const SubmitContcatDrawer = () => {
   const [open, setOpen] = useState(false)

@@ -20,11 +20,17 @@
     "react/prop-types": 0,
     "react/display-name": 0,
     "@next/next/no-img-element": 0,
-    "no-unused-vars": "warn",
     "import/no-unresolved": [2, { "caseSensitive": false }],
     "react/no-unescaped-entities": 0,
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ]
   },
   "settings": {
     "import/resolver": {

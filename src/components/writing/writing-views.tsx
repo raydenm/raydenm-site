@@ -1,10 +1,10 @@
 'use client'
 
-import { LazyMotion, domAnimation, m } from 'framer-motion'
+import { domAnimation, LazyMotion, m } from 'framer-motion'
+import { Eye } from 'lucide-react'
 
 import { useViewData } from '@/hooks/useViewData'
 import { viewCountFormatter } from '@/lib/utils'
-import { Eye } from 'lucide-react'
 
 export const WritingViews = ({ slug }: { slug: string }) => {
   const viewData: { slug: string; view_count: number }[] = useViewData(slug)

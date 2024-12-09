@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
 import Giscus from '@giscus/react'
+import { useEffect } from 'react'
+
 import useRealTheme from '@/hooks/useRealTheme'
 export function Message({ slug }: { slug: string }) {
   const repo = process.env.NEXT_PUBLIC_REPO || ''

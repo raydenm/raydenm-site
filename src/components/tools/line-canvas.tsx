@@ -1,8 +1,9 @@
 'use client'
 
-import renderCanvas from '@/lib/lineRenderCanvas'
 import { useEffect } from 'react'
+
 import useRealTheme from '@/hooks/useRealTheme'
+import renderCanvas from '@/lib/lineRenderCanvas'
 
 export const LineCanvas = () => {
   const realTheme = useRealTheme()

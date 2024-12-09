@@ -1,15 +1,15 @@
-import { Suspense } from 'react'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
-import { ScrollArea } from '@/components/common/scroll-area'
-import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
-import { WritingList } from '@/components/writing/writing-list'
 import { FloatingHeader } from '@/components/common/floating-header'
+import { ScreenLoadingSpinner } from '@/components/common/screen-loading-spinner'
+import { ScrollArea } from '@/components/common/scroll-area'
+import { ContcatContent } from '@/components/contcat/contcat-content'
 import { PageTitle } from '@/components/layout/page-title'
 import { Button } from '@/components/ui/button'
+import { WritingList } from '@/components/writing/writing-list'
+import { getItemsByYear, getSortedPosts } from '@/lib/utils'
 import { getAllPosts } from '@/services/contentful'
-import { getSortedPosts, getItemsByYear } from '@/lib/utils'
-import { ContcatContent } from '@/components/contcat/contcat-content'
 
 async function fetchData() {
   const allPosts = await getAllPosts()

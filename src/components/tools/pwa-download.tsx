@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { MonitorDown } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 export const PwaDownload = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null)

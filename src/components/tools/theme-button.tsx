@@ -1,12 +1,13 @@
 'use client'
 
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { Sun, Moon } from 'lucide-react'
-import { flushSync } from 'react-dom'
 import { useEffect, useRef, useState } from 'react'
+import { flushSync } from 'react-dom'
+
+import { SystemThemeIcon } from '@/assets/svg'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { cn } from '@/lib/utils'
-import { SystemThemeIcon } from '@/assets/svg'
 
 export const ThemeButton = () => {
   const { theme, setTheme } = useTheme()

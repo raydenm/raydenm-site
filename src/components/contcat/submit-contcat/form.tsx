@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
-import { toast } from 'sonner'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
@@ -25,7 +25,7 @@ const formSchema = z.object({
 
 type SubmitContcatFormProps = {
   className?: string
-  setFormOpen: (open: boolean) => void
+  setFormOpen: (_open: boolean) => void
 }
 
 export function SubmitContcatForm({ className, setFormOpen }: SubmitContcatFormProps) {

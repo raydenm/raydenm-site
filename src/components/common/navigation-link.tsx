@@ -1,9 +1,9 @@
 'use client'
 
-import React, { memo } from 'react'
+import { ArrowUpRightIcon, AtSignIcon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ArrowUpRightIcon, AtSignIcon } from 'lucide-react'
+import React, { memo } from 'react'
 
 import { cn } from '@/lib/utils'
 

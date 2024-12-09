@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 'use client'
 
-import { umami } from '@/lib/analytics'
 import { useReportWebVitals } from 'next/web-vitals'
+
+import { umami } from '@/lib/analytics'
 
 declare global {
   interface Window {
