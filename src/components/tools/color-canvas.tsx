@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use client'
 
 import { useEffect } from 'react'
@@ -5,13 +6,20 @@ import { useEffect } from 'react'
 import useRealTheme from '@/hooks/useRealTheme'
 import renderCanvas from '@/lib/colorRenderCanvas'
 
+declare global {
+  interface Window {
+    isRendercolorCanvas: any
+  }
+}
+
 export const ColorCanvas = () => {
   const realTheme = useRealTheme()
 
   useEffect(() => {
-    console.log('123')
-
-    renderCanvas()
+    if (!window.isRendercolorCanvas) {
+      window.isRendercolorCanvas = true
+      renderCanvas()
+    }
   })
 
   return (
