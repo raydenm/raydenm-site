@@ -4,9 +4,9 @@ import { DraftMode } from '@/components/tools/draft-mode'
 import { preloadGetAllPosts } from '@/services/contentful'
 
 // import { SettingButton } from './setting-button'
-// import { ColorCanvas } from './color-canvas'
+import { ColorCanvas } from './color-canvas'
 // import { FondoAnimado } from './fondo-animado'
-import { LineCanvas } from './line-canvas'
+// import { LineCanvas } from './line-canvas'
 import { PwaDownload } from './pwa-download'
 import { ThemeButton } from './theme-button'
 
@@ -22,9 +22,9 @@ export const Tools = () => {
         {/* <SettingButton /> */}
         <DraftMode isEnabled={isEnabled} />
       </div>
-      {/* <ColorCanvas /> */}
+      <ColorCanvas />
       {/* <FondoAnimado /> */}
-      <LineCanvas />
+      {/* <LineCanvas /> */}
     </div>
   )
 }
