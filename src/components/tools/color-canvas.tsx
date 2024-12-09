@@ -9,6 +9,8 @@ export const ColorCanvas = () => {
   const realTheme = useRealTheme()
 
   useEffect(() => {
+    console.log('123')
+
     renderCanvas()
   })
 
