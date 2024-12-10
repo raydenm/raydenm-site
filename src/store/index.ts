@@ -5,7 +5,7 @@ type State = {
 }
 
 type Action = {
-  setEditing: (editing: boolean) => void
+  setEditing: (_editing: boolean) => void
 }
 
 const useStore = create<State & Action>((set) => ({
