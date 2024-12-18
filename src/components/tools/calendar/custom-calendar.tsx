@@ -156,13 +156,11 @@ export function CustomCalendar({ onSelectDate }: CalendarProps) {
     const solar = Solar.fromDate(date)
     const holidayUtil = HolidayUtil.getHoliday(solar.toString())
     const isWork = holidayUtil?.isWork() // 是否调休
-    const isSelected =
-      selectedDate?.getDate() === date.getDate() &&
-      selectedDate?.getMonth() === date.getMonth() &&
-      selectedDate?.getFullYear() === date.getFullYear()
+    const isSelected = dayjs(selectedDate).isSame(date, 'day')
     const isToday = new Date().toDateString() === date.toDateString()
     const isWeekend = date.getDay() === 0 || date.getDay() === 6
     const festivals = getFestivals(date)
+    const day = date.getDate()
 
     return (
       <div
@@ -185,7 +183,10 @@ export function CustomCalendar({ onSelectDate }: CalendarProps) {
             休
           </div>
         )}
-        <span className={`text-lg font-bold leading-7`}>{date.getDate()}</span>
+        <span className={`text-lg font-bold leading-7`}>
+          {day < 10 && '0'}
+          {day}
+        </span>
         {festivals.length > 0 ? (
           <span className={`w-full truncate text-center text-xs  ${isToday ? 'text-white' : 'text-blue-500'}`}>
             {festivals[0]}
@@ -254,17 +255,22 @@ export function CustomCalendar({ onSelectDate }: CalendarProps) {
             )}
           </div>
         </div>
-        <div className="mb-2 grid grid-cols-7 gap-1">
-          {['一', '二', '三', '四', '五', '六', '日'].map((day, index) => (
-            <div
-              key={day}
-              className={`text-center text-sm font-medium ${index === 5 || index === 6 ? 'text-red-500' : 'text-muted-foreground'}`}
-            >
-              {day}
-            </div>
-          ))}
+        <div className="relative">
+          <div className="mb-2 grid grid-cols-7 gap-1">
+            {['一', '二', '三', '四', '五', '六', '日'].map((day, index) => (
+              <div
+                key={day}
+                className={`text-center text-sm font-medium ${index === 5 || index === 6 ? 'text-red-500' : 'text-muted-foreground'}`}
+              >
+                {day}
+              </div>
+            ))}
+          </div>
+          <div className="relative z-10 grid grid-cols-7 gap-1">{renderCalendarDays()}</div>
+          <div className="absolute top-0 z-0 flex size-full items-center justify-center text-[320px] text-black/[0.04] dark:text-white/5">
+            {currentDate.getMonth() + 1}
+          </div>
         </div>
-        <div className="grid grid-cols-7 gap-1">{renderCalendarDays()}</div>
       </div>
       <div className="w-1/3 border-l border-muted pl-8">{selectedDate && <DateDetails date={selectedDate} />}</div>
     </div>
