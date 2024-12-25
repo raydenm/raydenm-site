@@ -45,8 +45,6 @@ export function DateDetails({ date }: { date: Date }) {
           <div className="absolute left-2 top-2 size-2 rounded-full bg-white"></div>
           <div className="absolute right-2 top-2 size-2 rounded-full bg-white"></div>
         </div>
-        {/* <div className='flex flex-col gap-1'> */}
-
         <div>
           {lunar.getYearInGanZhi()} ( {lunar.getYearShengXiao()} ) 年 {lunar.getMonthInChinese()}月
           {lunar.getDayInChinese()}
@@ -54,7 +52,6 @@ export function DateDetails({ date }: { date: Date }) {
         <div>
           本年第 {solarWeek.getIndexInYear()} 周 第 {dayOfYear} 天
         </div>
-        {/* </div> */}
       </div>
       <div className="mt-3 flex flex-col leading-6 text-muted-foreground">
         <div className="flex items-start border-t border-muted py-2">
