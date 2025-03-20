@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 import supabase from '@/services/supabase/public'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 
 export async function GET(request: Request) {
   const parsedUrl = new URL(request.url)
