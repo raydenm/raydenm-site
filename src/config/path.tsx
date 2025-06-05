@@ -21,7 +21,7 @@ export const LINKS = [
   {
     href: '/writing',
     label: '文章',
-    defaultHref: `/javascript-es7-to-es15-evolution`,
+    defaultHref: `/https-docs`,
     icon: <PencilLineIcon size={16} />
   },
   {
