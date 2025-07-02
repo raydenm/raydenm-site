@@ -1,5 +1,5 @@
-import million from 'million/compiler'
 import withPWAInit from '@ducanh2912/next-pwa'
+import million from 'million/compiler'
 
 const withPWA = withPWAInit({
   dest: 'public',
@@ -32,6 +32,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion', '@supabase/supabase-js', 'react-tweet'],
     webVitalsAttribution: ['FCP', 'LCP', 'CLS', 'FID', 'TTFB', 'INP']
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 3000
   }
 }
 

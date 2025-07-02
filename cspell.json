@@ -1,0 +1,12 @@
+{
+  "version": "0.2",
+  "ignoreWords": [
+    "supabase",
+    "sonner",
+    "UMAMI"
+  ],
+  "ignorePaths":[
+    "src/config/index.ts",
+    "src/lib/colorRenderCanvas.js"
+  ]
+}
