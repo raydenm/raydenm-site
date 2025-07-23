@@ -42,7 +42,7 @@ export const LINKS = [
   },
   {
     href: '/photo',
-    label: '相册',
+    label: '图库',
     icon: <Images size={16} />
   }
 ]
