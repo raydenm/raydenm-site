@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <SideMenu>
                 <MenuContent />
               </SideMenu>
-              <div className="flex flex-1">{children}</div>
+              <div className="flex flex-1 overflow-auto">{children}</div>
             </div>
           </main>
           <TailwindIndicator />
